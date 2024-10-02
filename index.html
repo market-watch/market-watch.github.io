@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Data Plot</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+    
+    <style>
+        body {
+            display: flex;
+            justify-content: space-between;
+        }
+        .main-content {
+            width: 80%;
+        }
+        .info-box-container {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-top: 300px;
+        }
+        .info-box {
+            width: 80px;
+            height: 40px;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <h1>Search Stock Data</h1>
+
+        <!-- Google AdSense -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center; width:100%; height:90px;"
+             data-ad-client="ca-pub-XXXXXXX"
+             data-ad-slot="XXXXXXX"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        <input type="text" id="search-box" placeholder="Enter tick...">
+        <div id="suggestions" style="border: 1px solid #ccc; max-height: 200px; overflow-y: auto;"></div>
+        <button onclick="plotGraph()">Search</button>
+    
+        <div id="message"></div>
+        <div id="plot"></div>
+    </div>
+    
+    <div class="info-box-container" id="info-boxes" style="display: none;">
+        <div id="box1" class="info-box"></div>
+        <div id="box2" class="info-box"></div>
+        <div id="box3" class="info-box"></div>
+        <div id="box4" class="info-box"></div>
+        <div id="box5" class="info-box"></div>
+        <div id="box6" class="info-box"></div>
+        <div id="box7" class="info-box"></div>
+        <div id="box8" class="info-box"></div>
+    </div>
+
+    <script src="lib/script_with_permanent_fibs.js"></script>
+</body>
+</html>
