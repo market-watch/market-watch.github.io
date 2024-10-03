@@ -37,7 +37,7 @@ async function fetchAndDecryptJson(url, password) {
 
 // Function to load and merge multiple JSON files
 async function loadData() {
-    const password = "your_password";  // Ensure this matches your Python encryption password
+    const password = "lWNQ,qJja6ok9x2k8(G|On&A{kw[EZZbA3#~@8LVfE\y7`ob_:RBx>F5"N%+{a$TCfud!:wPY6^TM^a>~69fW\sM[o+7fHB}:+.}.Uy4Q=aL9B7TKY6+9_OCU2]k-%$PFo&Q(JQdR]R642B8ilg{>7GVg[D5FK`>:YGVZYhgM9$msA*"sK6*u7a{f.3_]X!+dlS>Q:gL-6g,LBK>_o2|v>I9.N:I|>q+~$]^y:7,e?Vk}|I\9ZSW`f8.i,uar_eZ";  // Ensure this matches your Python encryption password
 
     try {
         // Fetch the list of JSON files from data_list.json
