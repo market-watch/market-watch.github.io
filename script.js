@@ -228,9 +228,9 @@ function plotGraph() {
 
             // Only process if Data_tuple is not 0
             if (dataTuple !== 0) {
-                var secondValue = dataTuple[1].slice(0, 10);  // Date (second value in Data_tuple)
-                var fifthValue = dataTuple[4];   // True or False (fifth value)
-                var sixthValue = dataTuple[5];   // Fibonacci retracement (sixth value)
+                var secondValue = dataTuple[2].slice(0, 10);  // Date (second value in Data_tuple)
+                var fifthValue = dataTuple[5];   // True or False (fifth value)
+                var sixthValue = dataTuple[6];   // Fibonacci retracement (sixth value)
                 
                 // Determine y0 (starting point) based on fifthValue (low or high)
                 var y0 = fifthValue ? item.low : item.high;
@@ -387,7 +387,7 @@ function plotGraph() {
                 if (tickData && tickData.length > pointIndex) {
                     var dataTuple = tickData[pointIndex].Data_tuple;
                     var gap = tickData[pointIndex].GAP;
-                    var retracements = tickData[pointIndex].Data_tuple[5];
+                    var retracements = tickData[pointIndex].Data_tuple[6];
                     var slh = tickData[pointIndex].high
                     var sll = tickData[pointIndex].low
                     // Show the info boxes
@@ -405,11 +405,11 @@ function plotGraph() {
     }
 
     // Set the text color for box1 based on dataTuple[5]
-    const textColor = (dataTuple[4] === true) ? "#008000" : "#FF0000"; // Green if true, red if false
+    const textColor = (dataTuple[5] === true) ? "#008000" : "#FF0000"; // Green if true, red if false
     document.getElementById("box1").style.color = textColor;
 
     // Set background color for boxes if needed (optional)
-    const boxColor = (dataTuple[4] === true) ? "#90EE90" : "#FFCCCB"; // LightGreen or LightCoral
+    const boxColor = (dataTuple[5] === true) ? "#90EE90" : "#FFCCCB"; // LightGreen or LightCoral
     document.getElementById("box1").style.backgroundColor = boxColor;
 
     document.getElementById("box2").innerText = gap;
@@ -421,9 +421,9 @@ function plotGraph() {
     document.getElementById("box2").style.color = textColorGap;
     document.getElementById("box2").style.backgroundColor = boxColorGap;
 
-    if (dataTuple !== 0 && dataTuple[4] === true) {
+    if (dataTuple !== 0 && dataTuple[5] === true) {
         sl = sll;
-    } else if (dataTuple !== 0 && dataTuple[4] === false) {
+    } else if (dataTuple !== 0 && dataTuple[5] === false) {
         sl = slh;
     }
     else {
@@ -445,13 +445,13 @@ function plotGraph() {
     const f50tc = "#0000FF";
     const f61tc = "#006400";
 
-    document.getElementById("box4").innerText = retracements["38.2% retracement"];
+    document.getElementById("box4").innerText = retracements["23.6% retracement"];
 
-    document.getElementById("box5").innerText = retracements["50.0% retracement"];
+    document.getElementById("box5").innerText = retracements["38.2% retracement"];
 
-    document.getElementById("box6").innerText = retracements["61.8% retracement"];
+    document.getElementById("box6").innerText = retracements["50.0% retracement"];
 
-    document.getElementById("box7").innerText = retracements["78.6% retracement"];
+    document.getElementById("box7").innerText = retracements["61.8% retracement"];
     document.getElementById("box4").style.backgroundColor = f23bc;
     document.getElementById("box5").style.backgroundColor = f38bc;
     document.getElementById("box6").style.backgroundColor = f50bc;
