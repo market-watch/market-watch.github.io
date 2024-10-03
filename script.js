@@ -38,7 +38,7 @@ async function fetchAndDecryptJson(url, password) {
 async function loadData() {
     const randomstr = "buddha_bar_chandra";
     
-    const randstr = atob(randomstr);
+    // const randstr = atob(randomstr);
     try {
         
         const response = await fetch('data_list.json');
