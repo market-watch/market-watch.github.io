@@ -36,16 +36,16 @@ async function fetchAndDecryptJson(url, password) {
 
 
 async function loadData() {
-    const randomstr = "buddha_bar_chandra";
+    const randomstr = "YnVkZGhhX2Jhcl9jaGFuZHJh";
     
-    // const randstr = atob(randomstr);
+    const randstr = atob(randomstr);
     try {
         
         const response = await fetch('data_list.json');
         const { jsonFiles } = await response.json();  
 
         // Fetch and decrypt each JSON file
-        const fetchPromises = jsonFiles.map(file => fetchAndDecryptJson(file, randomstr));
+        const fetchPromises = jsonFiles.map(file => fetchAndDecryptJson(file, randstr));
 
         const jsonParts = await Promise.all(fetchPromises);
         jsonParts.forEach(part => {
