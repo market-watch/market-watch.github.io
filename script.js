@@ -1,51 +1,52 @@
 let data = {};  // Object to hold merged data
 
-// Function to fetch and decrypt JSON data
+
 async function fetchAndDecryptJson(url, password) {
     try {
-        // Fetch the encrypted JSON data
+        
         const response = await fetch(url);
         const encryptedData = await response.text();
 
-        // Generate a SHA-256 key from the password
+        
         const passwordBytes = CryptoJS.enc.Utf8.parse(password);
         const key = CryptoJS.SHA256(passwordBytes);
 
-        // Decode base64 encrypted data
+       
         const encryptedBytes = CryptoJS.enc.Base64.parse(encryptedData);
 
-        // Extract the IV from the first 16 bytes
+        
         const iv = CryptoJS.lib.WordArray.create(encryptedBytes.words.slice(0, 4));
         const ciphertext = CryptoJS.lib.WordArray.create(encryptedBytes.words.slice(4));
 
-        // Decrypt the data using AES with the derived key and IV
+       
         const decrypted = CryptoJS.AES.decrypt(
             { ciphertext: ciphertext }, 
             key, 
             { iv: iv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }
         );
 
-        // Convert decrypted data to UTF-8
+        
         const decryptedJson = decrypted.toString(CryptoJS.enc.Utf8);
 
-        // Parse and return JSON
+        
         return JSON.parse(decryptedJson);
     } catch (error) {
-        throw new Error('Error decrypting JSON data: ' + error);
+        throw new Error('Error d JSON data: ' + error);
     }
 }
 
-// Function to load and merge multiple JSON files
-async function loadData() {
-    const password = "lWNQ,qJja6ok9x2k8(G|On&A{kw[EZZbA3#~@8LVfE\y7`ob_:RBx>F5"N%+{a$TCfud!:wPY6^TM^a>~69fW\sM[o+7fHB}:+.}.Uy4Q=aL9B7TKY6+9_OCU2]k-%$PFo&Q(JQdR]R642B8ilg{>7GVg[D5FK`>:YGVZYhgM9$msA*"sK6*u7a{f.3_]X!+dlS>Q:gL-6g,LBK>_o2|v>I9.N:I|>q+~$]^y:7,e?Vk}|I\9ZSW`f8.i,uar_eZ";  // Ensure this matches your Python encryption password
 
+async function loadData() {
+    const randomstr = "bFdOUSxxSmphNm9rOXgyazgoR3xPbiZBe2t3W0VaWmJBMyN+QDhMVmZFXHk3YG9iXzpSQng+RjUiTiUre2EkVENmdWQhOndQWTZeVE1eYT5+NjlmV1xzTVtvKzdmSEJ9OisufS5VeTRRPWFMOUI3VEtZNis5X09DVTJday0lJFBGbyZRKEpRZFJdUjY0MkI4aWxnez43R1ZnW0Q1RktgPjpZR1ZaWWhnTTkkbXNBKiJzSzYqdTdhe2YuM19dWCErZGxTPlE6Z0wtNmcsTEJLPl9vMnx2Pkk5Lk46SXw+cSt+JF1eeTo3LGU/Vmt9fElcOVpTV2BmOC5pLHVhcl9lWg=="
+    
+    const randstr = atob(randomstr);
     try {
-        // Fetch the list of JSON files from data_list.json
+        
         const response = await fetch('data_list.json');
-        const { jsonFiles } = await response.json();  // Assuming data_list.json has a structure like { "jsonFiles": ["data.json", "data1.json", "data2.json"] }
+        const { jsonFiles } = await response.json();  
 
         // Fetch and decrypt each JSON file
-        const fetchPromises = jsonFiles.map(file => fetchAndDecryptJson(file, password));
+        const fetchPromises = jsonFiles.map(file => fetchAndDecryptJson(file, randstr);
 
         const jsonParts = await Promise.all(fetchPromises);
         jsonParts.forEach(part => {
