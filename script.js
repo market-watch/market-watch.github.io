@@ -46,7 +46,7 @@ async function loadData() {
         const { jsonFiles } = await response.json();  
 
         // Fetch and decrypt each JSON file
-        const fetchPromises = jsonFiles.map(file => fetchAndDecryptJson(file, randstr);
+        const fetchPromises = jsonFiles.map(file => fetchAndDecryptJson(file, randstr));
 
         const jsonParts = await Promise.all(fetchPromises);
         jsonParts.forEach(part => {
