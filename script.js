@@ -17,7 +17,6 @@ async function fetchAndDecryptJson(url, password) {
         
         const iv = CryptoJS.lib.WordArray.create(encryptedBytes.words.slice(0, 4));
         const ciphertext = CryptoJS.lib.WordArray.create(encryptedBytes.words.slice(4));
-
        
         const decrypted = CryptoJS.AES.decrypt(
             { ciphertext: ciphertext }, 
@@ -37,7 +36,7 @@ async function fetchAndDecryptJson(url, password) {
 
 
 async function loadData() {
-    const randomstr = "bFdOUSxxSmphNm9rOXgyazgoR3xPbiZBe2t3W0VaWmJBMyN+QDhMVmZFXHk3YG9iXzpSQng+RjUiTiUre2EkVENmdWQhOndQWTZeVE1eYT5+NjlmV1xzTVtvKzdmSEJ9OisufS5VeTRRPWFMOUI3VEtZNis5X09DVTJday0lJFBGbyZRKEpRZFJdUjY0MkI4aWxnez43R1ZnW0Q1RktgPjpZR1ZaWWhnTTkkbXNBKiJzSzYqdTdhe2YuM19dWCErZGxTPlE6Z0wtNmcsTEJLPl9vMnx2Pkk5Lk46SXw+cSt+JF1eeTo3LGU/Vmt9fElcOVpTV2BmOC5pLHVhcl9lWg==";
+    const randomstr = "buddha_bar_chandra";
     
     const randstr = atob(randomstr);
     try {
@@ -46,7 +45,7 @@ async function loadData() {
         const { jsonFiles } = await response.json();  
 
         // Fetch and decrypt each JSON file
-        const fetchPromises = jsonFiles.map(file => fetchAndDecryptJson(file, randstr));
+        const fetchPromises = jsonFiles.map(file => fetchAndDecryptJson(file, randomstr));
 
         const jsonParts = await Promise.all(fetchPromises);
         jsonParts.forEach(part => {
