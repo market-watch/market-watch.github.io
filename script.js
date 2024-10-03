@@ -53,7 +53,9 @@ async function loadData() {
         });
 
         displayMessage("All data successfully loaded.");
-        document.getElementById('output').innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+        document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('output').innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+});
     } catch (error) {
         displayMessage('Error loading or decrypting JSON files: ' + error);
     }
