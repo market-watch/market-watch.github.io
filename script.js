@@ -37,49 +37,37 @@ async function fetchAndDecryptJson(url, password) {
 
 async function loadData() {
     const randomstr = "YnVkZGhhX2Jhcl9jaGFuZHJh";
+    
     const randstr = atob(randomstr);
-
     try {
-        // Load the tick-to-file map
-        const response = await fetch('tick_file_map.json');
-        const tickFileMap = await response.json();  // This contains the mapping of ticks to files
+        
+        const response = await fetch('data_list.json');
+        const { jsonFiles } = await response.json();  
 
-        // Function to load data and plot the graph when the search button is clicked
-        window.plotGraph = function() {
-            const tick = document.getElementById("search-box").value.trim();
-            
-            if (tick in tickFileMap) {
-                const fileToLoad = tickFileMap[tick];
-                loadTickData(fileToLoad, randstr);
-            } else {
-                displayMessage("Tick not found in any file.");
-            }
-        };
+        // Fetch and decrypt each JSON file
+        const fetchPromises = jsonFiles.map(file => fetchAndDecryptJson(file, randstr));
 
+        const jsonParts = await Promise.all(fetchPromises);
+        jsonParts.forEach(part => {
+            Object.assign(data, part);  // Merge the decrypted parts into the data object
+        });
+
+        displayMessage("All data successfully loaded.");
+        document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('output').innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+});
     } catch (error) {
-        displayMessage('Error loading tick map or data: ' + error);
+        displayMessage('Error loading or decrypting JSON files: ' + error);
     }
 }
 
-// Function to load tick data and handle graph plotting
-async function loadTickData(file, randstr) {
-    try {
-        const response = await fetch(file);
-        const tickData = await response.json();
-        // Call your function to plot the graph with tickData
-        plotGraphWithTickData(tickData, randstr);
-    } catch (error) {
-        displayMessage('Error loading tick data: ' + error);
-    }
-}
-
-// Function to display error or success messages
+// Function to display messages
 function displayMessage(message) {
-    alert(message);  // You can replace this with a more user-friendly message display
+    document.getElementById('message').textContent = message;
 }
 
-// Load data when the page is ready
-document.addEventListener("DOMContentLoaded", loadData);
+// Call loadData when the page loads
+window.onload = loadData;
 
 // Function to update message on the screen
 function displayMessage(message) {
