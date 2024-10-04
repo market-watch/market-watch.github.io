@@ -1,63 +1,66 @@
 let data = {};  // Object to hold merged data
 
-
 async function fetchAndDecryptJson(url, password) {
     try {
-        
         const response = await fetch(url);
         const encryptedData = await response.text();
 
-        
         const passwordBytes = CryptoJS.enc.Utf8.parse(password);
         const key = CryptoJS.SHA256(passwordBytes);
 
-       
         const encryptedBytes = CryptoJS.enc.Base64.parse(encryptedData);
 
-        
         const iv = CryptoJS.lib.WordArray.create(encryptedBytes.words.slice(0, 4));
         const ciphertext = CryptoJS.lib.WordArray.create(encryptedBytes.words.slice(4));
-       
+
         const decrypted = CryptoJS.AES.decrypt(
             { ciphertext: ciphertext }, 
             key, 
             { iv: iv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }
         );
 
-        
         const decryptedJson = decrypted.toString(CryptoJS.enc.Utf8);
 
-        
         return JSON.parse(decryptedJson);
     } catch (error) {
-        throw new Error('Error d JSON data: ' + error);
+        throw new Error('Error decrypting JSON data: ' + error);
     }
 }
 
+async function plotGraph() {
+    const tick = document.getElementById('search-box').value.trim(); // Get the tick from the search box
+    if (!tick) {
+        displayMessage('Please enter a tick.');
+        return;
+    }
 
-async function loadData() {
-    const randomstr = "YnVkZGhhX2Jhcl9jaGFuZHJh";
-    
+    const randomstr = "YnVkZGhhX2Jhcl9jaGFuZHJh"; // Your encoded password
     const randstr = atob(randomstr);
+
     try {
+        // Fetch the tick_file_map.json to find the relevant file for the entered tick
+        const response = await fetch('tick_file_map.json');
+        const tickFileMap = await response.json();
+
+        // Find the file corresponding to the entered tick
+        const fileName = tickFileMap[tick];
+        if (!fileName) {
+            displayMessage(`No data available for the tick: ${tick}`);
+            return;
+        }
+
+        // Fetch and decrypt the relevant JSON file
+        const jsonData = await fetchAndDecryptJson(fileName, randstr);
         
-        const response = await fetch('data_list.json');
-        const { jsonFiles } = await response.json();  
+        // Merge the decrypted data into the global 'data' object
+        Object.assign(data, jsonData);
 
-        // Fetch and decrypt each JSON file
-        const fetchPromises = jsonFiles.map(file => fetchAndDecryptJson(file, randstr));
+        // Display success message and optionally render the plot
+        displayMessage(`Data loaded for tick: ${tick}`);
+        document.getElementById('output').innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
 
-        const jsonParts = await Promise.all(fetchPromises);
-        jsonParts.forEach(part => {
-            Object.assign(data, part);  // Merge the decrypted parts into the data object
-        });
-
-        displayMessage("All data successfully loaded.");
-        document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('output').innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
-});
     } catch (error) {
-        displayMessage('Error loading or decrypting JSON files: ' + error);
+        displayMessage('Error loading or decrypting JSON data: ' + error);
     }
 }
 
@@ -65,9 +68,6 @@ async function loadData() {
 function displayMessage(message) {
     document.getElementById('message').textContent = message;
 }
-
-// Call loadData when the page loads
-window.onload = loadData;
 
 // Function to update message on the screen
 function displayMessage(message) {
