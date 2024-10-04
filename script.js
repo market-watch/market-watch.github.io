@@ -27,46 +27,39 @@ async function fetchAndDecryptJson(url, password) {
     }
 }
 
-async function plotGraph() {
-    const tick = document.getElementById('search-box').value.trim(); // Get the tick from the search box
-    if (!tick) {
-        displayMessage('Please enter a tick.');
-        return;
-    }
-
-    const randomstr = "YnVkZGhhX2Jhcl9jaGFuZHJh"; // Your encoded password
-    const randstr = atob(randomstr);
-
+async function loadData(tick) {
+    const randomstr = "YnVkZGhhX2Jhcl9jaGFuZHJh";  // Encoded password
+    const randstr = atob(randomstr);  // Decode the password using Base64
+    
     try {
-        // Fetch the tick_file_map.json to find the relevant file for the entered tick
+        // Fetch the tick_file_map.json, which contains the mapping of ticks to files
         const response = await fetch('tick_file_map.json');
-        const tickFileMap = await response.json();
+        const tickFileMap = await response.json();  // Parse the JSON file that maps ticks to JSON files
 
-        // Find the file corresponding to the entered tick
+        // Look up the filename associated with the entered tick
         const fileName = tickFileMap[tick];
         if (!fileName) {
+            // If the tick is not found in the map, display an error message
             displayMessage(`No data available for the tick: ${tick}`);
             return;
         }
 
-        // Fetch and decrypt the relevant JSON file
+        // If the tick is found, fetch and decrypt the corresponding JSON file
         const jsonData = await fetchAndDecryptJson(fileName, randstr);
         
         // Merge the decrypted data into the global 'data' object
         Object.assign(data, jsonData);
 
-        // Display success message and optionally render the plot
-        displayMessage(`Data loaded for tick: ${tick}`);
+        // Display a success message after loading the data
+        displayMessage(`Data successfully loaded for tick: ${tick}`);
+        
+        // Optionally, you could trigger any additional functionality here (e.g., updating the plot)
         document.getElementById('output').innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
-
+    
     } catch (error) {
+        // Catch and display any errors encountered during the process
         displayMessage('Error loading or decrypting JSON data: ' + error);
     }
-}
-
-// Function to display messages
-function displayMessage(message) {
-    document.getElementById('message').textContent = message;
 }
 
 // Function to update message on the screen
