@@ -65,6 +65,20 @@
         
     </div>
 
+    <script>
+        // Get the search box element
+        const searchBox = document.getElementById('search-box');
+
+        // Add an event listener to monitor input changes
+        searchBox.addEventListener('input', function() {
+            // Check if the search box is cleared
+            if (searchBox.value === '') {
+                // Reload the page if cleared
+                location.reload();
+            }
+        });
+    </script>
+
     <script src="script.js"></script>
 </body>
 </html>
