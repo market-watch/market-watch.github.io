@@ -38,50 +38,48 @@ async function fetchAndDecryptJson(url, password) {
 async function loadData() {
     const randomstr = "YnVkZGhhX2Jhcl9jaGFuZHJh";
     const randstr = atob(randomstr);
-    
+
     try {
         // Load the tick-to-file map
         const response = await fetch('tick_file_map.json');
         const tickFileMap = await response.json();  // This contains the mapping of ticks to files
 
-        // Add event listener to load the correct file when a tick is searched
-        document.getElementById("search-box").addEventListener("input", function() {
-            const tick = this.value.trim();
+        // Function to load data and plot the graph when the search button is clicked
+        window.plotGraph = function() {
+            const tick = document.getElementById("search-box").value.trim();
+            
             if (tick in tickFileMap) {
                 const fileToLoad = tickFileMap[tick];
                 loadTickData(fileToLoad, randstr);
             } else {
                 displayMessage("Tick not found in any file.");
             }
-        });
+        };
 
     } catch (error) {
         displayMessage('Error loading tick map or data: ' + error);
     }
 }
 
-// Function to load and decrypt the specific JSON file for the tick
+// Function to load tick data and handle graph plotting
 async function loadTickData(file, randstr) {
     try {
         const response = await fetch(file);
-        const decryptedData = await fetchAndDecryptJson(response, randstr);
-        Object.assign(data, decryptedData);
-
-        displayMessage("Tick data successfully loaded.");
-        document.getElementById('output').innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+        const tickData = await response.json();
+        // Call your function to plot the graph with tickData
+        plotGraphWithTickData(tickData, randstr);
     } catch (error) {
-        displayMessage('Error loading or decrypting tick data: ' + error);
+        displayMessage('Error loading tick data: ' + error);
     }
 }
 
-// Function to display messages
+// Function to display error or success messages
 function displayMessage(message) {
-    const messageDiv = document.getElementById("message");
-    messageDiv.innerHTML = message;
+    alert(message);  // You can replace this with a more user-friendly message display
 }
 
-// Call loadData when the page loads
-window.onload = loadData;
+// Load data when the page is ready
+document.addEventListener("DOMContentLoaded", loadData);
 
 // Function to update message on the screen
 function displayMessage(message) {
