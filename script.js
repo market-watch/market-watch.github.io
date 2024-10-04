@@ -1,3 +1,40 @@
+let data = {};  // Object to hold merged data
+
+
+async function fetchAndDecryptJson(url, password) {
+    try {
+        
+        const response = await fetch(url);
+        const encryptedData = await response.text();
+
+        
+        const passwordBytes = CryptoJS.enc.Utf8.parse(password);
+        const key = CryptoJS.SHA256(passwordBytes);
+
+       
+        const encryptedBytes = CryptoJS.enc.Base64.parse(encryptedData);
+
+        
+        const iv = CryptoJS.lib.WordArray.create(encryptedBytes.words.slice(0, 4));
+        const ciphertext = CryptoJS.lib.WordArray.create(encryptedBytes.words.slice(4));
+       
+        const decrypted = CryptoJS.AES.decrypt(
+            { ciphertext: ciphertext }, 
+            key, 
+            { iv: iv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }
+        );
+
+        
+        const decryptedJson = decrypted.toString(CryptoJS.enc.Utf8);
+
+        
+        return JSON.parse(decryptedJson);
+    } catch (error) {
+        throw new Error('Error d JSON data: ' + error);
+    }
+}
+
+
 async function loadData() {
     const randomstr = "YnVkZGhhX2Jhcl9jaGFuZHJh";
     const randstr = atob(randomstr);
