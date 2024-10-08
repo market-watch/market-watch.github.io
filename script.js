@@ -94,6 +94,12 @@ function plotGraph() {
         const firstDate = dates[0];
         const lastDate = dates[dates.length - 1];
 
+        // Extend the chart to include 10 additional days
+        const extendedLastDate = new Date(lastDate);
+        extendedLastDate.setDate(extendedLastDate.getDate() + 10);
+        
+        // Convert the extended date back to a YYYY-MM-DD format for the chart
+        const formattedExtendedLastDate = extendedLastDate.toISOString().slice(0, 10);
         
         // Determine the appropriate JSON file to load based on tick suffix
         const missingDatesFile = tick.endsWith('.Daily') ? 'missing_dates.json' : 'missing_dates_w.json';
@@ -234,7 +240,6 @@ function plotGraph() {
 
                     // Calculate 10 bars ahead, limiting to the array length
                 const aheadIndex = Math.min(index + 20, dates.length -1);
-                // var aheadIndex = index + 10;
 
                 var x1Date = dates[aheadIndex];  // The date 10 bars ahead
                 // Add rectangle based on Data_tuple values
@@ -311,7 +316,7 @@ function plotGraph() {
                     },
                     xaxis: {
                         autorange: true,
-                        rangeslider: { visible: true, range: [firstDate, lastDate], yaxis: {
+                        rangeslider: { visible: true, range: [firstDate, formattedExtendedLastDate], yaxis: {
             rangemode: 'match',  // Ensures the y-axis is consistent
             thickness: 0.05 // Reduce this value to make the range slider thinner
         }},
