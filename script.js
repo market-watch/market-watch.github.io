@@ -95,8 +95,11 @@ function plotGraph() {
         const lastDate = dates[dates.length - 1];
 
         
-        // Load missing dates and plot the chart
-        fetch('missing_dates.json')
+        // Determine the appropriate JSON file to load based on tick suffix
+        const missingDatesFile = tick.endsWith('.Daily') ? 'missing_dates.json' : 'missing_dates_w.json';
+    
+        // Load the selected missing dates file and plot the chart
+        fetch(missingDatesFile)
             .then(response => response.json())
             .then(missingDates => {
                 // Candlestick data
