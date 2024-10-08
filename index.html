@@ -1,0 +1,233 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css">
+    <script src="lib/script.js"></script>
+    
+     <style>
+        /* Reset default padding and margin */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Modern and minimalistic menu styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        .nav-menu li {
+            margin: 0 15px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            padding: 8px 15px;
+            transition: color 0.3s, background-color 0.3s;
+            border-radius: 4px;
+        }
+
+        .nav-menu a:hover {
+            background-color: #007acc;
+            color: #fff;
+        }
+
+        h1 {
+            margin-top: 30px;
+            font-size: 2rem;
+            color: #007acc;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-top: 10px;
+            color: #555;
+            text-align: center;
+            max-width: 600px;
+        }
+    </style>
+
+    <style>
+        /* Popup Background */
+        #disclaimer-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            text-align: center;
+        }
+
+        /* Popup Container */
+        #disclaimer-popup .popup-content {
+            background: #fff;
+            margin: 100px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            max-height: 80%;
+            overflow-y: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        /* Header and Text */
+        #disclaimer-popup h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #444;
+            text-align: center;
+        }
+
+        #disclaimer-popup p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 1em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Scrollbar Styling */
+        #disclaimer-popup .popup-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        #disclaimer-popup .popup-content::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 10px;
+        }
+
+        #disclaimer-popup .popup-content::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
+
+        /* Button Styling */
+        #disclaimer-popup button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #disclaimer-popup button:hover {
+            background-color: #218838;
+        }
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to Selene project</h1>
+
+        <!-- Disclaimer Popup -->
+    <div id="disclaimer-popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; text-align:center;">
+        <div style="background:#fff; margin:100px auto; padding:20px; width:80%; max-width:600px; max-height:80%; overflow-y:auto;">
+            <h1>Disclaimer</h1>
+    <h2>The Indicator</h2>
+    <p>
+        The Selene Indicator and Oscillator presented on this website, which utilizes a <b>Stock Engine for Long-term Economic and Neural Evaluation</b>, is solely for educational and informational purposes. It is not intended as financial advice or a recommendation for buying, selling, or holding any specific stock or security. The creators of this Selene Indicator and Oscillator, including the developers and website administrators, are not registered investment advisors, stockbrokers, or financial planners under SEBI or any other regulatory authority.
+    </p>
+    
+    <h2>No Financial Advice</h2>
+    <p>
+        The information provided by the Selene Indicator and Oscillator is based on historical data and predictive models, and it may not accurately reflect the future performance of any stock or security. Users of this website should not make any investment decisions based solely on the information provided here. We strongly encourage consulting with a SEBI-registered investment advisor or financial professional before making any financial decisions.
+    </p>
+
+    <h2>No Liability</h2>
+    <p>
+       By using this website and the Selene Indicator and Oscillator, you agree that the creators, developers, and any associated parties are not liable for any losses, damages, or legal actions that may result from using the Selene Indicator and Oscillator or the information provided. You acknowledge that the stock market carries inherent risks, and you assume full responsibility for any investment decisions made based on the use of this Selene Indicator and Oscillator.
+    </p>
+
+    <h2>Compliance with SEBI Regulations</h2>
+    <p>
+        We do not guarantee compliance with SEBI guidelines for investment advice as this is purely an educational tool. Any use of the Selene Indicator and Oscillator for actual trading or investment purposes is done at your own risk and discretion. We are not liable for any actions taken by SEBI or any other regulatory authority due to the use of this website or Selene Indicator and Oscillator.
+    </p>
+
+    <h2>Legal Notice</h2>
+    <p>
+        This website and the Selene Indicator and Oscillator are provided "as-is," and we reserve the right to make changes or discontinue the Selene Indicator and Oscillator at any time without notice. Users agree to indemnify and hold harmless the creators of this Selene Indicator and Oscillator from any legal claims, including but not limited to those brought by SEBI or other regulatory authorities, arising out of the use of this website or its contents.
+    </p>
+            <button onclick="closePopup()">I Agree</button>
+        </div>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('disclaimer-popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('disclaimer-popup').style.display = 'none';
+        }
+
+        window.onload = function() {
+            showPopup(); // Show popup on page load
+        };
+    </script>
+
+    
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+            alert("This page does not support this feature.");
+        });
+
+        // Disable F12 and Ctrl key combinations
+        document.addEventListener('keydown', function(event) {
+            // Check for F12 key (Developer Tools)
+            if (event.key === 'F12') {
+                event.preventDefault();
+                alert("This page does not support this feature.");
+            }
+
+            // Check for Ctrl key combinations (Ctrl+S, Ctrl+U, etc.)
+            if (event.ctrlKey && (event.key === 'u' || event.key === 's' || event.key === 'p' || event.key === 'c' || event.key === 'Shift')) {
+                event.preventDefault();
+                alert("This page does not support this feature.");
+            }
+        });
+    </script>
+
+    <!-- Navigation Menu -->
+    <ul class="nav-menu">
+      <li><a href="lib/selene.html">About Selene</a></li>
+        <li><a href="lib/stock-list.html">View Stock List</a></li>
+        <li><a href="lib/studies.html">Studies and Charts</a></li>
+        <li><a href="lib/suggestions.html">Suggestions and Collaborations</a></li>
+    </ul>
+
+  </body>
+</html>
+
+<footer>
+    <p>
+        <a href="lib/disclaimer.html" target="_blank">Disclaimer</a>
+    </p>
+</footer>
