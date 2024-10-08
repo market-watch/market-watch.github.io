@@ -66,6 +66,29 @@
     </div>
 
     <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+            alert("This page does not support this feature.");
+        });
+
+        // Disable F12 and Ctrl key combinations
+        document.addEventListener('keydown', function(event) {
+            // Check for F12 key (Developer Tools)
+            if (event.key === 'F12') {
+                event.preventDefault();
+                alert("This page does not support this feature.");
+            }
+
+            // Check for Ctrl key combinations (Ctrl+S, Ctrl+U, etc.)
+            if (event.ctrlKey && (event.key === 'u' || event.key === 's' || event.key === 'p' || event.key === 'c' || event.key === 'Shift')) {
+                event.preventDefault();
+                alert("This page does not support this feature.");
+            }
+        });
+    </script>
+
+    <script>
         // Get the search box element
         const searchBox = document.getElementById('search-box');
 
