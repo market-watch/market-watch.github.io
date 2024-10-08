@@ -29,8 +29,8 @@
 
         /* Style for individual info boxes */
         .info-box {
-            width: 80px;
-            height: 40px; /* Increased height for better readability */
+            width: 70px;
+            height: 30px; /* Increased height for better readability */
             margin: 5px;
             padding: 10px;
             border: 1px solid #ccc;
@@ -38,6 +38,14 @@
             text-align: center;
             font-weight: bold;
         }
+        .info-box-wrapper {
+                margin-bottom: 10px; /* Spacing between each box */
+            }
+            
+            .info-label {
+                font-weight: bold; /* Makes the label stand out */
+                margin-bottom: 5px; /* Spacing between label and box */
+            }
     </style>
 </head>
 <body>
@@ -54,34 +62,44 @@
     
     <!-- Right-side boxes container -->
     <div class="info-box-container" id="info-boxes" style="display: none;">
-    <div id="box1" class="info-box">
-        <h3 class="info-label">Type</h3>
+    <div class="info-box-wrapper">
+        <span class="info-label">Type</span>
+        <div id="box1" class="info-box"></div>
     </div>
-    <div id="box2" class="info-box">
-        <h3 class="info-label">GAP</h3>
+    <div class="info-box-wrapper">
+        <span class="info-label">GAP</span>
+        <div id="box2" class="info-box"></div>
     </div>
-    <div id="box8" class="info-box">
-        <h3 class="info-label">Marubozu</h3>
+    <div class="info-box-wrapper">
+        <span class="info-label">Marubozu</span>
+        <div id="box3" class="info-box"></div>
     </div>
-    <div id="box9" class="info-box">
-        <h3 class="info-label">ATRV</h3>
+    <div class="info-box-wrapper">
+        <span class="info-label">ATRV</span>
+        <div id="box4" class="info-box"></div>
     </div>
-    <div id="box3" class="info-box">
-        <h3 class="info-label">RP</h3>
+    <div class="info-box-wrapper">
+        <span class="info-label">RP</span>
+        <div id="box5" class="info-box"></div>
     </div>
-    <div id="box4" class="info-box">
-        <h3 class="info-label">L1</h3>
+    <div class="info-box-wrapper">
+        <span class="info-label">L1</span>
+        <div id="box6" class="info-box"></div>
     </div>
-    <div id="box5" class="info-box">
-        <h3 class="info-label">L2</h3>
+    <div class="info-box-wrapper">
+        <span class="info-label">L2</span>
+        <div id="box7" class="info-box"></div>
     </div>
-    <div id="box6" class="info-box">
-        <h3 class="info-label">L3</h3>
+    <div class="info-box-wrapper">
+        <span class="info-label">L3</span>
+        <div id="box8" class="info-box"></div>
     </div>
-    <div id="box7" class="info-box">
-        <h3 class="info-label">L4</h3>
+    <div class="info-box-wrapper">
+        <span class="info-label">L4</span>
+        <div id="box8" class="info-box"></div>
     </div>
 </div>
+
 
         
     </div>
