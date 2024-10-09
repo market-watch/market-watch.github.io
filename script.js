@@ -252,9 +252,9 @@ function plotGraph() {
                 // Loop through fibData to create traces
                 fibData.forEach((item, idx) => {
                     var dataTuple = item.dataTuple;
-                    console.log(dataTuple);
+                    // console.log(dataTuple);
                     // Only process if Data_tuple is not 0
-                    if (dataTuple !== 0) {
+                    if (dataTuple !== 0 && !isNaN(dataTuple)) {
                         var secondValue = dataTuple[2].slice(0, 10);  // Date (second value in Data_tuple)
                         var fifthValue = dataTuple[5];                 // True or False (fifth value)
                         var sixthValue = dataTuple[6];                  // Fibonacci retracement (sixth value)
