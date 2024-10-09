@@ -11,7 +11,7 @@
 
     <script>
         // Fetch stock data from the JSON file
-        fetch('stocks.json')
+        fetch('../stocks.json')
             .then(response => response.json())
             .then(data => {
                 const stockList = document.getElementById('stock-list');
