@@ -213,91 +213,83 @@ function plotGraph() {
 
                 // cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
             var fibData = tickData.map(entry => ({
-    date: entry.Datetime.slice(0, 10),  // The date
-    low: entry.low,                      // Low of the candle
-    high: entry.high,                    // High of the candle
-    dataTuple: entry.Data_tuple          // Data_tuple
+  date: entry.Datetime.slice(0, 10),  // The date
+  low: entry.low,                      // Low of the candle
+  high: entry.high,                    // High of the candle
+  dataTuple: entry.Data_tuple          // Data_tuple
 }));
 
-// Initialize the traces array
+// Initialize the traces array with a single trace for each data point
 var traces = [];
 
 // Define retracement levels in order
 var levels = ["23.6%", "38.2%", "50.0%", "61.8%"];
 
-// Loop through fibData to create traces based on Data_tuple
+// Loop through fibData to create a single trace with combined levels
 fibData.forEach((item, idx) => {
-    var dataTuple = item.dataTuple;
+  var dataTuple = item.dataTuple;
 
-    // Only process if Data_tuple is not 0
-    if (dataTuple !== 0) {
-        var secondValue = dataTuple[2].slice(0, 10);  // Date (second value in Data_tuple)
-        var fifthValue = dataTuple[5];                 // True or False (fifth value)
-        var sixthValue = dataTuple[6];                  // Fibonacci retracement (sixth value)
+  // Only process if Data_tuple is not 0
+  if (dataTuple !== 0) {
+    var secondValue = dataTuple[2].slice(0, 10);  // Date (second value in Data_tuple)
+    var fifthValue = dataTuple[5];                 // True or False (fifth value)
+    var sixthValue = dataTuple[6];                  // Fibonacci retracement (sixth value)
 
-        // Determine y0 (starting point) based on fifthValue (low or high)
-        var y0 = fifthValue ? item.low : item.high;
-        var index = dates.indexOf(secondValue);
-        const aheadIndex = Math.min(index + 20, dates.length - 1);
-        var x1Date = dates[aheadIndex];
+    // Determine y0 (starting point) based on fifthValue (low or high)
+    var y0 = fifthValue ? item.low : item.high;
+    var index = dates.indexOf(secondValue);
+    const aheadIndex = Math.min(index + 20, dates.length - 1);
+    var x1Date = dates[aheadIndex];
 
-        // Create arrays for x and y coordinates for the trace
-        var xValues = [];
-        var yValues = [];
-        var colors = [];
+    // Create a single trace with combined rectangle segments and color coding
+    var lineColor, fillColor;  // Initialize variables for clarity
 
-        // Loop through retracement levels to add segments
-        levels.forEach((level, levelIdx) => {
-            var color;
-            switch(levelIdx) {
-                case 0: color = 'rgba(255, 255, 0, 0.3)'; break;  // Yellow
-                case 1: color = 'rgba(0, 255, 0, 0.3)'; break;    // Green
-                case 2: color = 'rgba(0, 0, 255, 0.3)'; break;    // Blue
-                case 3: color = 'rgba(0, 100, 0, 0.3)'; break;    // Dark Green
-            }
+    traces.push({
+      x: [],  // Initialize empty x and y arrays to be populated
+      y: [],
+      type: 'scatter',
+      mode: 'lines',
+      fill: 'toself',  // Fill the rectangle between lines
+      name: `Selene ${idx + 1}`,
 
-            var y1 = sixthValue[level + ' retracement'];
-            var y2 = levelIdx === 0 ? y0 : sixthValue[levels[levelIdx - 1] + ' retracement'];
+      // Define line and fill color based on clicked legend item:
+      onlegendclick: (event) => {
+        const clickedLevel = event.target.text.slice(event.target.text.indexOf('(') + 1, event.target.text.indexOf('%'));
+        switch (clickedLevel) {
+          case levels[0]:
+            lineColor = 'rgba(255, 255, 0, 1)';  // Yellow
+            fillColor = 'rgba(255, 255, 0, 0.3)';
+            break;
+          case levels[1]:
+            lineColor = 'rgba(0, 255, 0, 1)';  // Green
+            fillColor = 'rgba(0, 255, 0, 0.3)';
+            break;
+          case levels[2]:
+            lineColor = 'rgba(0, 0, 255, 1)';  // Blue
+            fillColor = 'rgba(0, 0, 255, 0.3)';
+            break;
+          case levels[3]:
+            lineColor = 'rgba(0, 100, 0, 1)';  // Dark Green
+            fillColor = 'rgba(0, 100, 0, 0.3)';
+            break;
+        }
+        // Update line and fill color based on clicked level
+        this.line.color = lineColor;
+        this.fillcolor = fillColor;
+      }
+    });
 
-            // Add points for this level's segment
-            xValues.push(secondValue, x1Date, x1Date, secondValue);
-            yValues.push(y1, y1, y2, y2);
-            colors.push(color);
-        });
-
-        // Create a single trace for this candle
-        traces.push({
-            x: xValues,
-            y: yValues,
-            type: 'scatter',
-            mode: 'lines',
-            fill: 'toself',
-            fillcolor: 'rgba(255, 255, 255, 0)', // Transparent fill for the overall trace
-            line: { width: 0 },  // No line width for the main trace
-            name: `Selene ${idx + 1}`,  // Group name for the candle
-            visible: 'legendonly'
-        });
-
-        // Create individual segments for the retracement levels
-        levels.forEach((level, levelIdx) => {
-            var color = colors[levelIdx]; // Retrieve color for this level
-            var y1 = sixthValue[level + ' retracement'];
-            var y2 = levelIdx === 0 ? y0 : sixthValue[levels[levelIdx - 1] + ' retracement'];
-
-            traces.push({
-                x: [secondValue, x1Date, x1Date, secondValue],
-                y: [y1, y1, y2, y2],
-                type: 'scatter',
-                mode: 'lines',
-                fill: 'toself',
-                fillcolor: color,
-                line: { color: color, width: 0 },
-                name: `${level} retracement`,
-                visible: 'legendonly'  // This allows it to be shown only when the legend is clicked
-            });
-        });
-    }
+    // Loop through retracement levels and add points to the combined trace
+    levels.forEach((level, levelIdx) => {
+      var y1 = sixthValue[level + ' retracement'];
+      var y2 = levelIdx === 0 ? y0 : sixthValue[levels[levelIdx - 1] + ' retracement'];
+      traces[idx].x.push(secondValue, x1Date, x1Date, secondValue);
+      traces[idx].y.push(y1, y1, y2, y2);
+    });
+  }
 });
+
+// Now you have `traces` with combined rectangle segments and color coding based on clicked legends.
 
 
 
