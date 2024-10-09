@@ -424,7 +424,7 @@ fibData.forEach((item, idx) => {
                     },
                     showlegend: true,
                     hovermode: 'x',
-                    shapes: rectangles  // Add rectangles to the layout
+                    // shapes: rectangles  // Add rectangles to the layout
                 };                                                  
 
                 // Array of existing traces
