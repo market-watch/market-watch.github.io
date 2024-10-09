@@ -237,67 +237,63 @@ function plotGraph() {
 
                 // cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
             var fibData = tickData.map(entry => ({
-                    date: entry.Datetime.slice(0, 10),  // The date
-                    low: entry.low,                      // Low of the candle
-                    high: entry.high,                    // High of the candle
-                    dataTuple: entry.Data_tuple          // Data_tuple
-                }));
-                
-                // Initialize the traces array with an empty object to hold combined levels
-                var traces = [];
-                
-                // Define retracement levels in order
-                var levels = ["23.6%", "38.2%", "50.0%", "61.8%"];
-                
-                // Loop through fibData to create traces
-                fibData.forEach((item, idx) => {
-                    var dataTuple = item.dataTuple;
-                    // console.log(dataTuple);
-                    // Only process if Data_tuple is not 0
-                    if (dataTuple !== 0 && !isNaN(dataTuple)) {
-                        var secondValue = dataTuple[2].slice(0, 10);  // Date (second value in Data_tuple)
-                        var fifthValue = dataTuple[5];                 // True or False (fifth value)
-                        var sixthValue = dataTuple[6];                  // Fibonacci retracement (sixth value)
-                
-                        // Determine y0 (starting point) based on fifthValue (low or high)
-                        var y0 = fifthValue ? item.low : item.high;
-                
-                        var levelData = []; // Array to store data for combined trace
-                
-                        // Loop through retracement levels and create trace data
-                        levels.forEach((level, levelIdx) => {
-                            var color;
-                            switch(levelIdx) {
-                                case 0: color = 'rgba(255, 255, 0, 0.3)'; break;  // Yellow
-                                case 1: color = 'rgba(0, 255, 0, 0.3)'; break;    // Green
-                                case 2: color = 'rgba(0, 0, 255, 0.3)'; break;    // Blue
-                                case 3: color = 'rgba(0, 100, 0, 0.3)'; break;    // Dark Green
-                            }
-                
-                            var y1 = sixthValue[level + ' retracement'];
-                            var y2 = levelIdx === 0 ? y0 : sixthValue[levels[levelIdx - 1] + ' retracement'];
-                
-                            levelData.push({
-                                x: [secondValue, secondValue],
-                                y: [y1, y2],
-                                type: 'scatter',
-                                mode: 'lines',
-                                fill: 'toself',
-                                fillcolor: color,
-                                line: { color: color, width: 0 },
-                                // No legend entry for individual levels (invisible)
-                                showInLegend: false
-                            });
-                        });
-                
-                        // Create a single trace with combined level data, clear legend name
-                        traces.push({
-                            data: levelData, // Combined data for all levels
-                            name: `Selene ${idx + 1}`, // Clear legend name for single trace
-                            visible: 'legendonly' // Hide in plot, only show in legend
-                        });
-                    }
-                });
+    date: entry.Datetime.slice(0, 10),  // The date
+    low: entry.low,                      // Low of the candle
+    high: entry.high,                    // High of the candle
+    dataTuple: entry.Data_tuple           // Data_tuple
+}));
+
+// Initialize traces array
+var traces = [];
+
+// Define colors for Fibonacci levels
+const fibColors = {
+    "23.6% retracement": 'rgba(255, 255, 0, 0.3)',
+    "38.2% retracement": 'rgba(0, 255, 0, 0.3)',
+    "50.0% retracement": 'rgba(0, 0, 255, 0.3)',
+    "61.8% retracement": 'rgba(0, 100, 0, 0.3)'
+};
+
+// Loop through fibData to create traces based on Data_tuple
+fibData.forEach((item, index) => {
+    var dataTuple = item.dataTuple;
+
+    // Only process if Data_tuple is not 0
+    if (dataTuple !== 0) {
+        var secondValue = dataTuple[2].slice(0, 10);  // Date (second value in Data_tuple)
+        var sixthValue = dataTuple[6];                 // Fibonacci retracement (sixth value)
+
+        // Create a group name for this candle
+        var groupName = `Trace ${index + 1}`;  // e.g., Trace 1, Trace 2, etc.
+
+        // Create filled traces for Fibonacci levels
+        let prevLevel = item.low; // Start from the low of the candle for the first level
+        Object.keys(fibColors).forEach((level) => {
+            const currentLevel = sixthValue[level];
+
+            // Add a filled trace
+            traces.push({
+                x: [secondValue, secondValue, secondValue, secondValue], // X values (same date)
+                y: [prevLevel, currentLevel, currentLevel, prevLevel],   // Y values for rectangle
+                fill: 'tozeroy', // Fill to the Y=0 axis
+                mode: 'lines',    // Line mode for the edge of the rectangle
+                name: groupName,  // Set name for grouping in legend
+                line: {
+                    color: fibColors[level], // Color for the level
+                    width: 1                // Line width
+                },
+                fillcolor: fibColors[level], // Fill color
+                visible: 'legendonly',        // Set initial visibility to legend only
+                legendgroup: groupName        // Grouping for legend toggling
+            });
+
+            // Update previous level for the next iteration
+            prevLevel = currentLevel;
+        });
+    }
+});
+
+
 
 
                 
