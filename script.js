@@ -355,7 +355,7 @@ fibData.forEach((item, index) => {
                 
                 // Concatenate the Fibonacci retracement traces to allTraces
                 allTraces = allTraces.concat(traces);
-                console.log(allTraces)
+                // console.log(allTraces)
                 // Plot the chart
                 Plotly.newPlot('plot', allTraces, layout, {showSendToCloud: true});
 
