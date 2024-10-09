@@ -48,6 +48,29 @@ async function loadData() {
         }
 
         const jsonData = await fetchAndDecryptJson(fileName, randstr);
+        
+        function replaceNpNan(obj) {
+            // Check if the current object is an array
+            if (Array.isArray(obj)) {
+                return obj.map(replaceNpNan);
+            } 
+            // Check if the current object is an object
+            else if (typeof obj === 'object' && obj !== null) {
+                for (const key in obj) {
+                    if (obj[key] === 'np.nan') {
+                        obj[key] = NaN; // Convert 'np.nan' to NaN
+                    } else {
+                        replaceNpNan(obj[key]); // Recurse for nested objects
+                    }
+                }
+            }
+            return obj;
+        }
+        
+        // Assuming jsonData is your JSON object
+        jsonData = replaceNpNan(jsonData);
+        
+        // Now you can use Object.assign as intended
         Object.assign(data, jsonData);
         displayMessage(`Data loaded for tick: ${tick}`);
         plotGraph();  // Call plotGraph after data is loaded
