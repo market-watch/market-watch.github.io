@@ -47,13 +47,7 @@ async function loadData() {
             return;
         }
 
-        let jsonData = await fetchAndDecryptJson(fileName, randstr);
-        
-        
-        // Assuming jsonData is your JSON object
-        jsonData = replaceNpNan(jsonData);
-        
-        // Now you can use Object.assign as intended
+        const jsonData = await fetchAndDecryptJson(fileName, randstr);
         Object.assign(data, jsonData);
         displayMessage(`Data loaded for tick: ${tick}`);
         plotGraph();  // Call plotGraph after data is loaded
@@ -70,24 +64,6 @@ document.getElementById('search-button').addEventListener('click', loadData);
 function displayMessage(message) {
     document.getElementById('message').textContent = message;
 }
-
-function replaceNpNan(obj) {
-            // Check if the current object is an array
-            if (Array.isArray(obj)) {
-                return obj.map(replaceNpNan);
-            } 
-            // Check if the current object is an object
-            else if (typeof obj === 'object' && obj !== null) {
-                for (const key in obj) {
-                    if (obj[key] === 'np.nan') {
-                        obj[key] = NaN; // Convert 'np.nan' to NaN
-                    } else {
-                        replaceNpNan(obj[key]); // Recurse for nested objects
-                    }
-                }
-            }
-            return obj;
-        }
 
 function plotGraph() {
     const tick = document.getElementById("search-box").value.trim();
@@ -118,12 +94,12 @@ function plotGraph() {
         const firstDate = dates[0];
         const lastDate = dates[dates.length - 1];
 
-        // // Extend the chart to include 10 additional days
-        // const extendedLastDate = new Date(lastDate);
-        // extendedLastDate.setDate(extendedLastDate.getDate() + 10);
+        // Extend the chart to include 10 additional days
+        const extendedLastDate = new Date(lastDate);
+        extendedLastDate.setDate(extendedLastDate.getDate() + 10);
         
-        // // Convert the extended date back to a YYYY-MM-DD format for the chart
-        // const formattedExtendedLastDate = extendedLastDate.toISOString().slice(0, 10);
+        // Convert the extended date back to a YYYY-MM-DD format for the chart
+        const formattedExtendedLastDate = extendedLastDate.toISOString().slice(0, 10);
         
         // Determine the appropriate JSON file to load based on tick suffix
         const missingDatesFile = tick.endsWith('.Daily') ? 'missing_dates.json' : 'missing_dates_w.json';
@@ -235,71 +211,102 @@ function plotGraph() {
                     hoverinfo:'none'
                 };
 
-                // cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-            var fibData = tickData.map(entry => ({
-    date: entry.Datetime.slice(0, 10),  // The date
-    low: entry.low,                      // Low of the candle
-    high: entry.high,                    // High of the candle
-    dataTuple: entry.Data_tuple           // Data_tuple
-}));
+                // Extract the required data from tickData
+        var fibData = tickData.map(entry => ({
+            date: entry.Datetime.slice(0, 10),  // The date
+            low: entry.low,        // Low of the candle
+            high: entry.high,      // High of the candle
+            dataTuple: entry.Data_tuple // Data_tuple
+        }));
 
-// Initialize traces array
-var traces = [];
+        // Initialize the rectangles array
+        var rectangles = [];
 
-// Define colors for Fibonacci levels
-const fibColors = {
-    "23.6% retracement": 'rgba(255, 255, 0, 0.3)',
-    "38.2% retracement": 'rgba(0, 255, 0, 0.3)',
-    "50.0% retracement": 'rgba(0, 0, 255, 0.3)',
-    "61.8% retracement": 'rgba(0, 100, 0, 0.3)'
-};
+        // Loop through fibData to create rectangles based on Data_tuple
+        fibData.forEach((item) => {
+            var dataTuple = item.dataTuple;
 
-// Loop through fibData to create traces based on Data_tuple
-fibData.forEach((item, index) => {
-    var dataTuple = item.dataTuple;
-
-    // Only process if Data_tuple is not 0
-    if (dataTuple !== 0 && !Number.isNaN(dataTuple)) {
-        var secondValue = dataTuple[2].slice(0, 10);  // Date (second value in Data_tuple)
-        var sixthValue = dataTuple[6];                 // Fibonacci retracement (sixth value)
-
-        // Create a group name for this candle
-        var groupName = `Trace ${index + 1}`;  // e.g., Trace 1, Trace 2, etc.
-
-        // Create filled traces for Fibonacci levels
-        let prevLevel = item.low; // Start from the low of the candle for the first level
-        Object.keys(fibColors).forEach((level) => {
-            const currentLevel = sixthValue[level];
-
-            // Add a filled trace
-            traces.push({
-                x: [secondValue, secondValue, secondValue, secondValue], // X values (same date)
-                y: [prevLevel, currentLevel, currentLevel, prevLevel],   // Y values for rectangle
-                fill: 'tozeroy', // Fill to the Y=0 axis
-                mode: 'lines',    // Line mode for the edge of the rectangle
-                name: groupName,  // Set name for grouping in legend
-                line: {
-                    color: fibColors[level], // Color for the level
-                    width: 1                // Line width
-                },
-                fillcolor: fibColors[level], // Fill color
-                visible: 'legendonly',        // Set initial visibility to legend only
-                legendgroup: groupName        // Grouping for legend toggling
-            });
-            console.log(traces)
-            // Update previous level for the next iteration
-            prevLevel = currentLevel;
-        });
-    }
-});
-
-
-
-
+            // Only process if Data_tuple is not 0
+            if (dataTuple !== 0) {
+                var secondValue = dataTuple[2].slice(0, 10);  // Date (second value in Data_tuple)
+                var fifthValue = dataTuple[5];   // True or False (fifth value)
+                var sixthValue = dataTuple[6];   // Fibonacci retracement (sixth value)
                 
+                // Determine y0 (starting point) based on fifthValue (low or high)
+                var y0 = fifthValue ? item.low : item.high;
+
+                // Find index of secondValue in the dates array
+                var index = dates.indexOf(secondValue);
+
+                    // Calculate 10 bars ahead, limiting to the array length
+                const aheadIndex = Math.min(index + 20, dates.length -1);
+
+                var x1Date = dates[aheadIndex];  // The date 10 bars ahead
+                // Add rectangle based on Data_tuple values
+                rectangles.push({
+                    type: 'rect',
+                    xref: 'x',
+                    yref: 'y1',
+                    x0: secondValue,  // The time of the candle
+                    x1: x1Date,  // End time (same as start for a vertical rectangle)
+                    y0: sixthValue["23.6% retracement"],           // Draw from low or high
+                    y1: y0,  // Draw to the 50% retracement level
+                    line: {
+                        color: 'rgba(255, 255, 0, 0.3)',
+                        width: 0.5
+                    },
+                    fillcolor: 'rgba(255, 255, 0, 0.3)'
+                },
+                    
+                    {
+                    type: 'rect',
+                    xref: 'x',
+                    yref: 'y1',
+                    x0: secondValue,  // The time of the candle
+                    x1: x1Date,  // End time (same as start for a vertical rectangle)
+                    y0: sixthValue["38.2% retracement"],           // Draw from low or high
+                    y1: sixthValue["23.6% retracement"],  // Draw to the 50% retracement level
+                    line: {
+                        color: 'rgba(0, 255, 0, 0.3)',
+                        width: 0.5
+                    },
+                    fillcolor: 'rgba(0, 255, 0, 0.3)'
+                },
+                
+                {type: 'rect',
+                    xref: 'x',
+                    yref: 'y1',
+                    x0: secondValue,  // The time of the candle
+                    x1: x1Date,  // End time (same as start for a vertical rectangle)
+                    y0: sixthValue["50.0% retracement"],           // Draw from low or high
+                    y1: sixthValue["38.2% retracement"],  // Draw to the 50% retracement level
+                    line: {
+                        color: 'rgba(0, 0, 255, 0.3)',
+                        width: 0.5
+                    },
+                    fillcolor: 'rgba(0, 0, 255, 0.3)'
+                },
+                
+               {type: 'rect',
+                    xref: 'x',
+                    yref: 'y1',
+                    x0: secondValue,  // The time of the candle
+                    x1: x1Date,  // End time (same as start for a vertical rectangle)
+                    y0: sixthValue["61.8% retracement"],           // Draw from low or high
+                    y1: sixthValue["50.0% retracement"],  // Draw to the 50% retracement level
+                    line: {
+                        color: 'rgba(0, 100, 0, 0.3)',
+                        width: 0.5
+                    },
+                    fillcolor: 'rgba(0, 100, 0, 0.3)'
+                },
+                );
+            }
+        });
+
                 // Layout for the chart
                 var layout = {
-                    title: `Study for ${tick}`,
+                    title: `Study for ${tick}, latest [${secondValue}]`,
                     height: 800,
                     grid: {
                         rows: 3,
@@ -309,7 +316,7 @@ fibData.forEach((item, index) => {
                     },
                     xaxis: {
                         autorange: true,
-                        rangeslider: { visible: true, range: [firstDate, lastDate], yaxis: {
+                        rangeslider: { visible: true, range: [firstDate, formattedExtendedLastDate], yaxis: {
             rangemode: 'match',  // Ensures the y-axis is consistent
             thickness: 0.05 // Reduce this value to make the range slider thinner
         }},
@@ -337,27 +344,11 @@ fibData.forEach((item, index) => {
                     },
                     showlegend: true,
                     hovermode: 'x',
-                    // shapes: rectangles  // Add rectangles to the layout
+                    shapes: rectangles  // Add rectangles to the layout
                 };                                                  
 
-                // Array of existing traces
-                var allTraces = [
-                    candlestick,
-                    volume_trace,
-                    k_trace,
-                    d_trace,
-                    ob_line,
-                    os_line,
-                    bbl_trace,
-                    bbm_trace,
-                    bbu_trace
-                ];
-                
-                // Concatenate the Fibonacci retracement traces to allTraces
-                allTraces = allTraces.concat(traces);
-                // console.log(allTraces)
                 // Plot the chart
-                Plotly.newPlot('plot', allTraces, layout, {showSendToCloud: true});
+                Plotly.newPlot('plot', [candlestick, volume_trace, k_trace, d_trace, ob_line, os_line, bbl_trace, bbm_trace, bbu_trace], layout, {showSendToCloud: true});
 
                 // Set up relayout event for auto-scaling on zoom, pan, or rangeslider move
                 var myPlot = document.getElementById('plot');
