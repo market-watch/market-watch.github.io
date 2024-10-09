@@ -259,7 +259,7 @@ fibData.forEach((item, index) => {
     var dataTuple = item.dataTuple;
 
     // Only process if Data_tuple is not 0
-    if (dataTuple !== 0 || !isNaN(dataTuple)) {
+    if (dataTuple !== 0 && !isNaN(dataTuple)) {
         var secondValue = dataTuple[2].slice(0, 10);  // Date (second value in Data_tuple)
         var sixthValue = dataTuple[6];                 // Fibonacci retracement (sixth value)
 
