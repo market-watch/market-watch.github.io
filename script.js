@@ -215,12 +215,11 @@ function plotGraph() {
 
 
 
-        // Extract the required data from tickData
 var fibData = tickData.map(entry => ({
     date: entry.Datetime.slice(0, 10),  // The date
-    low: entry.low,        // Low of the candle
-    high: entry.high,      // High of the candle
-    dataTuple: entry.Data_tuple // Data_tuple
+    low: entry.low,                      // Low of the candle
+    high: entry.high,                    // High of the candle
+    dataTuple: entry.Data_tuple          // Data_tuple
 }));
 
 // Initialize the traces array
@@ -236,28 +235,28 @@ fibData.forEach((item, idx) => {
     // Only process if Data_tuple is not 0
     if (dataTuple !== 0) {
         var secondValue = dataTuple[2].slice(0, 10);  // Date (second value in Data_tuple)
-        var fifthValue = dataTuple[5];   // True or False (fifth value)
-        var sixthValue = dataTuple[6];   // Fibonacci retracement (sixth value)
-        
+        var fifthValue = dataTuple[5];                 // True or False (fifth value)
+        var sixthValue = dataTuple[6];                  // Fibonacci retracement (sixth value)
+
         // Determine y0 (starting point) based on fifthValue (low or high)
         var y0 = fifthValue ? item.low : item.high;
         var index = dates.indexOf(secondValue);
         const aheadIndex = Math.min(index + 20, dates.length - 1);
         var x1Date = dates[aheadIndex];
-        
+
         // Loop through retracement levels to create traces for each
         levels.forEach((level, levelIdx) => {
             var color;
             switch(levelIdx) {
-                case 0: color = 'rgba(255, 255, 0, 0.3)'; break;
-                case 1: color = 'rgba(0, 255, 0, 0.3)'; break;
-                case 2: color = 'rgba(0, 0, 255, 0.3)'; break;
-                case 3: color = 'rgba(0, 100, 0, 0.3)'; break;
+                case 0: color = 'rgba(255, 255, 0, 0.3)'; break;  // Yellow
+                case 1: color = 'rgba(0, 255, 0, 0.3)'; break;    // Green
+                case 2: color = 'rgba(0, 0, 255, 0.3)'; break;    // Blue
+                case 3: color = 'rgba(0, 100, 0, 0.3)'; break;    // Dark Green
             }
-            
+
             var y1 = sixthValue[level + ' retracement'];
             var y2 = levelIdx === 0 ? y0 : sixthValue[levels[levelIdx - 1] + ' retracement'];
-            
+
             // Create a scatter trace for each rectangle segment
             traces.push({
                 x: [secondValue, x1Date, x1Date, secondValue],
@@ -274,8 +273,86 @@ fibData.forEach((item, idx) => {
     }
 });
 
+// Combine all traces
+var allTraces = [
+    candlestick,
+    volume_trace,
+    k_trace,
+    d_trace,
+    ob_line,
+    os_line,
+    bbl_trace,
+    bbm_trace,
+    bbu_trace
+].concat(traces);  // Combine with Fibonacci traces
 
+// Define the layout for the chart
+var layout = {
+    title: `Study for ${tick}, latest [${fibData[0].date}]`,
+    height: 800,
+    showlegend: true,
+    hovermode: 'x'
+};
 
+// Plot the chart with all traces
+Plotly.newPlot('chart', allTraces, layout);
+var fibData = tickData.map(entry => ({
+    date: entry.Datetime.slice(0, 10),  // The date
+    low: entry.low,                      // Low of the candle
+    high: entry.high,                    // High of the candle
+    dataTuple: entry.Data_tuple          // Data_tuple
+}));
+
+// Initialize the traces array
+var traces = [];
+
+// Define retracement levels in order
+var levels = ["23.6%", "38.2%", "50.0%", "61.8%"];
+
+// Loop through fibData to create traces based on Data_tuple
+fibData.forEach((item, idx) => {
+    var dataTuple = item.dataTuple;
+    
+    // Only process if Data_tuple is not 0
+    if (dataTuple !== 0) {
+        var secondValue = dataTuple[2].slice(0, 10);  // Date (second value in Data_tuple)
+        var fifthValue = dataTuple[5];                 // True or False (fifth value)
+        var sixthValue = dataTuple[6];                  // Fibonacci retracement (sixth value)
+
+        // Determine y0 (starting point) based on fifthValue (low or high)
+        var y0 = fifthValue ? item.low : item.high;
+        var index = dates.indexOf(secondValue);
+        const aheadIndex = Math.min(index + 20, dates.length - 1);
+        var x1Date = dates[aheadIndex];
+
+        // Loop through retracement levels to create traces for each
+        levels.forEach((level, levelIdx) => {
+            var color;
+            switch(levelIdx) {
+                case 0: color = 'rgba(255, 255, 0, 0.3)'; break;  // Yellow
+                case 1: color = 'rgba(0, 255, 0, 0.3)'; break;    // Green
+                case 2: color = 'rgba(0, 0, 255, 0.3)'; break;    // Blue
+                case 3: color = 'rgba(0, 100, 0, 0.3)'; break;    // Dark Green
+            }
+
+            var y1 = sixthValue[level + ' retracement'];
+            var y2 = levelIdx === 0 ? y0 : sixthValue[levels[levelIdx - 1] + ' retracement'];
+
+            // Create a scatter trace for each rectangle segment
+            traces.push({
+                x: [secondValue, x1Date, x1Date, secondValue],
+                y: [y1, y1, y2, y2],
+                type: 'scatter',
+                mode: 'lines',
+                fill: 'toself',
+                fillcolor: color,
+                line: { color: color, width: 0 },
+                name: `Selene ${idx + 1} (${level}%)`,
+                visible: 'legendonly'
+            });
+        });
+    }
+});
 
 
 
