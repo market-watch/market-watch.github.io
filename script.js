@@ -323,7 +323,7 @@ function plotGraph() {
 
                 // Layout for the chart
                 var layout = {
-                    title: `Study for ${tick}, latest [${secondValue}]`,
+                    title: `Study for ${tick}`,
                     height: 800,
                     grid: {
                         rows: 3,
