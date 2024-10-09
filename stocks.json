@@ -1532,6 +1532,10 @@
         "name": "Dish Tv India Limited"
     },
     {
+        "symbol": "DIVGIITTS",
+        "name": "Divgi Torqtransfer Systems Ltd"
+    },
+    {
         "symbol": "DIVISLAB",
         "name": "Divi's Laboratories Limited"
     },
@@ -5564,10 +5568,6 @@
         "name": "Share India Securities Ltd"
     },
     {
-        "symbol": "SHEKHAWATI",
-        "name": "Shekhawati Industries Ltd"
-    },
-    {
         "symbol": "SHEMAROO",
         "name": "Shemaroo Entertainment Limited"
     },
@@ -6262,10 +6262,6 @@
     {
         "symbol": "TIMKEN",
         "name": "Timken India Limited"
-    },
-    {
-        "symbol": "TIPSMUSIC",
-        "name": "Tips Music Ltd"
     },
     {
         "symbol": "TIRUMALCHM",
