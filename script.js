@@ -47,7 +47,7 @@ async function loadData() {
             return;
         }
 
-        const jsonData = await fetchAndDecryptJson(fileName, randstr);
+        let jsonData = await fetchAndDecryptJson(fileName, randstr);
         
         
         // Assuming jsonData is your JSON object
