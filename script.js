@@ -79,6 +79,23 @@ function plotGraph() {
 
         // Extract candlestick data
         const dates = tickData.map(entry => entry.Datetime.slice(0, 10)); // Use YYYY-MM-DD
+        // Get the last date from the dates array
+        let lastDate1 = new Date(dates[dates.length - 1]);
+        
+        // Function to format date as 'YYYY-MM-DD'
+        function formatDate(date) {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+            const day = String(date.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
+        
+        // Add 10 additional days to the dates array
+        for (let i = 1; i <= 10; i++) {
+            lastDate1.setDate(lastDate1.getDate() + 1);
+            dates.push(formatDate(lastDate1));
+        }
+        
         const opens = tickData.map(entry => entry.open);
         const highs = tickData.map(entry => entry.high);
         const lows = tickData.map(entry => entry.low);
