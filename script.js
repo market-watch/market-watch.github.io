@@ -286,7 +286,7 @@ fibData.forEach((item, index) => {
                 visible: 'legendonly',        // Set initial visibility to legend only
                 legendgroup: groupName        // Grouping for legend toggling
             });
-
+            console.log(traces)
             // Update previous level for the next iteration
             prevLevel = currentLevel;
         });
@@ -355,7 +355,7 @@ fibData.forEach((item, index) => {
                 
                 // Concatenate the Fibonacci retracement traces to allTraces
                 allTraces = allTraces.concat(traces);
-
+                console.log(allTraces)
                 // Plot the chart
                 Plotly.newPlot('plot', allTraces, layout, {showSendToCloud: true});
 
