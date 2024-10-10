@@ -430,10 +430,10 @@ if (window.innerWidth <= 768) {
                     var sll = tickData[pointIndex].low
                     var mar = dataTuple[7]
                     var atrv = dataTuple[8]
-                    console.log(dataTuple)
-                    console.log(mar)
-                    console.log(mar[1])
-                    // Show the info boxes
+                    // console.log(dataTuple)
+                    // console.log(mar)
+                    // console.log(mar[1])
+                    // // Show the info boxes
                     document.getElementById("info-boxes").style.display = "flex";
 
                     // Fill box1 based on Data_tuple[0]
@@ -464,6 +464,9 @@ if (window.innerWidth <= 768) {
     document.getElementById("box2").style.color = textColorGap;
     document.getElementById("box2").style.backgroundColor = boxColorGap;
 
+    let maru = '';
+    let textColorMar = '';
+    let boxtColorMar = '';
     // Text for box 3
     if (mar !== 'None' && mar[1] > 0  && dataTuple[5] == true) {
         maru = 'BullMB';
