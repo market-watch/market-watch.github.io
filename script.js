@@ -544,14 +544,14 @@ if (window.innerWidth <= 768) {
 
     // Data for box9
     const atrtextColor = (atrv === false) ? "#008000" : "#FF0000"; // Green if true, red if false
-    document.getElementById("box9").style.color = textColor;
+    document.getElementById("box4").style.color = textColor;
 
     // Set background color for boxes if needed (optional)
     const atrboxColor = (atrv === false) ? "#90EE90" : "#FFCCCB"; // LightGreen or LightCoral
-    document.getElementById("box9").style.backgroundColor = boxColor;
+    document.getElementById("box4").style.backgroundColor = boxColor;
 
     const bt9 = (atrv === false) ? "Normal" : "High";
-    document.getElementById("box9").innerText = bt9;
+    document.getElementById("box4").innerText = bt9;
 
         }
     });
