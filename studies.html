@@ -6,16 +6,14 @@
     <title>Stock Data Plot</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-
+    
     <style>
         /* Main container for flex layout */
         body {
             display: flex;
-            flex-direction: column; /* Stack elements vertically on small screens */
+            justify-content: space-between;
             background-color: transparent; /* Transparent background for video */
             color: white;
-            margin: 0; /* Remove default margin */
-            height: 100vh; /* Full viewport height */
         }
 
         /* Style for the plot and input areas */
@@ -23,21 +21,19 @@
             width: 80%;
             position: relative;
             z-index: 1;
-            margin: auto; /* Center main content */
-            padding: 20px; /* Add padding for content */
         }
 
         /* Container for boxes aligned to the right */
         .info-box-container {
-            width: 100%; /* Full width on smaller screens */
+            width: 20%;
             display: flex;
-            flex-direction: column; /* Stack boxes vertically */
-            align-items: flex-end; /* Align boxes to the end */
-            margin-top: 20px; /* Spacing between main content and boxes */
+            flex-direction: column;
+            align-items: flex-end;
+            margin-top: 300px;
             position: relative;
             z-index: 1;
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-            padding: 20px; /* Padding inside the container */
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white strip */
+            padding: 20px 0;
         }
 
         /* Style for individual info boxes */
@@ -56,11 +52,11 @@
         .info-box-wrapper {
             margin-bottom: 10px;
         }
-
+        
         .info-label {
             font-weight: bold;
             margin-bottom: 5px;
-            color: black; /* Change to black for better visibility on white background */
+            color: white; /* White headings */
         }
 
         /* Background Video */
@@ -80,9 +76,7 @@
             color: white;
             border: 1px solid #666;
             padding: 5px;
-            width: 100%; /* Full width on smaller screens */
-            max-width: 300px; /* Maximum width for larger screens */
-            margin-bottom: 10px; /* Space between input and button */
+            width: 200px;
         }
 
         #suggestions {
@@ -91,27 +85,10 @@
             background-color: #333;
             max-height: 200px;
             overflow-y: auto;
-            width: 100%; /* Full width */
         }
 
         #plot {
             color: white;
-            margin-top: 20px; /* Space between input area and plot */
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .main-content {
-                width: 90%; /* More width on smaller screens */
-            }
-
-            .info-box-container {
-                width: 100%; /* Ensure boxes take full width on smaller screens */
-            }
-
-            .info-box {
-                width: 80px; /* Adjust width for better visibility */
-            }
         }
     </style>
 </head>
@@ -122,19 +99,19 @@
         <source src="lib/osc.webm" type="video/webm">
         Your browser does not support the video tag.
     </video>
-
+    
     <!-- Main Content -->
     <div class="main-content">
         <h1>Search Stock Data</h1>
-
+        
         <input type="text" id="search-box" placeholder="Enter tick...">
         <div id="suggestions"></div>
         <button id="search-button">Search</button>
-
+    
         <div id="message"></div>
         <div id="plot"></div>
     </div>
-
+    
     <!-- Right-side boxes container -->
     <div class="info-box-container" id="info-boxes" style="display: none;">
         <!-- Info boxes for displaying data -->
