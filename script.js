@@ -110,7 +110,7 @@ function plotGraph() {
         // Get first and last date for setting X-axis range
         const firstDate = dates[0];
         const lastDate = dates[dates.length - 1];
-        const last50date = dates[dates.length - 50];
+        const last50date = dates[dates.length - 180];
         // Extend the chart to include 10 additional days
         const extendedLastDate = new Date(lastDate);
         extendedLastDate.setDate(extendedLastDate.getDate() + 10);
