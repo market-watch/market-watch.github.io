@@ -6,16 +6,20 @@
     <title>Stock Data Plot</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    
     <style>
         /* Main container for flex layout */
         body {
             display: flex;
             justify-content: space-between;
+            background-color: transparent; /* Transparent background for video */
         }
 
         /* Style for the plot and input areas */
         .main-content {
             width: 80%;
+            position: relative;
+            z-index: 1;
         }
 
         /* Container for boxes aligned to the right */
@@ -23,14 +27,16 @@
             width: 20%;
             display: flex;
             flex-direction: column;
-            align-items: flex-end; /* Align the boxes to the right */
+            align-items: flex-end;
             margin-top: 300px;
+            position: relative;
+            z-index: 1;
         }
 
         /* Style for individual info boxes */
         .info-box {
             width: 70px;
-            height: 30px; /* Increased height for better readability */
+            height: 30px;
             margin: 5px;
             padding: 10px;
             border: 1px solid #ccc;
@@ -38,17 +44,37 @@
             text-align: center;
             font-weight: bold;
         }
+
         .info-box-wrapper {
-                margin-bottom: 10px; /* Spacing between each box */
-            }
-            
-            .info-label {
-                font-weight: bold; /* Makes the label stand out */
-                margin-bottom: 5px; /* Spacing between label and box */
-            }
+            margin-bottom: 10px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* Background Video */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
     </style>
 </head>
+
 <body>
+    <!-- Background Video -->
+    <video class="video-bg" autoplay muted loop>
+        <source src="lib/osc.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+    
+    <!-- Main Content -->
     <div class="main-content">
         <h1>Search Stock Data</h1>
         
@@ -62,80 +88,66 @@
     
     <!-- Right-side boxes container -->
     <div class="info-box-container" id="info-boxes" style="display: none;">
-    <div class="info-box-wrapper">
-        <span class="info-label">Type</span>
-        <div id="box1" class="info-box"></div>
-    </div>
-    <div class="info-box-wrapper">
-        <span class="info-label">GAP</span>
-        <div id="box2" class="info-box"></div>
-    </div>
-    <div class="info-box-wrapper">
-        <span class="info-label">Marubozu</span>
-        <div id="box3" class="info-box"></div>
-    </div>
-    <div class="info-box-wrapper">
-        <span class="info-label">ATRV</span>
-        <div id="box4" class="info-box"></div>
-    </div>
-    <div class="info-box-wrapper">
-        <span class="info-label">RP</span>
-        <div id="box5" class="info-box"></div>
-    </div>
-    <div class="info-box-wrapper">
-        <span class="info-label">L1</span>
-        <div id="box6" class="info-box"></div>
-    </div>
-    <div class="info-box-wrapper">
-        <span class="info-label">L2</span>
-        <div id="box7" class="info-box"></div>
-    </div>
-    <div class="info-box-wrapper">
-        <span class="info-label">L3</span>
-        <div id="box8" class="info-box"></div>
-    </div>
-    <div class="info-box-wrapper">
-        <span class="info-label">L4</span>
-        <div id="box8" class="info-box"></div>
-    </div>
-</div>
-
-
-        
+        <!-- Info boxes for displaying data -->
+        <div class="info-box-wrapper">
+            <span class="info-label">Type</span>
+            <div id="box1" class="info-box"></div>
+        </div>
+        <div class="info-box-wrapper">
+            <span class="info-label">GAP</span>
+            <div id="box2" class="info-box"></div>
+        </div>
+        <!-- Additional boxes -->
+        <div class="info-box-wrapper">
+            <span class="info-label">Marubozu</span>
+            <div id="box3" class="info-box"></div>
+        </div>
+        <div class="info-box-wrapper">
+            <span class="info-label">ATRV</span>
+            <div id="box4" class="info-box"></div>
+        </div>
+        <div class="info-box-wrapper">
+            <span class="info-label">RP</span>
+            <div id="box5" class="info-box"></div>
+        </div>
+        <div class="info-box-wrapper">
+            <span class="info-label">L1</span>
+            <div id="box6" class="info-box"></div>
+        </div>
+        <div class="info-box-wrapper">
+            <span class="info-label">L2</span>
+            <div id="box7" class="info-box"></div>
+        </div>
+        <div class="info-box-wrapper">
+            <span class="info-label">L3</span>
+            <div id="box8" class="info-box"></div>
+        </div>
+        <div class="info-box-wrapper">
+            <span class="info-label">L4</span>
+            <div id="box9" class="info-box"></div>
+        </div>
     </div>
 
+    <!-- Script for disabling right-click and key combinations -->
     <script>
-        // Disable right-click
         document.addEventListener('contextmenu', function(event) {
             event.preventDefault();
             alert("This page does not support this feature.");
         });
 
-        // Disable F12 and Ctrl key combinations
         document.addEventListener('keydown', function(event) {
-            // Check for F12 key (Developer Tools)
-            if (event.key === 'F12') {
-                event.preventDefault();
-                alert("This page does not support this feature.");
-            }
-
-            // Check for Ctrl key combinations (Ctrl+S, Ctrl+U, etc.)
-            if (event.ctrlKey && (event.key === 'u' || event.key === 's' || event.key === 'p' || event.key === 'c' || event.key === 'Shift')) {
+            if (event.key === 'F12' || (event.ctrlKey && (event.key === 'u' || event.key === 's' || event.key === 'p' || event.key === 'c' || event.key === 'Shift'))) {
                 event.preventDefault();
                 alert("This page does not support this feature.");
             }
         });
     </script>
 
+    <!-- Reload page on empty search box -->
     <script>
-        // Get the search box element
         const searchBox = document.getElementById('search-box');
-
-        // Add an event listener to monitor input changes
         searchBox.addEventListener('input', function() {
-            // Check if the search box is cleared
             if (searchBox.value === '') {
-                // Reload the page if cleared
                 location.reload();
             }
         });
