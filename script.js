@@ -246,7 +246,7 @@ function plotGraph() {
             // Only process if Data_tuple is not 0
             if (dataTuple !== 0) {
                 var secondValue = dataTuple[2].slice(0, 10);  // Date (second value in Data_tuple)
-                var fifthValue = dataTuple[5];   // True or False (fifth value)
+                var fifthValue = dataTuple[5];   // true or false (fifth value)
                 var sixthValue = dataTuple[6];   // Fibonacci retracement (sixth value)
                 
                 // Determine y0 (starting point) based on fifthValue (low or high)
@@ -462,26 +462,26 @@ if (window.innerWidth <= 768) {
     document.getElementById("box2").style.backgroundColor = boxColorGap;
 
     // Text for box 3
-    if (mar !== 'None' && mar[1] > 0  && dataTuple[5] == True) {
+    if (mar !== 'None' && mar[1] > 0  && dataTuple[5] == true) {
         maru = 'BullMB';
         const textColorMar = "#008000";
         const boxtColorMar = "#90EE90";
-    } else if (mar !== 'None' && mar[1] > 0  && dataTuple[5] == False) {
+    } else if (mar !== 'None' && mar[1] > 0  && dataTuple[5] == false) {
         maru = 'BullMB';
         const textColorMar = "#008000";
         const boxtColorMar = "#90EE90";
         
-    } else if (mar !== 'None' && mar[1] < 0  && dataTuple[5] == False) {
+    } else if (mar !== 'None' && mar[1] < 0  && dataTuple[5] == false) {
         maru = 'BearMB';
         const textColorMar = "#FF0000";
         const boxtColorMar = "#FFCCCB";
 
-    } else if (mar !== 'None' && mar[1] < 0  && dataTuple[5] == True) {
+    } else if (mar !== 'None' && mar[1] < 0  && dataTuple[5] == true) {
         maru = 'BearMB';
         const textColorMar = "#FF0000";
         const boxtColorMar = "#FFCCCB";
 
-    } else if (mar === 'None'  && dataTuple[5] == False) {
+    } else if (mar === 'None'  && dataTuple[5] == false) {
         maru = '';
         const textColorMar = "#FF0000";
         const boxtColorMar = "#FFCCCB";
@@ -543,14 +543,14 @@ if (window.innerWidth <= 768) {
     document.getElementById("box9").style.color = f61tc;
 
     // Data for box9
-    const atrtextColor = (atrv === False) ? "#008000" : "#FF0000"; // Green if true, red if false
+    const atrtextColor = (atrv === false) ? "#008000" : "#FF0000"; // Green if true, red if false
     document.getElementById("box9").style.color = textColor;
 
     // Set background color for boxes if needed (optional)
-    const atrboxColor = (atrv === False) ? "#90EE90" : "#FFCCCB"; // LightGreen or LightCoral
+    const atrboxColor = (atrv === false) ? "#90EE90" : "#FFCCCB"; // LightGreen or LightCoral
     document.getElementById("box9").style.backgroundColor = boxColor;
 
-    const bt9 = (atrv === False) ? "Normal" : "High";
+    const bt9 = (atrv === false) ? "Normal" : "High";
     document.getElementById("box9").innerText = bt9;
 
         }
