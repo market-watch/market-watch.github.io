@@ -13,7 +13,7 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
         }
-        
+
         .video-bg {
             position: fixed;
             top: 0;
@@ -23,23 +23,28 @@
             object-fit: cover;
             z-index: -1;
         }
-        
+
         .content {
             position: relative;
             padding: 20px;
             background-color: rgba(244, 244, 244, 0.75); /* Slight transparency for better readability */
+            max-width: 800px; /* Limit content width for larger screens */
+            margin: auto; /* Center the content */
         }
 
         h1 {
             color: #333;
+            font-size: 2em; /* Responsive heading size */
         }
 
         h2 {
             color: #666;
+            font-size: 1.5em; /* Responsive subheading size */
         }
 
         p {
             margin-bottom: 15px;
+            font-size: 1em; /* Base font size for paragraphs */
         }
 
         .highlight {
@@ -54,6 +59,39 @@
             font-size: 0.8em;
             color: #999;
         }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em; /* Smaller font size for mobile */
+            }
+
+            h2 {
+                font-size: 1.25em; /* Smaller subheading size for mobile */
+            }
+
+            .content {
+                padding: 10px; /* Less padding on smaller screens */
+            }
+
+            p {
+                font-size: 0.9em; /* Smaller font size for paragraphs */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.25em; /* Further reduce size for very small devices */
+            }
+
+            h2 {
+                font-size: 1.1em; /* Further reduce size for very small devices */
+            }
+
+            p {
+                font-size: 0.85em; /* Further reduce size for very small devices */
+            }
+        }
     </style>
 </head>
 <body>
@@ -66,13 +104,13 @@
     <!-- Page content -->
     <div class="content">
         <h1>SELENE: Stock Engine for Long-term Economic and Neural Evaluation</h1>
-        
+
         <h2>Overview</h2>
         <p>SELENE is a state-of-the-art stock analysis engine designed to study short and long-term trend insights through the use of advanced machine learning (ML) algorithms. As an educational tool, SELENE aims to enhance understanding of market dynamics by analyzing vast amounts of financial data and identifying patterns that drive market movements.</p>
 
         <h2>Key Features</h2>
         <ul>
-            <li><strong>Machine Learning Predictive Models:</strong> SELENE employs cutting-edge machine learning techniques to analyse future stock prices and trends. By training on historical data, the model adapts to market changes and enhances its predictive accuracy.</li>
+            <li><strong>Machine Learning Predictive Models:</strong> SELENE employs cutting-edge machine learning techniques to analyze future stock prices and trends. By training on historical data, the model adapts to market changes and enhances its predictive accuracy.</li>
             <li><strong>Rigorous Testing of Historical Data:</strong> Each predictive model undergoes extensive backtesting against historical stock performance. This rigorous testing ensures reliability and helps fine-tune the algorithms to better capture market dynamics, providing users with valuable educational insights.</li>
             <li><strong>Market Study and Educational Insights:</strong> SELENE serves as an educational tool, enabling users to study market behaviors and learn from the analysis of stock data. It offers detailed reports and visualizations to enhance understanding and support informed decision-making.</li>
             <li><strong>Neural Evaluation:</strong> The neural network architecture allows SELENE to learn from complex data relationships, improving its ability to make informed analysis based on nuanced patterns.</li>
