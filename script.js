@@ -469,36 +469,29 @@ if (window.innerWidth <= 768) {
     let boxtColorMar = '';
     // Text for box 3
     if (mar !== 'None') {
-    if (mar !== 'None' && mar[1] > 0  && dataTuple[5] == true) {
+    if (mar[1] > 0 && dataTuple[5] === true) {
         maru = 'BullMB';
         const textColorMar = "#008000";
         const boxtColorMar = "#90EE90";
-    } else if (mar !== 'None' && mar[1] > 0  && dataTuple[5] == false) {
+    } else if (mar[1] > 0 && dataTuple[5] === false) {
         maru = 'BullMB';
         const textColorMar = "#008000";
         const boxtColorMar = "#90EE90";
-        
-    } else if (mar !== 'None' && mar[1] < 0  && dataTuple[5] == false) {
+    } else if (mar[1] < 0 && dataTuple[5] === false) {
         maru = 'BearMB';
         const textColorMar = "#FF0000";
         const boxtColorMar = "#FFCCCB";
-
-    } else if (mar !== 'None' && mar[1] < 0  && dataTuple[5] == true) {
+    } else if (mar[1] < 0 && dataTuple[5] === true) {
         maru = 'BearMB';
-        const textColorMar = "#FF0000";
-        const boxtColorMar = "#FFCCCB";
-
-    } else if (mar === 'None'  && dataTuple[5] == false) {
-        maru = '';
         const textColorMar = "#FF0000";
         const boxtColorMar = "#FFCCCB";
     }
-    else {
-        maru = '';
-        const textColorMar = "#008000";
-        const boxtColorMar = "#90EE90";
-        
-    }}
+} else {
+    // Fallback when mar is 'None'
+    maru = '';
+    const textColorMar = dataTuple[5] === false ? "#FF0000" : "#008000";
+    const boxtColorMar = dataTuple[5] === false ? "#FFCCCB" : "#90EE90";
+}
 
     document.getElementById("box3").style.color = textColorMar;
     document.getElementById("box3").style.backgroundColor = boxColorMar;
