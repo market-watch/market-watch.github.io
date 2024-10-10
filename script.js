@@ -430,6 +430,9 @@ if (window.innerWidth <= 768) {
                     var sll = tickData[pointIndex].low
                     var mar = dataTuple[7]
                     var atrv = dataTuple[8]
+                    console.log(dataTuple)
+                    console.log(mar)
+                    console.log(mar[1])
                     // Show the info boxes
                     document.getElementById("info-boxes").style.display = "flex";
 
