@@ -332,7 +332,7 @@ var layout = {
         roworder: 'top to bottom'
     },
     xaxis: {
-        autorange: true,
+        // autorange: true,
         rangeslider: { 
             visible: true, 
             range: [firstDate, formattedExtendedLastDate],
