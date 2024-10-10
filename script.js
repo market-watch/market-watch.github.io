@@ -468,7 +468,7 @@ if (window.innerWidth <= 768) {
     let textColorMar = '';
     let boxtColorMar = '';
     // Text for box 3
-    if (mar !== 'None) {
+    if (mar !== 'None') {
     if (mar !== 'None' && mar[1] > 0  && dataTuple[5] == true) {
         maru = 'BullMB';
         const textColorMar = "#008000";
