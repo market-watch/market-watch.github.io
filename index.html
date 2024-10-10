@@ -1,9 +1,10 @@
 <!doctype html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="lib/style.css">
     <script src="script.js"></script>
-
     <style>
         /* Reset default padding and margin */
         * {
@@ -44,6 +45,7 @@
             width: 100%;
             position: relative;
             z-index: 1;
+            flex-wrap: wrap; /* Allow items to wrap */
         }
 
         .nav-menu li {
@@ -70,6 +72,7 @@
             color: #007acc;
             position: relative;
             z-index: 1;
+            text-align: center; /* Center heading for mobile */
         }
 
         p {
@@ -81,7 +84,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         /* Popup Background */
         #disclaimer-popup {
             display: none;
@@ -138,10 +141,44 @@
         #disclaimer-popup button:hover {
             background-color: #218838;
         }
-    </style>
-  </head>
 
-  <body>
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column; /* Stack menu items on smaller screens */
+                align-items: center;
+            }
+
+            .nav-menu li {
+                margin: 10px 0; /* Adjust margins for stacked layout */
+            }
+
+            h1 {
+                font-size: 1.5rem; /* Smaller font size for heading */
+            }
+
+            p {
+                font-size: 0.9rem; /* Smaller font size for paragraph */
+            }
+
+            #disclaimer-popup .popup-content {
+                margin: 50px auto; /* Adjust margin for mobile */
+            }
+
+            #disclaimer-popup h2 {
+                font-size: 1.2em; /* Smaller font size for headings in popup */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-menu a {
+                font-size: 14px; /* Further reduce font size on very small screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
     <!-- Background Video -->
     <video class="video-bg" autoplay muted loop>
         <source src="lib/sitting learning.webm" type="video/webm">
@@ -154,31 +191,31 @@
     <div id="disclaimer-popup">
         <div class="popup-content">
             <h1>Disclaimer</h1>
-            
-    <h2>The Indicator</h2>
-    <p>
-        The Selene Indicator and Oscillator presented on this website, which utilizes a <b>Stock Engine for Long-term Economic and Neural Evaluation</b>, is solely for educational and informational purposes. It is not intended as financial advice or a recommendation for buying, selling, or holding any specific stock or security. The creators of this Selene Indicator and Oscillator, including the developers and website administrators, are not registered investment advisors, stockbrokers, or financial planners under SEBI or any other regulatory authority.
-    </p>
-    
-    <h2>No Financial Advice</h2>
-    <p>
-        The information provided by the Selene Indicator and Oscillator is based on historical data and predictive models, and it may not accurately reflect the future performance of any stock or security. Users of this website should not make any investment decisions based solely on the information provided here. We strongly encourage consulting with a SEBI-registered investment advisor or financial professional before making any financial decisions.
-    </p>
 
-    <h2>No Liability</h2>
-    <p>
-       By using this website and the Selene Indicator and Oscillator, you agree that the creators, developers, and any associated parties are not liable for any losses, damages, or legal actions that may result from using the Selene Indicator and Oscillator or the information provided. You acknowledge that the stock market carries inherent risks, and you assume full responsibility for any investment decisions made based on the use of this Selene Indicator and Oscillator.
-    </p>
+            <h2>The Indicator</h2>
+            <p>
+                The Selene Indicator and Oscillator presented on this website, which utilizes a <b>Stock Engine for Long-term Economic and Neural Evaluation</b>, is solely for educational and informational purposes. It is not intended as financial advice or a recommendation for buying, selling, or holding any specific stock or security. The creators of this Selene Indicator and Oscillator, including the developers and website administrators, are not registered investment advisors, stockbrokers, or financial planners under SEBI or any other regulatory authority.
+            </p>
 
-    <h2>Compliance with SEBI Regulations</h2>
-    <p>
-        We do not guarantee compliance with SEBI guidelines for investment advice as this is purely an educational tool. Any use of the Selene Indicator and Oscillator for actual trading or investment purposes is done at your own risk and discretion. We are not liable for any actions taken by SEBI or any other regulatory authority due to the use of this website or Selene Indicator and Oscillator.
-    </p>
+            <h2>No Financial Advice</h2>
+            <p>
+                The information provided by the Selene Indicator and Oscillator is based on historical data and predictive models, and it may not accurately reflect the future performance of any stock or security. Users of this website should not make any investment decisions based solely on the information provided here. We strongly encourage consulting with a SEBI-registered investment advisor or financial professional before making any financial decisions.
+            </p>
 
-    <h2>Legal Notice</h2>
-    <p>
-        This website and the Selene Indicator and Oscillator are provided "as-is," and we reserve the right to make changes or discontinue the Selene Indicator and Oscillator at any time without notice. Users agree to indemnify and hold harmless the creators of this Selene Indicator and Oscillator from any legal claims, including but not limited to those brought by SEBI or other regulatory authorities, arising out of the use of this website or its contents.
-    </p>
+            <h2>No Liability</h2>
+            <p>
+                By using this website and the Selene Indicator and Oscillator, you agree that the creators, developers, and any associated parties are not liable for any losses, damages, or legal actions that may result from using the Selene Indicator and Oscillator or the information provided. You acknowledge that the stock market carries inherent risks, and you assume full responsibility for any investment decisions made based on the use of this Selene Indicator and Oscillator.
+            </p>
+
+            <h2>Compliance with SEBI Regulations</h2>
+            <p>
+                We do not guarantee compliance with SEBI guidelines for investment advice as this is purely an educational tool. Any use of the Selene Indicator and Oscillator for actual trading or investment purposes is done at your own risk and discretion. We are not liable for any actions taken by SEBI or any other regulatory authority due to the use of this website or Selene Indicator and Oscillator.
+            </p>
+
+            <h2>Legal Notice</h2>
+            <p>
+                This website and the Selene Indicator and Oscillator are provided "as-is," and we reserve the right to make changes or discontinue the Selene Indicator and Oscillator at any time without notice. Users agree to indemnify and hold harmless the creators of this Selene Indicator and Oscillator from any legal claims, including but not limited to those brought by SEBI or other regulatory authorities, arising out of the use of this website or its contents.
+            </p>
             <button onclick="closePopup()">I Agree</button>
         </div>
     </div>
@@ -192,7 +229,7 @@
             document.getElementById('disclaimer-popup').style.display = 'none';
         }
 
-        window.onload = function() {
+        window.onload = function () {
             showPopup(); // Show popup on page load
         };
     </script>
@@ -202,17 +239,18 @@
         <li><a href="lib/selene.html">About Selene</a></li>
         <li><a href="lib/stock-list.html">View Stock List</a></li>
         <li><a href="studies.html">Studies and Charts</a></li>
-      <li><a href="lib/Learning.html">How to Use?</a></li>
+        <li><a href="lib/Learning.html">How to Use?</a></li>
         <li><a href="lib/suggestions.html">Suggestions and Collaborations</a></li>
     </ul>
 
     <script>
         // Disable right-click
-        document.addEventListener('contextmenu', function(event) {
+        document.addEventListener('contextmenu', function (event) {
             event.preventDefault();
             alert("This page does not support this feature.");
         });
 
+        
         // Disable F12 and Ctrl key combinations
         document.addEventListener('keydown', function(event) {
             if (event.key === 'F12') {
@@ -221,6 +259,11 @@
             }
 
             if (event.ctrlKey && (event.key === 'u' || event.key === 's' || event.key === 'p' || event.key === 'c' || event.key === 'Shift')) {
+                event.preventDefault();
+                alert("This page does not support this feature.");
+            }
+
+if (event.key === 'F12' || (event.ctrlKey && (event.shiftKey || event.key === 'I' || event.key === 'u'))) {
                 event.preventDefault();
                 alert("This page does not support this feature.");
             }
