@@ -337,9 +337,7 @@ var layout = {
             visible: true, 
             range: [firstDate, formattedExtendedLastDate],
             thickness: 0.05, // Make the range slider thinner
-            yaxis: {
-                rangemode: 'match' // Ensure the y-axis is consistent
-            }
+            
         },
         range: [last50date, formattedExtendedLastDate], // Set the initial visible range to show only the last 50 candles
         rangebreaks: missingDates.map(date => ({ values: [date] })),
@@ -349,7 +347,9 @@ var layout = {
         title: 'Price',
         domain: [0.4, 1],  // Height for candlestick panel
         autorange: true,
-        anchor: 'x'
+        anchor: 'x',
+        rangemode: 'match' // Ensure the y-axis is consistent
+
     },
     yaxis2: {
         title: 'Volume',
