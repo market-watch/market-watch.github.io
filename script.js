@@ -468,6 +468,7 @@ if (window.innerWidth <= 768) {
     let textColorMar = '';
     let boxtColorMar = '';
     // Text for box 3
+    if (mar !== 'None) {
     if (mar !== 'None' && mar[1] > 0  && dataTuple[5] == true) {
         maru = 'BullMB';
         const textColorMar = "#008000";
@@ -497,7 +498,7 @@ if (window.innerWidth <= 768) {
         const textColorMar = "#008000";
         const boxtColorMar = "#90EE90";
         
-    }
+    }}
 
     document.getElementById("box3").style.color = textColorMar;
     document.getElementById("box3").style.backgroundColor = boxColorMar;
