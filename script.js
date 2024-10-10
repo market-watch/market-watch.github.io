@@ -322,47 +322,69 @@ function plotGraph() {
         });
 
                 // Layout for the chart
-                var layout = {
-                    title: `Study for ${tick}`,
-                    height: 800,
-                    grid: {
-                        rows: 3,
-                        columns: 1,
-                        pattern: 'independent',
-                        roworder: 'top to bottom'
-                    },
-                    xaxis: {
-                        autorange: true,
-                        rangeslider: { visible: true, range: [firstDate, formattedExtendedLastDate], yaxis: {
-            rangemode: 'match',  // Ensures the y-axis is consistent
-            thickness: 0.05 // Reduce this value to make the range slider thinner
-        }},
-                        
-                        rangebreaks: missingDates.map(date => ({ values: [date] })),
-                        title: 'Date'
-                    },
-                    yaxis1: {
-                        title: 'Price',
-                        domain: [0.4, 1],  // Adjusted height for candlestick panel
-                        autorange: true,
-                        anchor: 'x'
-                    },
-                    yaxis2: {
-                        title: 'Volume',
-                        domain: [0.25, 0.39],  // Adjusted height for volume panel
-                        autorange: true,
-                        anchor: 'x'
-                    },
-                    yaxis3: {
-                        title: 'Oscillator',
-                        domain: [0, 0.24],  // Adjusted height for K and D oscillator panel
-                        autorange: true,
-                        anchor: 'x'
-                    },
-                    showlegend: true,
-                    hovermode: 'x',
-                    shapes: rectangles  // Add rectangles to the layout
-                };                                                  
+var layout = {
+    title: `Study for ${tick}`,
+    height: 800,
+    grid: {
+        rows: 3,
+        columns: 1,
+        pattern: 'independent',
+        roworder: 'top to bottom'
+    },
+    xaxis: {
+        autorange: true,
+        rangeslider: { 
+            visible: true, 
+            range: [firstDate, formattedExtendedLastDate],
+            thickness: 0.05, // Make the range slider thinner
+            yaxis: {
+                rangemode: 'match' // Ensure the y-axis is consistent
+            }
+        },
+        rangebreaks: missingDates.map(date => ({ values: [date] })),
+        title: 'Date'
+    },
+    yaxis1: {
+        title: 'Price',
+        domain: [0.4, 1],  // Height for candlestick panel
+        autorange: true,
+        anchor: 'x'
+    },
+    yaxis2: {
+        title: 'Volume',
+        domain: [0.25, 0.39],  // Height for volume panel
+        autorange: true,
+        anchor: 'x'
+    },
+    yaxis3: {
+        title: 'Oscillator',
+        domain: [0, 0.24],  // Height for oscillator panel
+        autorange: true,
+        anchor: 'x'
+    },
+    showlegend: true,
+    hovermode: 'x',
+    shapes: rectangles, // Add rectangles to the layout
+    margin: {
+        t: 50,  // Top margin for title
+        r: 20,  // Right margin
+        b: 40,  // Bottom margin for x-axis labels
+        l: 40   // Left margin
+    },
+    responsive: true, // Enable responsive behavior
+    autosize: true // Allow automatic sizing based on viewport
+};
+
+// Adjust height dynamically for mobile screens
+if (window.innerWidth <= 768) {
+    layout.height = 400; // Reduce height for smaller screens
+    layout.title.font = { size: 16 }; // Adjust title font size for mobile
+    layout.xaxis.title.font = { size: 14 }; // Adjust x-axis title font size for mobile
+    layout.yaxis1.title.font = { size: 14 }; // Adjust y-axis 1 title font size for mobile
+    layout.yaxis2.title.font = { size: 14 }; // Adjust y-axis 2 title font size for mobile
+    layout.yaxis3.title.font = { size: 14 }; // Adjust y-axis 3 title font size for mobile
+}
+
 
                 // Plot the chart
                 Plotly.newPlot('plot', [candlestick, volume_trace, k_trace, d_trace, ob_line, os_line, bbl_trace, bbm_trace, bbu_trace], layout, {showSendToCloud: true});
