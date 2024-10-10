@@ -342,7 +342,6 @@ var layout = {
             }
         },
         range: [last50date, formattedExtendedLastDate], // Set the initial visible range to show only the last 50 candles
-},
         rangebreaks: missingDates.map(date => ({ values: [date] })),
         title: 'Date'
     },
