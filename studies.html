@@ -13,6 +13,7 @@
             display: flex;
             justify-content: space-between;
             background-color: transparent; /* Transparent background for video */
+            color: white;
         }
 
         /* Style for the plot and input areas */
@@ -31,6 +32,8 @@
             margin-top: 300px;
             position: relative;
             z-index: 1;
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white strip */
+            padding: 20px 0;
         }
 
         /* Style for individual info boxes */
@@ -43,6 +46,7 @@
             background-color: #f9f9f9;
             text-align: center;
             font-weight: bold;
+            color: black; /* Retain default text color inside the boxes */
         }
 
         .info-box-wrapper {
@@ -52,6 +56,7 @@
         .info-label {
             font-weight: bold;
             margin-bottom: 5px;
+            color: white; /* White headings */
         }
 
         /* Background Video */
@@ -63,6 +68,27 @@
             height: 100%;
             object-fit: cover;
             z-index: -1;
+        }
+
+        /* Search box and suggestions style */
+        #search-box {
+            background-color: #333;
+            color: white;
+            border: 1px solid #666;
+            padding: 5px;
+            width: 200px;
+        }
+
+        #suggestions {
+            border: 1px solid #666;
+            color: white;
+            background-color: #333;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        #plot {
+            color: white;
         }
     </style>
 </head>
@@ -79,10 +105,10 @@
         <h1>Search Stock Data</h1>
         
         <input type="text" id="search-box" placeholder="Enter tick...">
-        <div id="suggestions" style="border: 1px solid #ccc; max-height: 200px; overflow-y: auto;"></div>
+        <div id="suggestions"></div>
         <button id="search-button">Search</button>
     
-        <div id="message"></div> <!-- This will display messages -->
+        <div id="message"></div>
         <div id="plot"></div>
     </div>
     
