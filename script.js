@@ -428,6 +428,8 @@ if (window.innerWidth <= 768) {
                     var retracements = tickData[pointIndex].Data_tuple[6];
                     var slh = tickData[pointIndex].high
                     var sll = tickData[pointIndex].low
+                    var mar = dataTuple[7]
+                    var atrv = dataTuple[8]
                     // Show the info boxes
                     document.getElementById("info-boxes").style.display = "flex";
 
@@ -459,6 +461,44 @@ if (window.innerWidth <= 768) {
     document.getElementById("box2").style.color = textColorGap;
     document.getElementById("box2").style.backgroundColor = boxColorGap;
 
+    // Text for box 3
+    if (mar !== 'None' && mar[1] > 0  && dataTuple[5] == True) {
+        maru = 'BullMB';
+        const textColorMar = "#008000";
+        const boxtColorMar = "#90EE90";
+    } else if (mar !== 'None' && mar[1] > 0  && dataTuple[5] == False) {
+        maru = 'BullMB';
+        const textColorMar = "#008000";
+        const boxtColorMar = "#90EE90";
+        
+    } else if (mar !== 'None' && mar[1] < 0  && dataTuple[5] == False) {
+        maru = 'BearMB';
+        const textColorMar = "#FF0000";
+        const boxtColorMar = "#FFCCCB";
+
+    } else if (mar !== 'None' && mar[1] < 0  && dataTuple[5] == True) {
+        maru = 'BearMB';
+        const textColorMar = "#FF0000";
+        const boxtColorMar = "#FFCCCB";
+
+    } else if (mar === 'None'  && dataTuple[5] == False) {
+        maru = '';
+        const textColorMar = "#FF0000";
+        const boxtColorMar = "#FFCCCB";
+    }
+    else {
+        maru = '';
+        const textColorMar = "#008000";
+        const boxtColorMar = "#90EE90";
+        
+    }
+
+    document.getElementById("box3").style.color = textColorMar;
+    document.getElementById("box3").style.backgroundColor = boxColorMar;
+
+    document.getElementById("box3").innerText = maru;
+
+                    
     if (dataTuple !== 0 && dataTuple[5] === true) {
         sl = sll;
     } else if (dataTuple !== 0 && dataTuple[5] === false) {
@@ -467,11 +507,12 @@ if (window.innerWidth <= 768) {
     else {
         sl = "";
     }
+    
+    
+    document.getElementById("box5").style.color = "#FF0000";
+    document.getElementById("box5").style.backgroundColor = "#FF00004D";
 
-    document.getElementById("box3").style.color = "#FF0000";
-    document.getElementById("box3").style.backgroundColor = "#FF00004D";
-
-    document.getElementById("box3").innerText = sl;
+    document.getElementById("box5").innerText = sl;
 
     const f23bc = "#FFFF004D";
     const f38bc = "#00FF004D";
@@ -483,23 +524,35 @@ if (window.innerWidth <= 768) {
     const f50tc = "#0000FF";
     const f61tc = "#006400";
 
-    document.getElementById("box4").innerText = retracements["23.6% retracement"];
+    document.getElementById("box6").innerText = retracements["23.6% retracement"];
 
-    document.getElementById("box5").innerText = retracements["38.2% retracement"];
+    document.getElementById("box7").innerText = retracements["38.2% retracement"];
 
-    document.getElementById("box6").innerText = retracements["50.0% retracement"];
+    document.getElementById("box8").innerText = retracements["50.0% retracement"];
 
-    document.getElementById("box7").innerText = retracements["61.8% retracement"];
-    document.getElementById("box4").style.backgroundColor = f23bc;
-    document.getElementById("box5").style.backgroundColor = f38bc;
-    document.getElementById("box6").style.backgroundColor = f50bc;
-    document.getElementById("box7").style.backgroundColor = f61bc;
+    document.getElementById("box9").innerText = retracements["61.8% retracement"];
+   
+    document.getElementById("box6").style.backgroundColor = f23bc;
+    document.getElementById("box7").style.backgroundColor = f38bc;
+    document.getElementById("box8").style.backgroundColor = f50bc;
+    document.getElementById("box9").style.backgroundColor = f61bc;
     
-    // document.getElementById("box4").style.color = f23tc;
-    document.getElementById("box5").style.color = f38tc;
-    document.getElementById("box6").style.color = f50tc;
-    document.getElementById("box7").style.color = f61tc;
-    
+    // document.getElementById("box6").style.color = f23tc;
+    document.getElementById("box7").style.color = f38tc;
+    document.getElementById("box8").style.color = f50tc;
+    document.getElementById("box9").style.color = f61tc;
+
+    // Data for box9
+    const atrtextColor = (atrv === False) ? "#008000" : "#FF0000"; // Green if true, red if false
+    document.getElementById("box9").style.color = textColor;
+
+    // Set background color for boxes if needed (optional)
+    const atrboxColor = (atrv === False) ? "#90EE90" : "#FFCCCB"; // LightGreen or LightCoral
+    document.getElementById("box9").style.backgroundColor = boxColor;
+
+    const bt9 = (atrv === False) ? "Normal" : "High";
+    document.getElementById("box9").innerText = bt9;
+
         }
     });
         
