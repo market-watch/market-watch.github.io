@@ -15,14 +15,6 @@
             background-color: #f5f5f5;
             color: #333;
         }
-        .content {
-            text-align: center;
-            padding: 20px;
-            border: 1px solid #ddd;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
         .video-bg {
             position: fixed;
             top: 0;
@@ -32,13 +24,15 @@
             object-fit: cover;
             z-index: -1;
         }
-        
         .content {
             position: relative;
+            text-align: center;
             padding: 20px;
-            background-color: rgba(244, 244, 244, 0.75); /* Slight transparency for better readability */
+            border: 1px solid #ddd;
+            background-color: rgba(255, 255, 255, 0.85); /* More opacity for readability */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1;
         }
-
     </style>
 </head>
 <body>
@@ -49,9 +43,11 @@
         Your browser does not support the video tag.
     </video>
 
+    <!-- Content area -->
     <div class="content">
         <h1>Learning</h1>
         <p>Content will be uploaded soon. Stay tuned.</p>
     </div>
+
 </body>
 </html>
