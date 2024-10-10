@@ -27,6 +27,23 @@
         b {
             font-weight: bold;
         }
+
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .content {
+            position: relative;
+            padding: 20px;
+            background-color: rgba(244, 244, 244, 0.75); /* Slight transparency for better readability */
+        }
+
     </style>
 
     
@@ -34,7 +51,12 @@
 </head>
 <body>
 
-    
+    <!-- Video background -->
+    <video class="video-bg" autoplay muted loop>
+        <source src="orange.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+
 
     <h1>Disclaimer</h1>
     <h2>The Indicator</h2>
