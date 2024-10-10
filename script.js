@@ -466,31 +466,31 @@ if (window.innerWidth <= 768) {
 
     let maru = '';
     let textColorMar = '';
-    let boxtColorMar = '';
+    let   boxColorMar = '';
     // Text for box 3
     if (mar !== 'None') {
     if (mar[1] > 0 && dataTuple[5] === true) {
         maru = 'BullMB';
         const textColorMar = "#008000";
-        const boxtColorMar = "#90EE90";
+        const   boxColorMar = "#90EE90";
     } else if (mar[1] > 0 && dataTuple[5] === false) {
         maru = 'BullMB';
         const textColorMar = "#008000";
-        const boxtColorMar = "#90EE90";
+        const   boxColorMar = "#90EE90";
     } else if (mar[1] < 0 && dataTuple[5] === false) {
         maru = 'BearMB';
         const textColorMar = "#FF0000";
-        const boxtColorMar = "#FFCCCB";
+        const   boxColorMar = "#FFCCCB";
     } else if (mar[1] < 0 && dataTuple[5] === true) {
         maru = 'BearMB';
         const textColorMar = "#FF0000";
-        const boxtColorMar = "#FFCCCB";
+        const   boxColorMar = "#FFCCCB";
     }
 } else {
     // Fallback when mar is 'None'
     maru = '';
     const textColorMar = dataTuple[5] === false ? "#FF0000" : "#008000";
-    const boxtColorMar = dataTuple[5] === false ? "#FFCCCB" : "#90EE90";
+    const   boxColorMar = dataTuple[5] === false ? "#FFCCCB" : "#90EE90";
 }
 
     document.getElementById("box3").style.color = textColorMar;
