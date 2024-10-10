@@ -110,7 +110,7 @@ function plotGraph() {
         // Get first and last date for setting X-axis range
         const firstDate = dates[0];
         const lastDate = dates[dates.length - 1];
-
+        const last50date = dates[dates.length - 50];
         // Extend the chart to include 10 additional days
         const extendedLastDate = new Date(lastDate);
         extendedLastDate.setDate(extendedLastDate.getDate() + 10);
@@ -341,6 +341,8 @@ var layout = {
                 rangemode: 'match' // Ensure the y-axis is consistent
             }
         },
+        range: [last50date, formattedExtendedLastDate], // Set the initial visible range to show only the last 50 candles
+},
         rangebreaks: missingDates.map(date => ({ values: [date] })),
         title: 'Date'
     },
