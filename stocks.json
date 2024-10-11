@@ -1156,10 +1156,6 @@
         "name": "Century Plyboards (india) Limited"
     },
     {
-        "symbol": "CENTURYTEX",
-        "name": "Century Textiles & Industries Limited"
-    },
-    {
         "symbol": "CESC",
         "name": "Cesc Limited"
     },
@@ -1266,10 +1262,6 @@
     {
         "symbol": "COMMOIETF",
         "name": "ICICI Prudential Nifty Commodities ETF"
-    },
-    {
-        "symbol": "COMPINFO",
-        "name": "Compuage Infocom Limited"
     },
     {
         "symbol": "COMPUSOFT",
@@ -1706,10 +1698,6 @@
     {
         "symbol": "EMIL",
         "name": "Electronics Mart India Ltd"
-    },
-    {
-        "symbol": "EMKAY",
-        "name": "Emkay Global Financial Services Limited"
     },
     {
         "symbol": "EMMBI",
@@ -2340,10 +2328,6 @@
         "name": "Happiest Minds Technologies Ltd"
     },
     {
-        "symbol": "HAPPYFORGE",
-        "name": "Happy Forgings Ltd"
-    },
-    {
         "symbol": "HARDWYN",
         "name": "Hardwyn India Ltd"
     },
@@ -2576,6 +2560,10 @@
         "name": "Hi-Tech Pipes Ltd"
     },
     {
+        "symbol": "HITECHCORP",
+        "name": "Hitech Corporation"
+    },
+    {
         "symbol": "HLEGLAS",
         "name": "HLE Glascoat Ltd"
     },
@@ -2678,10 +2666,6 @@
     {
         "symbol": "IDEAFORGE",
         "name": "Ideaforge Technology Ltd"
-    },
-    {
-        "symbol": "IDFC",
-        "name": "Idfc Limited"
     },
     {
         "symbol": "IDFCFIRSTB",
@@ -3130,10 +3114,6 @@
     {
         "symbol": "JNKINDIA",
         "name": "JNK India Ltd"
-    },
-    {
-        "symbol": "JPASSOCIAT",
-        "name": "Jaiprakash Associates Limited"
     },
     {
         "symbol": "JPPOWER",
@@ -4612,6 +4592,10 @@
         "name": "Patel Integrated Logistics Limited"
     },
     {
+        "symbol": "PAVNAIND",
+        "name": "Pavna Industries Ltd"
+    },
+    {
         "symbol": "PAYTM",
         "name": "One 97 Communications Ltd"
     },
@@ -5056,10 +5040,6 @@
         "name": "Rashtriya Chemicals And Fertilizers Limited"
     },
     {
-        "symbol": "RCOM",
-        "name": "Reliance Communications Limited"
-    },
-    {
         "symbol": "RECLTD",
         "name": "Rural Electrification Corporation Limited"
     },
@@ -5178,6 +5158,10 @@
     {
         "symbol": "ROUTE",
         "name": "Route Mobile Ltd"
+    },
+    {
+        "symbol": "RPGLIFE",
+        "name": "Rpg Life Sciences Limited"
     },
     {
         "symbol": "RPOWER",
@@ -5566,6 +5550,10 @@
     {
         "symbol": "SHAREINDIA",
         "name": "Share India Securities Ltd"
+    },
+    {
+        "symbol": "SHEKHAWATI",
+        "name": "Shekhawati Industries Ltd"
     },
     {
         "symbol": "SHEMAROO",
@@ -6216,10 +6204,6 @@
         "name": "Tourism Finance Corporation Of India Limited"
     },
     {
-        "symbol": "TFL",
-        "name": "Transwarranty Finance Limited"
-    },
-    {
         "symbol": "TGBHOTELS",
         "name": "Tgb Banquets And Hotels Limited"
     },
@@ -6252,16 +6236,16 @@
         "name": "Tube Investments of India Ltd"
     },
     {
-        "symbol": "TIJARIA",
-        "name": "Tijaria Polypipes Limited"
-    },
-    {
         "symbol": "TIMETECHNO",
         "name": "Time Technoplast Limited"
     },
     {
         "symbol": "TIMKEN",
         "name": "Timken India Limited"
+    },
+    {
+        "symbol": "TIPSMUSIC",
+        "name": "Tips Music Ltd"
     },
     {
         "symbol": "TIRUMALCHM",
@@ -6762,6 +6746,10 @@
     {
         "symbol": "XCHANGING",
         "name": "Xchanging Solutions Limited"
+    },
+    {
+        "symbol": "XELPMOC",
+        "name": "Xelpmoc Design and Tech Ltd"
     },
     {
         "symbol": "YAARI",
