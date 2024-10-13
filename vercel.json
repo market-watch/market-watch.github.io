@@ -5,13 +5,10 @@
       "destination": "https://marketflow.co.in/:path*",
       "permanent": true
     }
-  ]
-}
-
-{
+  ],
   "headers": [
     {
-      "source": "/(.*)", // This applies to all routes
+      "source": "/(.*)", 
       "headers": [
         {
           "key": "Content-Security-Policy",
