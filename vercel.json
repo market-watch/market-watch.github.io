@@ -7,3 +7,29 @@
     }
   ]
 }
+
+{
+  "headers": [
+    {
+      "source": "/(.*)", // This applies to all routes
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self' https://*.google.com https://*.googleadservices.com https://*.googlesyndication.com; script-src 'self' https://*.google.com https://*.googlesyndication.com; object-src 'none';"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Accept, X-Requested-With"
+        }
+      ]
+    }
+  ]
+}
