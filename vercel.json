@@ -1,7 +1,7 @@
 {
   "redirects": [
     {
-      "source": "http://project-selene.vercel.app/:path*",
+      "source": "https://project-selene.vercel.app/:path*",
       "destination": "https://marketflow.co.in/:path*",
       "permanent": true
     }
