@@ -153,7 +153,7 @@ function plotGraph() {
                         C: ${close}<br>
                         %C: ${percentageChange}<br>
                         %R: ${percentageRange}<br>
-                        // <extra></extra>
+                        
                     `;
                 });
 
@@ -171,7 +171,7 @@ function plotGraph() {
                     xaxis: 'x',
                     yaxis: 'y1',
                     hovertext: hoverText,  // Set pre-calculated hover text
-                    hoverinfo: 'text'       // Display only the hover text
+                    // hoverinfo: 'text'       // Display only the hover text
                 };
                 
                 // Volume bar chart trace
