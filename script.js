@@ -384,7 +384,7 @@ var layout = {
         rangeslider: { 
             visible: true, 
             range: [firstDate, formattedExtendedLastDate],
-            thickness: 0.05, // Make the range slider thinner
+            thickness: 0.01, // Make the range slider thinner
             
         },
         range: [last50date, formattedExtendedLastDate], // Set the initial visible range to show only the last 50 candles
