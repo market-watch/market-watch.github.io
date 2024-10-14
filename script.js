@@ -145,17 +145,17 @@ function plotGraph() {
                     const percentageRange = ((high - low) / open * 100).toFixed(2) + '%';
                     
                     // Return formatted hover information
-                    return "
-                        D: %{date}<br>+
-                        O: %{open}<br>+
-                        H: %{high}<br>+
-                        L: %{low}<br>+
-                        C: %{close}<br>+
-                        %C: %{percentageChange}<br>+
-                        %R: %{percentageRange}<br>+
-                        <extra></extra>
-                "
-                        ;
+                    return `
+                    Date: %{date}<br>+
+                    Open: %{open}<br>+
+                    High: %{high}<br>+
+                    Low: %{low}<br>+
+                    Close: %{close}<br>+
+                    % Change: %{percentageChange}<br>+
+                    % Range: %{percentageRange}<br>+
+                    <extra></extra>
+                `;
+
                 });
 
                 
