@@ -164,7 +164,7 @@ function plotGraph() {
                     y: k_values,
                     mode: 'lines',
                     name: 'K',
-                    line: { color: 'blue', width: 0.5 },
+                    line: { color: 'blue', width: 0.8 },
                     xaxis: 'x',
                     yaxis: 'y3'
                 };
@@ -174,7 +174,7 @@ function plotGraph() {
                     y: d_values,
                     mode: 'lines',
                     name: 'D',
-                    line: { color: 'orange', width: 0.5 },
+                    line: { color: 'orange', width: 0.8 },
                     xaxis: 'x',
                     yaxis: 'y3'
                 };
@@ -183,9 +183,9 @@ function plotGraph() {
                 // Overbought and Oversold lines (for the K and D Oscillator)
                 var ob_line = {
                     x: dates,
-                    y: Array(dates.length).fill(80),
+                    y: Array(dates.length).fill(70),
                     mode: 'lines',
-                    name: 'Overbought (80)',
+                    name: 'Overbought (70)',
                     line: { color: 'red', dash: 'dash', width: 0.5 },
                     xaxis: 'x',
                     yaxis: 'y3'
@@ -193,9 +193,9 @@ function plotGraph() {
                 
                 var os_line = {
                     x: dates,
-                    y: Array(dates.length).fill(20),
+                    y: Array(dates.length).fill(30),
                     mode: 'lines',
-                    name: 'Oversold (20)',
+                    name: 'Oversold (30)',
                     line: { color: 'green', dash: 'dash', width: 0.5 },
                     xaxis: 'x',
                     yaxis: 'y3'
@@ -474,32 +474,33 @@ if (window.innerWidth <= 768) {
 
     let maru = '';
     let textColorMar = '';
-    let   boxColorMar = '';
+    let boxColorMar = ''; // Initialize boxColorMar
+    
     // Text for box 3
     if (mar !== 'None') {
-    if (mar[1] > 0 && dataTuple[5] === true) {
-        maru = 'BullMB';
-        const textColorMar = "#008000";
-        const   boxColorMar = "#90EE90";
-    } else if (mar[1] > 0 && dataTuple[5] === false) {
-        maru = 'BullMB';
-        const textColorMar = "#008000";
-        const   boxColorMar = "#90EE90";
-    } else if (mar[1] < 0 && dataTuple[5] === false) {
-        maru = 'BearMB';
-        const textColorMar = "#FF0000";
-        const   boxColorMar = "#FFCCCB";
-    } else if (mar[1] < 0 && dataTuple[5] === true) {
-        maru = 'BearMB';
-        const textColorMar = "#FF0000";
-        const   boxColorMar = "#FFCCCB";
+        if (mar[1] > 0 && dataTuple[5] === true) {
+            maru = 'BullMB';
+            textColorMar = "#008000"; // Green text color
+            boxColorMar = "#90EE90";  // Light green box color
+        } else if (mar[1] > 0 && dataTuple[5] === false) {
+            maru = 'BullMB';
+            textColorMar = "#008000"; // Green text color
+            boxColorMar = "#90EE90";  // Light green box color
+        } else if (mar[1] < 0 && dataTuple[5] === false) {
+            maru = 'BearMB';
+            textColorMar = "#FF0000"; // Red text color
+            boxColorMar = "#FFCCCB";  // Light red box color
+        } else if (mar[1] < 0 && dataTuple[5] === true) {
+            maru = 'BearMB';
+            textColorMar = "#FF0000"; // Red text color
+            boxColorMar = "#FFCCCB";  // Light red box color
+        }
+    } else {
+        // Fallback when mar is 'None'
+        maru = '';
+        textColorMar = dataTuple[5] === false ? "#FF0000" : "#008000"; // Set text color based on dataTuple[5]
+        boxColorMar = dataTuple[5] === false ? "#FFCCCB" : "#90EE90";   // Set box color based on dataTuple[5]
     }
-} else {
-    // Fallback when mar is 'None'
-    maru = '';
-    const textColorMar = dataTuple[5] === false ? "#FF0000" : "#008000";
-    const   boxColorMar = dataTuple[5] === false ? "#FFCCCB" : "#90EE90";
-}
 
     document.getElementById("box3").style.color = textColorMar;
     document.getElementById("box3").style.backgroundColor = boxColorMar;
@@ -551,12 +552,28 @@ if (window.innerWidth <= 768) {
     document.getElementById("box9").style.color = f61tc;
 
     // Data for box9
-    const atrtextColor = (atrv === false) ? "#008000" : "#FF0000"; // Green if true, red if false
-    document.getElementById("box4").style.color = textColor;
+    let atrtextColor = '';
+    let atrboxColor = '';
+    
+    // Check conditions to set colors
+    if (dataTuple[5] === true && atrv === false) {
+        atrtextColor = "#008000"; // Green text color
+        atrboxColor = "#90EE90";  // Light green box color
+    } else if (dataTuple[5] === true && atrv === true) {
+        atrtextColor = "#FF0000"; // Red text color
+        atrboxColor = "#FFCCCB";  // Light red box color
+    } else if (dataTuple[5] === false && atrv === false) {
+        atrtextColor = "#FF0000"; // Red text color
+        atrboxColor = "#FFCCCB";  // Light red box color
+    } else {
+        atrtextColor = "#008000"; // Green text color
+        atrboxColor = "#90EE90";  // Light green box color
+    }
 
-    // Set background color for boxes if needed (optional)
-    const atrboxColor = (atrv === false) ? "#90EE90" : "#FFCCCB"; // LightGreen or LightCoral
-    document.getElementById("box4").style.backgroundColor = boxColor;
+                   
+    document.getElementById("box4").style.color = atrtextColor;
+
+    document.getElementById("box4").style.backgroundColor = atrboxColor;
 
     const bt9 = (atrv === false) ? "Normal" : "High";
     document.getElementById("box4").innerText = bt9;
