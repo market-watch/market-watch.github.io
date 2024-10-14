@@ -202,10 +202,7 @@ function plotGraph() {
                         size: 0, // Make markers invisible
                         color: 'rgba(255, 255, 255, 0)' // Fully transparent
                     },
-                    hovertemplate: `
-                        % Range: %{text}<br>
-                        // <extra></extra>
-                    `,
+                    hovertemplate: `% Range: %{text}`,
                     text: percentageRanges // Set the text for hover
                 };
 
