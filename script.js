@@ -117,7 +117,21 @@ function plotGraph() {
         
         // Convert the extended date back to a YYYY-MM-DD format for the chart
         const formattedExtendedLastDate = extendedLastDate.toISOString().slice(0, 10);
+
+        // Get indices of the date range in the dates array
+        const startIndex1 = dates.indexOf(last50date);
+        const endIndex1 = dates.indexOf(formattedExtendedLastDate);
         
+        // Validate that both indices are found
+        if (startIndex1 !== -1 && endIndex1 !== -1) {
+            // Slice highs and lows arrays between the indices
+            const highsInRange = highs.slice(startIndex1, endIndex1 + 1);
+            const lowsInRange = lows.slice(startIndex1, endIndex1 + 1);
+        
+            // Calculate the max high and min low within the sliced ranges
+            const maxHigh = Math.max(...highsInRange);
+            const minLow = Math.min(...lowsInRange);
+
         // Determine the appropriate JSON file to load based on tick suffix
         const missingDatesFile = tick.endsWith('NS.Daily') || tick.endsWith('BO.Daily')
         ? 'missing_dates.json'
@@ -374,7 +388,8 @@ var layout = {
         domain: [0.4, 1],  // Height for candlestick panel
         // autorange: true,
         anchor: 'x',
-        rangemode: 'match' // Ensure the y-axis is consistent
+        rangemode: 'match', // Ensure the y-axis is consistent,
+        range: [minLow, maxHigh] // Set the initial range for y-axis
 
     },
     yaxis2: {
