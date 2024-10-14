@@ -469,8 +469,7 @@ if (window.innerWidth <= 768) {
 
                 // Plot the chart
                 Plotly.newPlot('plot', [candlestick, volume_trace, k_trace, d_trace, ob_line,
-                                        os_line, bbl_trace, bbm_trace, bbu_trace, percentageChangeTrace,
-                                        percentageRangeTrace], layout, {showSendToCloud: true});
+                                        os_line, bbl_trace, bbm_trace, bbu_trace], layout, {showSendToCloud: true});
 
                 // Set up relayout event for auto-scaling on zoom, pan, or rangeslider move
                 var myPlot = document.getElementById('plot');
