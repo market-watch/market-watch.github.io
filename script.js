@@ -485,8 +485,8 @@ if (window.innerWidth <= 768) {
 
     document.getElementById("box2").innerText = gap;
 
-    const textColorGap = (gap > 0) ? "#008000" : (gap < 0) ? "#FF0000" : "";
-    const boxColorGap = (gap>0) ? "#90EE90" : (gap < 0) ? "#FFCCCB": ""; 
+    const textColorGap = (gap > 0) ? "#008000" : (gap < 0) ? "#FF0000" : (gap === 0 && dataTuple[5] === true) ? "#008000" : "#FF0000";
+    const boxColorGap = (gap>0) ? "#90EE90" : (gap < 0) ? "#FFCCCB": (gap === 0 && dataTuple[5] === true) ? "#90EE90"  : "#FFCCCB"; 
     
 
     document.getElementById("box2").style.color = textColorGap;
