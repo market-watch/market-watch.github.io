@@ -110,7 +110,7 @@ function plotGraph() {
         // Get first and last date for setting X-axis range
         const firstDate = dates[0];
         const lastDate = dates[dates.length - 1];
-        const last50date = dates[dates.length - 180];
+        const last50date = dates[dates.length - Math.round(dates.length/3)];
         // Extend the chart to include 10 additional days
         const extendedLastDate = new Date(lastDate);
         extendedLastDate.setDate(extendedLastDate.getDate() + 10);
@@ -144,7 +144,24 @@ function plotGraph() {
                     xaxis: 'x',
                     yaxis: 'y1',
                     // increasing: {line: {color: '#17BECF'}},
-                    // decreasing: {line: {color: '#7F7F7F'}}
+                    // decreasing: {line: {color: '#7F7F7F'}},
+                    hovertemplate: function (x, open, high, low, close) {
+                        // Calculate percentage change and range
+                        const percentageChange = ((close - open) / open * 100).toFixed(2) + '%';
+                        const percentageRange = ((high - low) / open * 100).toFixed(2) + '%';
+                
+                        // Return formatted hover information
+                        return `
+                            Date: ${x}<br>
+                            Open: ${open}<br>
+                            High: ${high}<br>
+                            Low: ${low}<br>
+                            Close: ${close}<br>
+                            % Change: ${percentageChange}<br>
+                            % Range: ${percentageRange}<br>
+                            <extra></extra>
+                        `;
+                    }
                 };
                 
                 // Volume bar chart trace
