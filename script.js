@@ -216,8 +216,8 @@ function plotGraph() {
                     name: 'Price',
                     xaxis: 'x',
                     yaxis: 'y1',
-                    // hovertext: hoverText,  // Set pre-calculated hover text
-                    // hoverinfo: 'date+open+close+low+high+percentageChange+percentageRange'       // Display only the hover text
+                    hovertext: hoverText,  // Set pre-calculated hover text
+                    hoverinfo: 'text'       // Display only the hover text
                 };
                 
                 // Volume bar chart trace
