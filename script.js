@@ -133,8 +133,8 @@ function plotGraph() {
             const lowsInRange = lows.slice(startIndex1, endIndex1 + 1);
         
             // Calculate the max high and min low within the sliced ranges
-            const maxHigh = Math.max(...highsInRange);
-            const minLow = Math.min(...lowsInRange);
+            maxHigh = Math.max(...highsInRange);
+            minLow = Math.min(...lowsInRange);
             console.log(minLow);
             console.log(maxHigh);
             } else {
