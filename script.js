@@ -132,79 +132,76 @@ function plotGraph() {
         fetch(missingDatesFile)
             .then(response => response.json())
             .then(missingDates => {
-                // Assuming you have your arrays ready
-                const percentageChanges = [];
-                const percentageRanges = [];
+                // // Assuming you have your arrays ready
+                // const percentageChanges = [];
+                // const percentageRanges = [];
                 
-                for (let i = 0; i < closes.length; i++) {
-                    const open = opens[i];
-                    const close = closes[i];
-                    const high = highs[i];
-                    const low = lows[i];
+                // for (let i = 0; i < closes.length; i++) {
+                //     const open = opens[i];
+                //     const close = closes[i];
+                //     const high = highs[i];
+                //     const low = lows[i];
                 
-                    // Calculate percentage change and range
-                    const percentageChange = ((close - open) / open * 100).toFixed(2) + '%';
-                    const percentageRange = ((high - low) / open * 100).toFixed(2) + '%';
-                
-                    // Push calculated values to arrays
-                    percentageChanges.push(percentageChange);
-                    percentageRanges.push(percentageRange);
-                }
-                // // Prepare data for hover template using already calculated values
-                // const hoverText = dates.map((date, index) => {
-                //     const open = opens[index];
-                //     const high = highs[index];
-                //     const low = lows[index];
-                //     const close = closes[index];
-                    
                 //     // Calculate percentage change and range
                 //     const percentageChange = ((close - open) / open * 100).toFixed(2) + '%';
                 //     const percentageRange = ((high - low) / open * 100).toFixed(2) + '%';
-                    
-                //     // Return formatted hover information
-                //     return `
-                //     D: ${date}<br>
-                //     O: ${open}<br>
-                //     H: ${high}<br>
-                //     L: ${low}<br>
-                //     C: ${close}<br>
-                //     % C: ${percentageChange}<br>
-                //     % R: ${percentageRange}<br>
-                    
-                // `;
-
-                // });
-
-                // Create trace for percentage change with hover information only
-                var percentageChangeTrace = {
-                    x: dates,
-                    y: opens.map((_, index) => lows[index] - 1), // Position slightly below each candle
-                    type: 'scatter', // Use scatter to allow hover information
-                    mode: 'markers',
-                    marker: {
-                        size: 0, // Make markers invisible
-                        color: 'rgba(255, 255, 255, 0)' // Fully transparent
-                    },
-                    hovertemplate: `
-                        % Change: %{text}<br>
-                        <extra></extra>
-                    `,
-                    text: percentageChanges // Set the text for hover
-                };
                 
-                // Create trace for percentage range with hover information only
-                var percentageRangeTrace = {
-                    x: dates,
-                    y: opens.map((_, index) => lows[index] - 2), // Position below the percentage change trace
-                    type: 'scatter', // Use scatter to allow hover information
-                    mode: 'markers',
-                    marker: {
-                        size: 0, // Make markers invisible
-                        color: 'rgba(255, 255, 255, 0)' // Fully transparent
-                    },
-                    hovertemplate: `% Range: %{text}`,
-                    text: percentageRanges // Set the text for hover
-                };
+                //     // Push calculated values to arrays
+                //     percentageChanges.push(percentageChange);
+                //     percentageRanges.push(percentageRange);
+                // }
+                // Prepare data for hover template using already calculated values
+                const hoverText = dates.map((date, index) => {
+                    const open = opens[index];
+                    const high = highs[index];
+                    const low = lows[index];
+                    const close = closes[index];
+                    
+                    // Calculate percentage change and range
+                    const percentageChange = ((close - open) / open * 100).toFixed(2) + '%';
+                    const percentageRange = ((high - low) / open * 100).toFixed(2) + '%';
+                    
+                    // Return formatted hover information
+                    return `D: ${date}<br>
+                    O: ${open}<br>
+                    H: ${high}<br>
+                    L: ${low}<br>
+                    C: ${close}<br>
+                    % Change: ${percentageChange}<br>
+                    % Range: ${percentageRange}<br>`;
+
+                });
+
+                // // Create trace for percentage change with hover information only
+                // var percentageChangeTrace = {
+                //     x: dates,
+                //     y: opens.map((_, index) => lows[index] - 1), // Position slightly below each candle
+                //     type: 'scatter', // Use scatter to allow hover information
+                //     mode: 'markers',
+                //     marker: {
+                //         size: 0, // Make markers invisible
+                //         color: 'rgba(255, 255, 255, 0)' // Fully transparent
+                //     },
+                //     hovertemplate: `
+                //         % Change: %{text}<br>
+                //         <extra></extra>
+                //     `,
+                //     text: percentageChanges // Set the text for hover
+                // };
+                
+                // // Create trace for percentage range with hover information only
+                // var percentageRangeTrace = {
+                //     x: dates,
+                //     y: opens.map((_, index) => lows[index] - 2), // Position below the percentage change trace
+                //     type: 'scatter', // Use scatter to allow hover information
+                //     mode: 'markers',
+                //     marker: {
+                //         size: 0, // Make markers invisible
+                //         color: 'rgba(255, 255, 255, 0)' // Fully transparent
+                //     },
+                //     hovertemplate: `% Range: %{text}`,
+                //     text: percentageRanges // Set the text for hover
+                // };
 
                 
                                 
