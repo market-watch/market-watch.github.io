@@ -121,7 +121,8 @@ function plotGraph() {
         // Get indices of the date range in the dates array
         const startIndex1 = dates.indexOf(last50date);
         const endIndex1 = dates.indexOf(lastDate);
-        
+        console.log(startIndex1)
+        constole.log(endIndex1)
         // Validate that both indices are found
         if (startIndex1 !== -1 && endIndex1 !== -1) {
             // Slice highs and lows arrays between the indices
