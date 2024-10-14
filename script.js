@@ -173,7 +173,7 @@ function plotGraph() {
                     
                 // `;
 
-                });
+                // });
 
                 // Create an invisible trace for percentage changes
                 var percentageChangeTrace = {
