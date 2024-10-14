@@ -146,13 +146,13 @@ function plotGraph() {
                     
                     // Return formatted hover information
                     return `
-                        Date: ${date}<br>
-                        Open: ${open}<br>
-                        High: ${high}<br>
-                        Low: ${low}<br>
-                        Close: ${close}<br>
-                        % Change: ${percentageChange}<br>
-                        % Range: ${percentageRange}<br>
+                        Date: ${d}<br>
+                        Open: ${o}<br>
+                        High: ${h}<br>
+                        Low: ${l}<br>
+                        Close: ${c}<br>
+                        % Change: ${pc}<br>
+                        % Range: ${pr}<br>
                         <extra></extra>
                     `;
                 });
