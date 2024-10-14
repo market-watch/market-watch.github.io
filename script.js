@@ -121,8 +121,8 @@ function plotGraph() {
         // Get indices of the date range in the dates array
         const startIndex1 = dates.indexOf(last50date);
         const endIndex1 = dates.indexOf(lastDate);
-        console.log(startIndex1);
-        console.log(endIndex1);
+        // console.log(startIndex1);
+        // console.log(endIndex1);
         let maxHigh = "";
         let minLow = "";
         
@@ -135,8 +135,8 @@ function plotGraph() {
             // Calculate the max high and min low within the sliced ranges
             maxHigh = Math.max(...highsInRange);
             minLow = Math.min(...lowsInRange);
-            console.log(minLow);
-            console.log(maxHigh);
+            // console.log(minLow);
+            // console.log(maxHigh);
             } else {
     console.log("Date range not found in the dates array.");
 }
@@ -317,10 +317,10 @@ function plotGraph() {
                     y0: sixthValue["23.6% retracement"],           // Draw from low or high
                     y1: y0,  // Draw to the 50% retracement level
                     line: {
-                        color: 'rgba(255, 255, 0, 0.3)',
+                        color: 'rgba(255, 255, 0, 0.5)',
                         width: 0.5
                     },
-                    fillcolor: 'rgba(255, 255, 0, 0.3)'
+                    fillcolor: 'rgba(255, 255, 0, 0.5)'
                 },
                     
                     {
@@ -332,10 +332,10 @@ function plotGraph() {
                     y0: sixthValue["38.2% retracement"],           // Draw from low or high
                     y1: sixthValue["23.6% retracement"],  // Draw to the 50% retracement level
                     line: {
-                        color: 'rgba(0, 255, 0, 0.3)',
+                        color: 'rgba(0, 255, 0, 0.5)',
                         width: 0.5
                     },
-                    fillcolor: 'rgba(0, 255, 0, 0.3)'
+                    fillcolor: 'rgba(0, 255, 0, 0.5)'
                 },
                 
                 {type: 'rect',
@@ -346,10 +346,10 @@ function plotGraph() {
                     y0: sixthValue["50.0% retracement"],           // Draw from low or high
                     y1: sixthValue["38.2% retracement"],  // Draw to the 50% retracement level
                     line: {
-                        color: 'rgba(0, 0, 255, 0.3)',
+                        color: 'rgba(0, 0, 255, 0.5)',
                         width: 0.5
                     },
-                    fillcolor: 'rgba(0, 0, 255, 0.3)'
+                    fillcolor: 'rgba(0, 0, 255, 0.5)'
                 },
                 
                {type: 'rect',
@@ -360,10 +360,10 @@ function plotGraph() {
                     y0: sixthValue["61.8% retracement"],           // Draw from low or high
                     y1: sixthValue["50.0% retracement"],  // Draw to the 50% retracement level
                     line: {
-                        color: 'rgba(0, 100, 0, 0.3)',
+                        color: 'rgba(0, 100, 0, 0.5)',
                         width: 0.5
                     },
-                    fillcolor: 'rgba(0, 100, 0, 0.3)'
+                    fillcolor: 'rgba(0, 100, 0, 0.5)'
                 },
                 );
             }
