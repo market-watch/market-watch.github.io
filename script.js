@@ -204,7 +204,7 @@ function plotGraph() {
                     },
                     hovertemplate: `
                         % Range: %{text}<br>
-                        <extra></extra>
+                        // <extra></extra>
                     `,
                     text: percentageRanges // Set the text for hover
                 };
