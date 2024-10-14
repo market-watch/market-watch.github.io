@@ -131,7 +131,9 @@ function plotGraph() {
             // Calculate the max high and min low within the sliced ranges
             const maxHigh = Math.max(...highsInRange);
             const minLow = Math.min(...lowsInRange);
-
+            } else {
+    console.log("Date range not found in the dates array.");
+}
         // Determine the appropriate JSON file to load based on tick suffix
         const missingDatesFile = tick.endsWith('NS.Daily') || tick.endsWith('BO.Daily')
         ? 'missing_dates.json'
