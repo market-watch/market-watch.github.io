@@ -175,35 +175,40 @@ function plotGraph() {
 
                 // });
 
-                // Create an invisible trace for percentage changes
+                // Create trace for percentage change with hover information only
                 var percentageChangeTrace = {
                     x: dates,
-                    y: opens.map((_, index) => lows[index] - 1), // Position below each candle
-                    text: percentageChanges, // Hover text for percentage change
-                    mode: 'markers+text',
+                    y: opens.map((_, index) => lows[index] - 1), // Position slightly below each candle
+                    type: 'scatter', // Use scatter to allow hover information
+                    mode: 'markers',
                     marker: {
                         size: 0, // Make markers invisible
                         color: 'rgba(255, 255, 255, 0)' // Fully transparent
                     },
-                    textposition: 'bottom center', // Position text below the markers
-                    hoverinfo: 'text', // Display only text on hover
-                    name: 'Percentage Change'
+                    hovertemplate: `
+                        % Change: %{text}<br>
+                        <extra></extra>
+                    `,
+                    text: percentageChanges // Set the text for hover
                 };
                 
-                // Create an invisible trace for percentage ranges
+                // Create trace for percentage range with hover information only
                 var percentageRangeTrace = {
                     x: dates,
                     y: opens.map((_, index) => lows[index] - 2), // Position below the percentage change trace
-                    text: percentageRanges, // Hover text for percentage range
-                    mode: 'markers+text',
+                    type: 'scatter', // Use scatter to allow hover information
+                    mode: 'markers',
                     marker: {
                         size: 0, // Make markers invisible
                         color: 'rgba(255, 255, 255, 0)' // Fully transparent
                     },
-                    textposition: 'top center', // Position text above the markers
-                    hoverinfo: 'text', // Display only text on hover
-                    name: 'Percentage Range'
+                    hovertemplate: `
+                        % Range: %{text}<br>
+                        <extra></extra>
+                    `,
+                    text: percentageRanges // Set the text for hover
                 };
+
                 
                                 
                 // Candlestick data
