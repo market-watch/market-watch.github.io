@@ -121,8 +121,11 @@ function plotGraph() {
         // Get indices of the date range in the dates array
         const startIndex1 = dates.indexOf(last50date);
         const endIndex1 = dates.indexOf(lastDate);
-        console.log(startIndex1)
-        console.log(endIndex1)
+        console.log(startIndex1);
+        console.log(endIndex1);
+        let maxHigh = "";
+        let minLow = "";
+        
         // Validate that both indices are found
         if (startIndex1 !== -1 && endIndex1 !== -1) {
             // Slice highs and lows arrays between the indices
@@ -132,6 +135,8 @@ function plotGraph() {
             // Calculate the max high and min low within the sliced ranges
             const maxHigh = Math.max(...highsInRange);
             const minLow = Math.min(...lowsInRange);
+            console.log(minLow);
+            console.log(maxHigh);
             } else {
     console.log("Date range not found in the dates array.");
 }
