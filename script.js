@@ -185,11 +185,11 @@ function plotGraph() {
                         size: 0, // Make markers invisible
                         color: 'rgba(255, 255, 255, 0)' // Fully transparent
                     },
-                    // hovertemplate: `
-                    //     % Change: %{text}<br>
-                    //     <extra></extra>
-                    // `,
-                    // text: percentageChanges // Set the text for hover
+                    hovertemplate: `
+                        % Change: %{text}<br>
+                        <extra></extra>
+                    `,
+                    text: percentageChanges // Set the text for hover
                 };
                 
                 // Create trace for percentage range with hover information only
@@ -202,11 +202,11 @@ function plotGraph() {
                         size: 0, // Make markers invisible
                         color: 'rgba(255, 255, 255, 0)' // Fully transparent
                     },
-                    // hovertemplate: `
-                    //     % Range: %{text}<br>
-                    //     <extra></extra>
-                    // `,
-                    // text: percentageRanges // Set the text for hover
+                    hovertemplate: `
+                        % Range: %{text}<br>
+                        <extra></extra>
+                    `,
+                    text: percentageRanges // Set the text for hover
                 };
 
                 
