@@ -119,11 +119,13 @@ function plotGraph() {
         const formattedExtendedLastDate = extendedLastDate.toISOString().slice(0, 10);
         
         // Determine the appropriate JSON file to load based on tick suffix
-        const missingDatesFile = tick.endsWith('.Daily') 
-            ? 'missing_dates.json' 
-            : tick.endsWith('.Weekly') 
-                ? 'missing_dates_w.json' 
-                : 'missing_dates_forex.json';
+        const missingDatesFile = tick.endsWith('NS.Daily') || tick.endsWith('BO.Daily')
+        ? 'missing_dates.json'
+        : tick.endsWith('NS.Weekly') || tick.endsWith('BO.Weekly')
+            ? 'missing_dates_w.json'
+            : tick.endsWith('.Daily') && (!tick.endsWith('NS.Daily') && !tick.endsWith('BO.Daily'))
+                ? 'missing_dates_forex_d.json'
+                : 'missing_dates_forex_w.json';
 
     
         // Load the selected missing dates file and plot the chart
