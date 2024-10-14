@@ -120,7 +120,7 @@ function plotGraph() {
 
         // Get indices of the date range in the dates array
         const startIndex1 = dates.indexOf(last50date);
-        const endIndex1 = dates.indexOf(formattedExtendedLastDate);
+        const endIndex1 = dates.indexOf(lastDate);
         
         // Validate that both indices are found
         if (startIndex1 !== -1 && endIndex1 !== -1) {
