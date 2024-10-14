@@ -132,6 +132,33 @@ function plotGraph() {
         fetch(missingDatesFile)
             .then(response => response.json())
             .then(missingDates => {
+                
+                // Prepare data for hover template using already calculated values
+                const hoverText = dates.map((date, index) => {
+                    const open = opens[index];
+                    const high = highs[index];
+                    const low = lows[index];
+                    const close = closes[index];
+                    
+                    // Calculate percentage change and range
+                    const percentageChange = ((close - open) / open * 100).toFixed(2) + '%';
+                    const percentageRange = ((high - low) / open * 100).toFixed(2) + '%';
+                    
+                    // Return formatted hover information
+                    return `
+                        Date: ${date}<br>
+                        Open: ${open}<br>
+                        High: ${high}<br>
+                        Low: ${low}<br>
+                        Close: ${close}<br>
+                        % Change: ${percentageChange}<br>
+                        % Range: ${percentageRange}<br>
+                        <extra></extra>
+                    `;
+                });
+
+                
+                
                 // Candlestick data
                 var candlestick = {
                     x: dates,
@@ -143,25 +170,8 @@ function plotGraph() {
                     name: 'Price',
                     xaxis: 'x',
                     yaxis: 'y1',
-                    // increasing: {line: {color: '#17BECF'}},
-                    // decreasing: {line: {color: '#7F7F7F'}},
-                    hovertemplate: function (x, open, high, low, close) {
-                        // Calculate percentage change and range
-                        const percentageChange = ((close - open) / open * 100).toFixed(2) + '%';
-                        const percentageRange = ((high - low) / open * 100).toFixed(2) + '%';
-                
-                        // Return formatted hover information
-                        return `
-                            Date: ${x}<br>
-                            Open: ${open}<br>
-                            High: ${high}<br>
-                            Low: ${low}<br>
-                            Close: ${close}<br>
-                            % Change: ${percentageChange}<br>
-                            % Range: ${percentageRange}<br>
-                            <extra></extra>
-                        `;
-                    }
+                    hovertext: hoverText,  // Set pre-calculated hover text
+                    hoverinfo: 'text'       // Display only the hover text
                 };
                 
                 // Volume bar chart trace
