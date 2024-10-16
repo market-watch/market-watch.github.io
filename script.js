@@ -520,7 +520,7 @@ if (window.innerWidth <= 768) {
     let boxColorMar = ''; // Initialize boxColorMar
     
     // Text for box 3
-    if (mar !== 'None') {
+    if (mar[0] !== 'None') {
         if (mar[1] > 0 && dataTuple[5] === true) {
             maru = 'BullMB';
             textColorMar = "#008000"; // Green text color
