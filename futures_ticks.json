@@ -1,0 +1,2012 @@
+[
+    [
+        "BANKNIFTY",
+        "BANKNIFTY INDEX FUTURES",
+        "NSE"
+    ],
+    [
+        "NIFTY",
+        "P CNX NIFTY INDEX FUTURES",
+        "NSE"
+    ],
+    [
+        "NIFTY",
+        "GIFT NIFTY 50 INDEX FUTURES",
+        "NSEIX"
+    ],
+    [
+        "FINNIFTY",
+        "FINNIFTY FUTURES",
+        "NSE"
+    ],
+    [
+        "MIDCPNIFTY",
+        "MIDCPNIFTY FUTURES",
+        "NSE"
+    ],
+    [
+        "RELIANCE",
+        "RELIANCE INDS FUTURES",
+        "NSE"
+    ],
+    [
+        "INFY",
+        "INFOSYS FUTURES",
+        "NSE"
+    ],
+    [
+        "HDFCBANK",
+        "HDFC BANK FUTURES",
+        "NSE"
+    ],
+    [
+        "SBIN",
+        "STATE BANK OF INDIA FUTURES",
+        "NSE"
+    ],
+    [
+        "ICICIBANK",
+        "ICICI BANK FUTURES",
+        "NSE"
+    ],
+    [
+        "TATAMOTORS",
+        "TATA MOTORS FUTURES",
+        "NSE"
+    ],
+    [
+        "HAL",
+        "HAL FUTURES",
+        "NSE"
+    ],
+    [
+        "TCS",
+        "TATA CONSULTANCY FUTURES",
+        "NSE"
+    ],
+    [
+        "BAJFINANCE",
+        "BAJAJ FINANCE FUTURES",
+        "NSE"
+    ],
+    [
+        "DIXON",
+        "DIXON FUTURES",
+        "NSE"
+    ],
+    [
+        "LT",
+        "LARSEN &amp; TOUBRO FUTURES",
+        "NSE"
+    ],
+    [
+        "WIPRO",
+        "WIPRO FUTURES",
+        "NSE"
+    ],
+    [
+        "KOTAKBANK",
+        "KOTAK MAHINDRA BANK FUTURES",
+        "NSE"
+    ],
+    [
+        "HCLTECH",
+        "HCL TECHNOLOGIES FUTURES",
+        "NSE"
+    ],
+    [
+        "TATASTEEL",
+        "TATA STEEL FUTURES",
+        "NSE"
+    ],
+    [
+        "MARUTI",
+        "MARUTI SUZUKI IND FUTURES",
+        "NSE"
+    ],
+    [
+        "AXISBANK",
+        "AXIS BANK FUTURES",
+        "NSE"
+    ],
+    [
+        "TECHM",
+        "TECH MAHINDRA FUTURES",
+        "NSE"
+    ],
+    [
+        "VEDL",
+        "VEDANTA FUTURES",
+        "NSE"
+    ],
+    [
+        "M_M",
+        "MAHINDRA &amp; MAHINDRA FUTURES",
+        "NSE"
+    ],
+    [
+        "DIVISLAB",
+        "DIVI'S LABORATORIE FUTURES",
+        "NSE"
+    ],
+    [
+        "ITC",
+        "ITC FUTURES",
+        "NSE"
+    ],
+    [
+        "BPCL",
+        "BHARAT PETROL FUTURES",
+        "NSE"
+    ],
+    [
+        "TITAN",
+        "TITAN COMPANY FUTURES",
+        "NSE"
+    ],
+    [
+        "BEL",
+        "BHARAT ELECTRONICS FUTURES",
+        "NSE"
+    ],
+    [
+        "BAJAJ_AUTO",
+        "BAJAJ AUTO FUTURES",
+        "NSE"
+    ],
+    [
+        "DLF",
+        "DLF FUTURES",
+        "NSE"
+    ],
+    [
+        "HDFCLIFE",
+        "HDFC LIFE INSURANCE FUTURES",
+        "NSE"
+    ],
+    [
+        "ASIANPAINT",
+        "ASIAN PAINTS FUTURES",
+        "NSE"
+    ],
+    [
+        "EXIDEIND",
+        "EXIDE INDUSTRIES FUTURES",
+        "NSE"
+    ],
+    [
+        "BHARTIARTL",
+        "BHARTI AIRTEL FUTURES",
+        "NSE"
+    ],
+    [
+        "HEROMOTOCO",
+        "HERO MOTOCORP FUTURES",
+        "NSE"
+    ],
+    [
+        "PFC",
+        "POWER FINANCE CORP FUTURES",
+        "NSE"
+    ],
+    [
+        "RECLTD",
+        "REC FUTURES",
+        "NSE"
+    ],
+    [
+        "HINDALCO",
+        "HINDALCO INDS FUTURES",
+        "NSE"
+    ],
+    [
+        "TATAPOWER",
+        "TATA POWER CO FUTURES",
+        "NSE"
+    ],
+    [
+        "GODREJPROP",
+        "GODREJ PROPERTIES FUTURES",
+        "NSE"
+    ],
+    [
+        "ADANIENT",
+        "ADANI ENTERPRISES FUTURES",
+        "NSE"
+    ],
+    [
+        "INDUSINDBK",
+        "INDUSIND BANK FUTURES",
+        "NSE"
+    ],
+    [
+        "COALINDIA",
+        "COAL INDIA FUTURES",
+        "NSE"
+    ],
+    [
+        "BAJAJFINSV",
+        "BAJAJ FINSERV FUTURES",
+        "NSE"
+    ],
+    [
+        "COFORGE",
+        "COFORGE FUTURES",
+        "NSE"
+    ],
+    [
+        "LUPIN",
+        "LUPIN FUTURES",
+        "NSE"
+    ],
+    [
+        "OBEROIRLTY",
+        "OBEROIRLTY FUTURES",
+        "NSE"
+    ],
+    [
+        "MOTHERSON",
+        "MOTHERSON FUTURES",
+        "NSE"
+    ],
+    [
+        "ONGC",
+        "OIL &amp; NATURAL GAS CORP FUTURES",
+        "NSE"
+    ],
+    [
+        "BANKBARODA",
+        "BANK OF BARODA FUTURES",
+        "NSE"
+    ],
+    [
+        "TATACHEM",
+        "TATA CHEMICALS FUTURES",
+        "NSE"
+    ],
+    [
+        "NATIONALUM",
+        "NATIONAL ALUMINUM FUTURES",
+        "NSE"
+    ],
+    [
+        "HINDPETRO",
+        "HINDUSTAN PETROL FUTURES",
+        "NSE"
+    ],
+    [
+        "HDFCAMC",
+        "HDFCAMC FUTURES",
+        "NSE"
+    ],
+    [
+        "TRENT",
+        "TRENT FUTURES",
+        "NSE"
+    ],
+    [
+        "TVSMOTOR",
+        "TVS MOTOR FUTURES",
+        "NSE"
+    ],
+    [
+        "CIPLA",
+        "CIPLA FUTURES",
+        "NSE"
+    ],
+    [
+        "JSWSTEEL",
+        "JSW STEEL FUTURES",
+        "NSE"
+    ],
+    [
+        "APOLLOHOSP",
+        "APOLLO HOSPITALS FUTURES",
+        "NSE"
+    ],
+    [
+        "ASHOKLEY",
+        "ASHOK LEYLAND FUTURES",
+        "NSE"
+    ],
+    [
+        "PERSISTENT",
+        "PERSISTENT FUTURES",
+        "NSE"
+    ],
+    [
+        "HINDUNILVR",
+        "HINDUSTAN UNILEVER FUTURES",
+        "NSE"
+    ],
+    [
+        "NTPC",
+        "NTPC FUTURES",
+        "NSE"
+    ],
+    [
+        "BHEL",
+        "BHARAT HEAVY ELECT FUTURES",
+        "NSE"
+    ],
+    [
+        "FEDERALBNK",
+        "FED BANK FUTURES",
+        "NSE"
+    ],
+    [
+        "EICHERMOT",
+        "EICHER MOTORS FUTURES",
+        "NSE"
+    ],
+    [
+        "NMDC",
+        "NMDC FUTURES",
+        "NSE"
+    ],
+    [
+        "POLYCAB",
+        "POLYCAB FUTURES",
+        "NSE"
+    ],
+    [
+        "IEX",
+        "IEX FUTURES",
+        "NSE"
+    ],
+    [
+        "GLENMARK",
+        "GLENMARK PHARM FUTURES",
+        "NSE"
+    ],
+    [
+        "IPCALAB",
+        "IPCALAB FUTURES",
+        "NSE"
+    ],
+    [
+        "GAIL",
+        "GAIL INDIA FUTURES",
+        "NSE"
+    ],
+    [
+        "MPHASIS",
+        "MPHASIS FUTURES",
+        "NSE"
+    ],
+    [
+        "INDIGO",
+        "INTERGLOBE AVIATIO FUTURES",
+        "NSE"
+    ],
+    [
+        "VOLTAS",
+        "VOLTAS FUTURES",
+        "NSE"
+    ],
+    [
+        "BANDHANBNK",
+        "BANDHAN BANK FUTURES",
+        "NSE"
+    ],
+    [
+        "LTIM",
+        "LTIM FUTURES",
+        "NSE"
+    ],
+    [
+        "BRITANNIA",
+        "BRITANNIA INDS FUTURES",
+        "NSE"
+    ],
+    [
+        "DEEPAKNTR",
+        "DEEPAKNTR FUTURES",
+        "NSE"
+    ],
+    [
+        "HAVELLS",
+        "HAVELLS INDIA FUTURES",
+        "NSE"
+    ],
+    [
+        "ADANIPORTS",
+        "ADANI PORT SPECIAL FUTURES",
+        "NSE"
+    ],
+    [
+        "IOC",
+        "INDIAN OIL CORP FUTURES",
+        "NSE"
+    ],
+    [
+        "MCX",
+        "MCX FUTURES",
+        "NSE"
+    ],
+    [
+        "ABB",
+        "ABB FUTURES",
+        "NSE"
+    ],
+    [
+        "LALPATHLAB",
+        "LALPATHLAB FUTURES",
+        "NSE"
+    ],
+    [
+        "CONCOR",
+        "CONTAINER CORP FUTURES",
+        "NSE"
+    ],
+    [
+        "DRREDDY",
+        "DR REDDYS LABS FUTURES",
+        "NSE"
+    ],
+    [
+        "ULTRACEMCO",
+        "ULTRATECH CEMENT FUTURES",
+        "NSE"
+    ],
+    [
+        "SUNPHARMA",
+        "SUN PHARMACEUTICAL FUTURES",
+        "NSE"
+    ],
+    [
+        "IGL",
+        "INDRAPRASTHA GAS FUTURES",
+        "NSE"
+    ],
+    [
+        "JINDALSTEL",
+        "JINDAL STEEL &amp; PWR FUTURES",
+        "NSE"
+    ],
+    [
+        "CANFINHOME",
+        "CANFINHOME FUTURES",
+        "NSE"
+    ],
+    [
+        "SHRIRAMFIN",
+        "SHRIRAMFIN FUTURES",
+        "NSE"
+    ],
+    [
+        "IRCTC",
+        "IRCTC FUTURES",
+        "NSE"
+    ],
+    [
+        "APOLLOTYRE",
+        "APOLLO TYRES FUTURES",
+        "NSE"
+    ],
+    [
+        "COLPAL",
+        "COLGATE-PALM FUTURES",
+        "NSE"
+    ],
+    [
+        "PVRINOX",
+        "PVRINOX FUTURES",
+        "NSE"
+    ],
+    [
+        "MGL",
+        "MAHANAGAR GAS FUTURES",
+        "NSE"
+    ],
+    [
+        "AARTIIND",
+        "AARTIIND FUTURES",
+        "NSE"
+    ],
+    [
+        "AUROPHARMA",
+        "AUROBINDO PHARMA FUTURES",
+        "NSE"
+    ],
+    [
+        "GRASIM",
+        "GRASIM INDUSTRIES FUTURES",
+        "NSE"
+    ],
+    [
+        "AUBANK",
+        "AUBANK FUTURES",
+        "NSE"
+    ],
+    [
+        "BSX",
+        "SENSEX INDEX FUTURES",
+        "BSE"
+    ],
+    [
+        "TATACONSUM",
+        "TATA CONSUMER PROD FUTURES",
+        "NSE"
+    ],
+    [
+        "COAL",
+        "COAL INDIA LTD",
+        "BSE"
+    ],
+    [
+        "CANBK",
+        "CANARA BANK FUTURES",
+        "NSE"
+    ],
+    [
+        "ABFRL",
+        "ABFRL FUTURES",
+        "NSE"
+    ],
+    [
+        "AMBUJACEM",
+        "AMBUJA CEMENTS FUTURES",
+        "NSE"
+    ],
+    [
+        "ACC",
+        "ACC FUTURES",
+        "NSE"
+    ],
+    [
+        "SBILIFE",
+        "SBI LIFE INSURANCE FUTURES",
+        "NSE"
+    ],
+    [
+        "BSOFT",
+        "BSOFT FUTURES",
+        "NSE"
+    ],
+    [
+        "CUMMINSIND",
+        "CUMMINS INDIA FUTURES",
+        "NSE"
+    ],
+    [
+        "ABCAPITAL",
+        "ABCAPITAL FUTURES",
+        "NSE"
+    ],
+    [
+        "OFSS",
+        "OFSS FUTURES",
+        "NSE"
+    ],
+    [
+        "SAIL",
+        "STEEL AUTHOR INDIA FUTURES",
+        "NSE"
+    ],
+    [
+        "BATAINDIA",
+        "BATA INDIA FUTURES",
+        "NSE"
+    ],
+    [
+        "ESCORTS",
+        "ESCORTS FUTURES",
+        "NSE"
+    ],
+    [
+        "ICICIPRULI",
+        "ICICI PRUDENTIAL FUTURES",
+        "NSE"
+    ],
+    [
+        "BERGEPAINT",
+        "BERGER PAINTS FUTURES",
+        "NSE"
+    ],
+    [
+        "POWERGRID",
+        "POWER GRID CORP FUTURES",
+        "NSE"
+    ],
+    [
+        "ALKEM",
+        "ALKEM FUTURES",
+        "NSE"
+    ],
+    [
+        "INDHOTEL",
+        "INDHOTEL FUTURES",
+        "NSE"
+    ],
+    [
+        "NESTLEIND",
+        "NESTLE INDIA FUTURES",
+        "NSE"
+    ],
+    [
+        "BIOCON",
+        "BIOCON FUTURES",
+        "NSE"
+    ],
+    [
+        "INDUSTOWER",
+        "INDUSTOWER FUTURES",
+        "NSE"
+    ],
+    [
+        "JUBLFOOD",
+        "JUBILANT FOODWORKS FUTURES",
+        "NSE"
+    ],
+    [
+        "BHARATFORG",
+        "BHARAT FORGE FUTURES",
+        "NSE"
+    ],
+    [
+        "GODREJCP",
+        "GODREJ CONSUMER PR FUTURES",
+        "NSE"
+    ],
+    [
+        "INDIAMART",
+        "INDIAMART FUTURES",
+        "NSE"
+    ],
+    [
+        "SBICARD",
+        "SBICARD FUTURES",
+        "NSE"
+    ],
+    [
+        "M_MFIN",
+        "MAHINDRA &amp; MAHINDRA FINANCIAL FUTURES",
+        "NSE"
+    ],
+    [
+        "TATACOMM",
+        "TATACOMM FUTURES",
+        "NSE"
+    ],
+    [
+        "LAURUSLABS",
+        "LAURUSLABS FUTURES",
+        "NSE"
+    ],
+    [
+        "TATACOMM",
+        "TATACOMM FUTURES",
+        "NSE"
+    ],
+    [
+        "LAURUSLABS",
+        "LAURUSLABS FUTURES",
+        "NSE"
+    ],
+    [
+        "DABUR",
+        "DABUR INDIA FUTURES",
+        "NSE"
+    ],
+    [
+        "UPL",
+        "UPL FUTURES",
+        "NSE"
+    ],
+    [
+        "ICICIGI",
+        "ICICIGI FUTURES",
+        "NSE"
+    ],
+    [
+        "NAUKRI",
+        "INFO EDGE FUTURES",
+        "NSE"
+    ],
+    [
+        "LTTS",
+        "LTTS FUTURES",
+        "NSE"
+    ],
+    [
+        "PIDILITIND",
+        "PIDILITE INDUSTRIE FUTURES",
+        "NSE"
+    ],
+    [
+        "SRF",
+        "SRF FUTURES",
+        "NSE"
+    ],
+    [
+        "ATUL",
+        "ATUL FUTURES",
+        "NSE"
+    ],
+    [
+        "HINDCOPPER",
+        "HINDCOPPER FUTURES",
+        "NSE"
+    ],
+    [
+        "ZYDUSLIFE",
+        "ZYDUSLIFE FUTURES",
+        "NSE"
+    ],
+    [
+        "CHOLAFIN",
+        "CHOLAMANDALAM INV FUTURES",
+        "NSE"
+    ],
+    [
+        "GUJGASLTD",
+        "GUJGASLTD FUTURES",
+        "NSE"
+    ],
+    [
+        "IDFCFIRSTB",
+        "IDFC FIRST BANK FUTURES",
+        "NSE"
+    ],
+    [
+        "LICHSGFIN",
+        "LIC HOUSING FINANCIAL FUTURES",
+        "NSE"
+    ],
+    [
+        "JKCEMENT",
+        "JKCEMENT FUTURES",
+        "NSE"
+    ],
+    [
+        "BALRAMCHIN",
+        "BALRAMCHIN FUTURES",
+        "NSE"
+    ],
+    [
+        "PAGEIND",
+        "PAGE INDUSTRIES FUTURES",
+        "NSE"
+    ],
+    [
+        "DALBHARAT",
+        "DALBHARAT FUTURES",
+        "NSE"
+    ],
+    [
+        "PEL",
+        "PIRAMAL ENTERPRISE FUTURES",
+        "NSE"
+    ],
+    [
+        "GMRINFRA",
+        "GMR INFRASTRUCTURE FUTURES",
+        "NSE"
+    ],
+    [
+        "BALKRISIND",
+        "BALKRISHNA INDS FUTURES",
+        "NSE"
+    ],
+    [
+        "BATA",
+        "BATA INDIA LTD",
+        "BSE"
+    ],
+    [
+        "ASTRAL",
+        "ASTRAL FUTURES",
+        "NSE"
+    ],
+    [
+        "PNB",
+        "PUNJAB NATL BANK FUTURES",
+        "NSE"
+    ],
+    [
+        "LTF",
+        "LTF FUTURES",
+        "NSE"
+    ],
+    [
+        "NIFTYNXT50",
+        "NIFTYNXT50 FUTURES",
+        "NSE"
+    ],
+    [
+        "BKX",
+        "BSE BANKEX",
+        "BSE"
+    ],
+    [
+        "CROMPTON",
+        "CROMPTON FUTURES",
+        "NSE"
+    ],
+    [
+        "TORNTPHARM",
+        "TORRENT PHARM FUTURES",
+        "NSE"
+    ],
+    [
+        "NAVINFLUOR",
+        "NAVINFLUOR FUTURES",
+        "NSE"
+    ],
+    [
+        "MFSL",
+        "MAX FINANCIAL SERV FUTURES",
+        "NSE"
+    ],
+    [
+        "PETRONET",
+        "PETRONET LNG FUTURES",
+        "NSE"
+    ],
+    [
+        "CHAMBLFERT",
+        "CHAMBLFERT FUTURES",
+        "NSE"
+    ],
+    [
+        "GRANULES",
+        "GRANULES FUTURES",
+        "NSE"
+    ],
+    [
+        "RBLBANK",
+        "RBL BANK FUTURES",
+        "NSE"
+    ],
+    [
+        "MARICO",
+        "MARICO FUTURES",
+        "NSE"
+    ],
+    [
+        "BOSCHLTD",
+        "BOSCH FUTURES",
+        "NSE"
+    ],
+    [
+        "SHREECEM",
+        "SHREE CEMENT FUTURES",
+        "NSE"
+    ],
+    [
+        "ABBOTINDIA",
+        "ABBOTINDIA FUTURES",
+        "NSE"
+    ],
+    [
+        "MUTHOOTFIN",
+        "MUTHOOT FINANCE FUTURES",
+        "NSE"
+    ],
+    [
+        "SUNTV",
+        "SUN TV NETWORK FUTURES",
+        "NSE"
+    ],
+    [
+        "HCLT",
+        "HCL TECHNOLOGIES LTD",
+        "BSE"
+    ],
+    [
+        "RAMCOCEM",
+        "RAMCO CEMENTS FUTURES",
+        "NSE"
+    ],
+    [
+        "PIIND",
+        "PIIND FUTURES",
+        "NSE"
+    ],
+    [
+        "SYNGENE",
+        "SYNGENE FUTURES",
+        "NSE"
+    ],
+    [
+        "METROPOLIS",
+        "METROPOLIS FUTURES",
+        "NSE"
+    ],
+    [
+        "MRF",
+        "MRF FUTURES",
+        "NSE"
+    ],
+    [
+        "CUB",
+        "CUB FUTURES",
+        "NSE"
+    ],
+    [
+        "IDEA",
+        "VODAFONE IDEA FUTURES",
+        "NSE"
+    ],
+    [
+        "COROMANDEL",
+        "COROMANDEL FUTURES",
+        "NSE"
+    ],
+    [
+        "WIPR",
+        "WIPRO",
+        "BSE"
+    ],
+    [
+        "MANAPPURAM",
+        "MANAPPURAM FINANCE FUTURES",
+        "NSE"
+    ],
+    [
+        "UBL",
+        "UNITED BREWERIES L FUTURES",
+        "NSE"
+    ],
+    [
+        "UNITDSPR",
+        "UNITDSPR FUTURES",
+        "NSE"
+    ],
+    [
+        "HERO",
+        "HERO MOTOCORP LTD",
+        "BSE"
+    ],
+    [
+        "GNFC",
+        "GNFC FUTURES",
+        "NSE"
+    ],
+    [
+        "IDFC",
+        "IDFC FUTURES",
+        "NSE"
+    ],
+    [
+        "AXIS",
+        "AXIS BANK FUTURES",
+        "BSE"
+    ],
+    [
+        "USDINR",
+        "USDINR Futures",
+        "MSEI"
+    ],
+    [
+        "GUARSEED10",
+        "Guar Seed Futures",
+        "NCDEX"
+    ],
+    [
+        "HPCL",
+        "HPC FUTURES",
+        "BSE"
+    ],
+    [
+        "PAGE",
+        "PAGE INDUSTRIES LIMITED",
+        "BSE"
+    ],
+    [
+        "MARU",
+        "MARUTI SUZUKI INDIA",
+        "BSE"
+    ],
+    [
+        "GUARGUM5",
+        "Guar Gum Refined Splits Futures",
+        "NCDEX"
+    ],
+    [
+        "BRIT",
+        "BRITANNIA INDUSTRIES LIMITED",
+        "BSE"
+    ],
+    [
+        "DIVI",
+        "DIVI'S LABORATORIES LTD",
+        "BSE"
+    ],
+    [
+        "TMCFGRNZM",
+        "Turmeric Futures",
+        "NCDEX"
+    ],
+    [
+        "RELI",
+        "RIL",
+        "BSE"
+    ],
+    [
+        "JEERAUNJHA",
+        "Jeera Futures",
+        "NCDEX"
+    ],
+    [
+        "PIDI",
+        "PIDILITE INDUSTRIES LIMITED",
+        "BSE"
+    ],
+    [
+        "COCUDAKL",
+        "Undecorticated Cotton Seed Oilcake \u2013 Akola Futures",
+        "NCDEX"
+    ],
+    [
+        "IPCA",
+        "IPCALAB FUTURES",
+        "BSE"
+    ],
+    [
+        "CASTOR",
+        "Castor Seed Futures",
+        "NCDEX"
+    ],
+    [
+        "TITA",
+        "TITAN INDUSTRIES LTD",
+        "BSE"
+    ],
+    [
+        "BIOC",
+        "BIOCON LTD",
+        "BSE"
+    ],
+    [
+        "CANB",
+        "CANARA BANK",
+        "BSE"
+    ],
+    [
+        "DHANIYA",
+        "Coriander Futures",
+        "NCDEX"
+    ],
+    [
+        "EXID",
+        "EXIDE INDUSTRIES LTD",
+        "BSE"
+    ],
+    [
+        "RECL",
+        "RURAL ELECTRIFICATION CORP.LTD",
+        "BSE"
+    ],
+    [
+        "HDLF",
+        "HDFCLIFE FUTURES",
+        "BSE"
+    ],
+    [
+        "SUNP",
+        "SUN PHARMACEUTICALS INDUSTRY",
+        "BSE"
+    ],
+    [
+        "SX50",
+        "SENSEX50 FUTURES",
+        "BSE"
+    ],
+    [
+        "NALC",
+        "NATIONAL ALUMINIUM CO.LTD",
+        "BSE"
+    ],
+    [
+        "HDBK",
+        "HDFC BANK",
+        "BSE"
+    ],
+    [
+        "DABU",
+        "DABUR INDIA LTD",
+        "BSE"
+    ],
+    [
+        "DIXO",
+        "DIXON FUTURES",
+        "BSE"
+    ],
+    [
+        "NIIT",
+        "COFORGE LTD",
+        "BSE"
+    ],
+    [
+        "FEDB",
+        "FEDERAL BANK LTD",
+        "BSE"
+    ],
+    [
+        "NAUK",
+        "NAUKRI FUTURES",
+        "BSE"
+    ],
+    [
+        "RBLB",
+        "RBL BANK LIMITED",
+        "BSE"
+    ],
+    [
+        "POLY",
+        "POLYCAB FUTURES",
+        "BSE"
+    ],
+    [
+        "HULL",
+        "HINDUSTAN UNILEVER LTD",
+        "BSE"
+    ],
+    [
+        "USDJPY",
+        "USDJPY Futures",
+        "MSEI"
+    ],
+    [
+        "IOCL",
+        "IOC FUTURES",
+        "BSE"
+    ],
+    [
+        "KAPAS",
+        "Kapas Futures",
+        "NCDEX"
+    ],
+    [
+        "PVRL",
+        "PVR LTD",
+        "BSE"
+    ],
+    [
+        "MSSL",
+        "MOTHERSON SUMI SYSTEMS LTD",
+        "BSE"
+    ],
+    [
+        "STEEL",
+        "Steel Long Futures",
+        "NCDEX"
+    ],
+    [
+        "ULCL",
+        "ULTRA TECH CEMENT",
+        "BSE"
+    ],
+    [
+        "BOSH",
+        "BOSCH LIMITED",
+        "BSE"
+    ],
+    [
+        "COLG",
+        "COLGATE-PALMOLIVE (INDIA) LTD",
+        "BSE"
+    ],
+    [
+        "GBPUSD",
+        "GBPUSD Futures",
+        "MSEI"
+    ],
+    [
+        "VOLT",
+        "VOLTAS LTD",
+        "BSE"
+    ],
+    [
+        "ICIC",
+        "ICI FUTURES",
+        "BSE"
+    ],
+    [
+        "BAJF",
+        "BAJAJ FINSERV LIMITED",
+        "BSE"
+    ],
+    [
+        "GMRI",
+        "GMR INFRASTRUCTURE",
+        "BSE"
+    ],
+    [
+        "TAMO",
+        "TATA MOTORS",
+        "BSE"
+    ],
+    [
+        "EURUSD",
+        "EURUSD Futures",
+        "MSEI"
+    ],
+    [
+        "SBIL",
+        "STATE BANK OF INDIA",
+        "BSE"
+    ],
+    [
+        "GPRL",
+        "GODREJPROP FUTURES",
+        "BSE"
+    ],
+    [
+        "HNDL",
+        "HINDALCO",
+        "BSE"
+    ],
+    [
+        "MARI",
+        "MARICO LTD",
+        "BSE"
+    ],
+    [
+        "SUNT",
+        "SUN TV NETWORK LTD",
+        "BSE"
+    ],
+    [
+        "GRAN",
+        "GRANULES FUTURES",
+        "BSE"
+    ],
+    [
+        "JSPL",
+        "JINDAL STEEL &amp; POWER",
+        "BSE"
+    ],
+    [
+        "TECM",
+        "TECH MAHINDRA LTD",
+        "BSE"
+    ],
+    [
+        "SUNOIL",
+        "Crude Sunflower Oil Futures",
+        "NCDEX"
+    ],
+    [
+        "ABFR",
+        "ABFRL FUTURES",
+        "BSE"
+    ],
+    [
+        "BDBK",
+        "BANDHANBNK FUTURES",
+        "BSE"
+    ],
+    [
+        "ESCT",
+        "ESCORTS LTD",
+        "BSE"
+    ],
+    [
+        "HIND",
+        "HINDCOPPER FUTURES",
+        "BSE"
+    ],
+    [
+        "IRCT",
+        "IRCTC FUTURES",
+        "BSE"
+    ],
+    [
+        "NESL",
+        "NESTLE INDIA LTD",
+        "BSE"
+    ],
+    [
+        "IDBL",
+        "IDFC BANK LTD",
+        "BSE"
+    ],
+    [
+        "SBLF",
+        "SBILIFE FUTURES",
+        "BSE"
+    ],
+    [
+        "INDH",
+        "INDHOTEL FUTURES",
+        "BSE"
+    ],
+    [
+        "RAMC",
+        "THE RAMCO CEMENTS LIMITED",
+        "BSE"
+    ],
+    [
+        "COTTON",
+        "29 mm Cotton Futures",
+        "NCDEX"
+    ],
+    [
+        "TCSL",
+        "TCS FUTURES",
+        "BSE"
+    ],
+    [
+        "JSWL",
+        "JSW STEEL LTD",
+        "BSE"
+    ],
+    [
+        "INFY",
+        "INF FUTURES",
+        "BSE"
+    ],
+    [
+        "BHRT",
+        "BHARTI AIRTEL",
+        "BSE"
+    ],
+    [
+        "LNTF",
+        "L&amp;T FINANCE HOLDINGS LIMITED",
+        "BSE"
+    ],
+    [
+        "ONGC",
+        "OIL &amp; GAS FUTURES",
+        "BSE"
+    ],
+    [
+        "SYNG",
+        "SYNGENE FUTURES",
+        "BSE"
+    ],
+    [
+        "BHEL",
+        "BHE FUTURES",
+        "BSE"
+    ],
+    [
+        "TATP",
+        "TATA POWER",
+        "BSE"
+    ],
+    [
+        "OFSS",
+        "ORACLE FIN.SERVICES SOFTWARE LTD",
+        "BSE"
+    ],
+    [
+        "TGBL",
+        "TATA CONSUMER PRODUCTS LTD",
+        "BSE"
+    ],
+    [
+        "CADL",
+        "CADILA HEALTHCARE LTD",
+        "BSE"
+    ],
+    [
+        "CIPL",
+        "CIP FUTURES",
+        "BSE"
+    ],
+    [
+        "EURINR",
+        "EURINR Futures",
+        "MSEI"
+    ],
+    [
+        "PIND",
+        "PIIND FUTURES",
+        "BSE"
+    ],
+    [
+        "ICLF",
+        "ICICI PRUDENTIAL LIFE INSURANCE COMPANY LIMITED",
+        "BSE"
+    ],
+    [
+        "MFSL",
+        "MAHINDRA &amp; MAHINDRA FINANCIAL",
+        "BSE"
+    ],
+    [
+        "MPSL",
+        "ADANI PORTS",
+        "BSE"
+    ],
+    [
+        "VEDL",
+        "VEDANTA LIMITED",
+        "BSE"
+    ],
+    [
+        "ASPL",
+        "ASIAN PAINTS LIMITED",
+        "BSE"
+    ],
+    [
+        "GBPINR",
+        "GBPINR Futures",
+        "MSEI"
+    ],
+    [
+        "CORO",
+        "COROMANDEL FUTURES",
+        "BSE"
+    ],
+    [
+        "KOTB",
+        "KOTAK MAHINDRA BANK LTD",
+        "BSE"
+    ],
+    [
+        "ASTR",
+        "ASTRAL FUTURES",
+        "BSE"
+    ],
+    [
+        "LAPL",
+        "LALPATHLAB FUTURES",
+        "BSE"
+    ],
+    [
+        "LICH",
+        "LIC FUTURES",
+        "BSE"
+    ],
+    [
+        "UNSL",
+        "UNITED SPIRITS LTD",
+        "BSE"
+    ],
+    [
+        "ABCL",
+        "ABCAPITAL FUTURES",
+        "BSE"
+    ],
+    [
+        "BOBL",
+        "BOB FUTURES",
+        "BSE"
+    ],
+    [
+        "IDEA",
+        "IDEA CELLULAR",
+        "BSE"
+    ],
+    [
+        "INFR",
+        "INDUS TOWERS LTD",
+        "BSE"
+    ],
+    [
+        "OBRL",
+        "OBEROIRLTY FUTURES",
+        "BSE"
+    ],
+    [
+        "HAMC",
+        "HDFCAMC FUTURES",
+        "BSE"
+    ],
+    [
+        "TISC",
+        "TATA STEEL LTD",
+        "BSE"
+    ],
+    [
+        "ABOT",
+        "ABBOTINDIA FUTURES",
+        "BSE"
+    ],
+    [
+        "BPCL",
+        "BPC FUTURES",
+        "BSE"
+    ],
+    [
+        "COTWASOIL",
+        "COTWASOIL",
+        "NCDEX"
+    ],
+    [
+        "JKCL",
+        "JKCEMENT FUTURES",
+        "BSE"
+    ],
+    [
+        "NMDC",
+        "NMDC LTD",
+        "BSE"
+    ],
+    [
+        "SHTF",
+        "SHRIRAM TRANSPORT FINANCIAL",
+        "BSE"
+    ],
+    [
+        "BELL",
+        "BHARAT ELECTRONICS LTD",
+        "BSE"
+    ],
+    [
+        "JPYINR",
+        "JPYINR Futures",
+        "MSEI"
+    ],
+    [
+        "MANF",
+        "MANAPPURAM FINANCE LIMITED",
+        "BSE"
+    ],
+    [
+        "CIFL",
+        "CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY",
+        "BSE"
+    ],
+    [
+        "MCXL",
+        "MULTI COMMODITY EXCHANGE OF INDIA LTD",
+        "BSE"
+    ],
+    [
+        "TRNT",
+        "TRENT FUTURES",
+        "BSE"
+    ],
+    [
+        "BHFL",
+        "BHARAT FORGE LTD",
+        "BSE"
+    ],
+    [
+        "BAFL",
+        "BAJAJ FINANCE LIMITED",
+        "BSE"
+    ],
+    [
+        "METR",
+        "METROPOLIS FUTURES",
+        "BSE"
+    ],
+    [
+        "MXFS",
+        "MAX FINANCIAL SERVICES LTD",
+        "BSE"
+    ],
+    [
+        "PFCL",
+        "POWER FINANCE CORPORATION LTD",
+        "BSE"
+    ],
+    [
+        "DRRL",
+        "DRR FUTURES",
+        "BSE"
+    ],
+    [
+        "MPHS",
+        "MPHASIS FUTURES",
+        "BSE"
+    ],
+    [
+        "BSOT",
+        "BSOFT FUTURES",
+        "BSE"
+    ],
+    [
+        "SIEM",
+        "SIE FUTURES",
+        "BSE"
+    ],
+    [
+        "AUSF",
+        "AUBANK FUTURES",
+        "BSE"
+    ],
+    [
+        "ADEL",
+        "ADANI ENTERPRISES LTD",
+        "BSE"
+    ],
+    [
+        "APLT",
+        "APOLLO TYRES LTD",
+        "BSE"
+    ],
+    [
+        "ARIN",
+        "AARTIIND FUTURES",
+        "BSE"
+    ],
+    [
+        "GLPL",
+        "GLENMARK PHARMACEUTICALS LTD",
+        "BSE"
+    ],
+    [
+        "SRFL",
+        "SRF LIMITED",
+        "BSE"
+    ],
+    [
+        "BRGP",
+        "BERGER PAINTS INDIA LTD",
+        "BSE"
+    ],
+    [
+        "CASTOROIL",
+        "Refined Castor Oil Futures",
+        "NCDEX"
+    ],
+    [
+        "LUPL",
+        "LUPIN LTD",
+        "BSE"
+    ],
+    [
+        "CUML",
+        "CUMMINS INDIA LTD",
+        "BSE"
+    ],
+    [
+        "DLFL",
+        "DLF LTD",
+        "BSE"
+    ],
+    [
+        "GCPL",
+        "GODREJ CONSUMER PRODUCTS LTD",
+        "BSE"
+    ],
+    [
+        "LNTL",
+        "LARSEN &amp; TOUBRO LTD",
+        "BSE"
+    ],
+    [
+        "ALLD",
+        "ASHOK LEYLAND LTD",
+        "BSE"
+    ],
+    [
+        "GROUNDNUT",
+        "Groundnut Futures",
+        "NCDEX"
+    ],
+    [
+        "HAIL",
+        "HAVELLS INDIA LIMITED",
+        "BSE"
+    ],
+    [
+        "PESL",
+        "PERSISTENT FUTURES",
+        "BSE"
+    ],
+    [
+        "AMBC",
+        "AMBUJA CEMENTS LTD",
+        "BSE"
+    ],
+    [
+        "DABL",
+        "DALBHARAT FUTURES",
+        "BSE"
+    ],
+    [
+        "GUGL",
+        "GUJGASLTD FUTURES",
+        "BSE"
+    ],
+    [
+        "PGCL",
+        "POWER GRID CORP LTD",
+        "BSE"
+    ],
+    [
+        "SESAMESEED",
+        "Natural Whitish Sesame Seeds Futures",
+        "NCDEX"
+    ],
+    [
+        "CCOI",
+        "CONTAINER CORPORATION OF INDIA",
+        "BSE"
+    ],
+    [
+        "CGCL",
+        "CROMPTON FUTURES",
+        "BSE"
+    ],
+    [
+        "DENP",
+        "DEEPAKNTR FUTURES",
+        "BSE"
+    ],
+    [
+        "ILGI",
+        "ICICIGI FUTURES",
+        "BSE"
+    ],
+    [
+        "ITCL",
+        "ITC FUTURES",
+        "BSE"
+    ],
+    [
+        "LABS",
+        "LAURUSLABS FUTURES",
+        "BSE"
+    ],
+    [
+        "MNGL",
+        "MAHANAGAR GAS LIMITED",
+        "BSE"
+    ],
+    [
+        "MNML",
+        "MNM FUTURES",
+        "BSE"
+    ],
+    [
+        "MRFL",
+        "MRF LTD",
+        "BSE"
+    ],
+    [
+        "PNBK",
+        "PNB FUTURES",
+        "BSE"
+    ],
+    [
+        "TCHM",
+        "TCH FUTURES",
+        "BSE"
+    ],
+    [
+        "TRPL",
+        "TORRENT PHARMACEUTICALS LTD",
+        "BSE"
+    ],
+    [
+        "BAML",
+        "BALRAMCHIN FUTURES",
+        "BSE"
+    ],
+    [
+        "CFCL",
+        "CHAMBLFERT FUTURES",
+        "BSE"
+    ],
+    [
+        "GAIL",
+        "GAIL (INDIA) LTD",
+        "BSE"
+    ],
+    [
+        "IMIL",
+        "INDIAMART FUTURES",
+        "BSE"
+    ],
+    [
+        "ISABGOL",
+        "Isabgol Seed",
+        "NCDEX"
+    ],
+    [
+        "PREL",
+        "PIRAMAL ENTERPRISES LTD",
+        "BSE"
+    ],
+    [
+        "SAIL",
+        "STEEL AUTHORITY OF INDIA LTD",
+        "BSE"
+    ],
+    [
+        "TACL",
+        "TATACOMM FUTURES",
+        "BSE"
+    ],
+    [
+        "754GS2036",
+        "754GS2036 Futures",
+        "MSEI"
+    ],
+    [
+        "AHEL",
+        "APOLLO HOSPITALS ENTEREPRISE LTD",
+        "BSE"
+    ],
+    [
+        "ALKM",
+        "ALKEM FUTURES",
+        "BSE"
+    ],
+    [
+        "ATUL",
+        "ATUL FUTURES",
+        "BSE"
+    ],
+    [
+        "BARLEYJPR",
+        "Barley Futures",
+        "NCDEX"
+    ],
+    [
+        "IEEX",
+        "IEX FUTURES",
+        "BSE"
+    ],
+    [
+        "JEERAMINI",
+        "Jeera Mini Futures",
+        "NCDEX"
+    ],
+    [
+        "LTIL",
+        "LTIM FUTURES",
+        "BSE"
+    ],
+    [
+        "MAIZE",
+        "Maize - Feed/Industrial Grade Futures",
+        "NCDEX"
+    ],
+    [
+        "MTFL",
+        "MUTHOOT FINANCE LTD",
+        "BSE"
+    ],
+    [
+        "NFIL",
+        "NAVINFLUOR FUTURES",
+        "BSE"
+    ],
+    [
+        "NTPC",
+        "NTP FUTURES",
+        "BSE"
+    ],
+    [
+        "PLNG",
+        "PETRONET LNG LTD",
+        "BSE"
+    ],
+    [
+        "NTPC",
+        "NTP FUTURES",
+        "BSE"
+    ],
+    [
+        "PLNG",
+        "PETRONET LNG LTD",
+        "BSE"
+    ],
+    [
+        "UBRL",
+        "UNITED BREWERIES LTD",
+        "BSE"
+    ],
+    [
+        "ABBL",
+        "ABB FUTURES",
+        "BSE"
+    ],
+    [
+        "ACCL",
+        "ACC FUTURES",
+        "BSE"
+    ],
+    [
+        "BLKI",
+        "BALKRISHNA INDUSTRIES LTD",
+        "BSE"
+    ],
+    [
+        "CFHL",
+        "CAN FIN HOMES LTD",
+        "BSE"
+    ],
+    [
+        "EMLD",
+        "EICHER MOTORS LIMITED",
+        "BSE"
+    ],
+    [
+        "GRSM",
+        "GRS FUTURES",
+        "BSE"
+    ],
+    [
+        "HIAL",
+        "HAL FUTURES",
+        "BSE"
+    ],
+    [
+        "JBFW",
+        "JUBILANT FOODWORKS LTD",
+        "BSE"
+    ],
+    [
+        "SCPL",
+        "SBICARD FUTURES",
+        "BSE"
+    ],
+    [
+        "718GS2033",
+        "718GS2033 Futures",
+        "MSEI"
+    ],
+    [
+        "718GS2037",
+        "718GS2037 Futures",
+        "MSEI"
+    ],
+    [
+        "726GS2033",
+        "726GS2033 Futures",
+        "MSEI"
+    ],
+    [
+        "741GS2036",
+        "741GS2036 Futures",
+        "MSEI"
+    ],
+    [
+        "AUPL",
+        "AUROBINDO PHARMA LTD",
+        "BSE"
+    ],
+    [
+        "BAJT",
+        "BAJ FUTURES",
+        "BSE"
+    ],
+    [
+        "GNFC",
+        "GNFC FUTURES",
+        "BSE"
+    ],
+    [
+        "IDFL",
+        "IDFC FUTURES",
+        "BSE"
+    ],
+    [
+        "IIBK",
+        "INDUSIND BANK BOMBAY",
+        "BSE"
+    ],
+    [
+        "INGL",
+        "INDRAPRASTHA GAS LTD",
+        "BSE"
+    ],
+    [
+        "LTTS",
+        "LTTS FUTURES",
+        "BSE"
+    ],
+    [
+        "SHCM",
+        "SHREE CEMENT LTD",
+        "BSE"
+    ],
+    [
+        "TMCL",
+        "TVS MOTOR COMPANY LTD",
+        "BSE"
+    ],
+    [
+        "UPHL",
+        "U.P.HOTELS LTD",
+        "BSE"
+    ],
+    [
+        "CUBL",
+        "CUB FUTURES",
+        "BSE"
+    ]
+]

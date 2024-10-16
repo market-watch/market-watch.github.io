@@ -1,0 +1,1227 @@
+[
+    [
+        "NIFTY",
+        "Nifty 50 Index",
+        "NSE"
+    ],
+    [
+        "BANKNIFTY",
+        "Nifty Bank Index",
+        "NSE"
+    ],
+    [
+        "CNXFINANCE",
+        "Nifty Financial Services Index",
+        "NSE"
+    ],
+    [
+        "NIFTY_MID_SELECT",
+        "Nifty MidCap Select Index",
+        "NSE"
+    ],
+    [
+        "SENSEX",
+        "P BSE SENSEX Index",
+        "BSE"
+    ],
+    [
+        "INDIAVIX",
+        "India VIX Index",
+        "NSE"
+    ],
+    [
+        "CNXIT",
+        "Nifty IT Index",
+        "NSE"
+    ],
+    [
+        "BANK",
+        "P BSE BANKEX",
+        "BSE"
+    ],
+    [
+        "CNX500",
+        "Nifty 500 Index",
+        "NSE"
+    ],
+    [
+        "CNXMETAL",
+        "Nifty Metal Index",
+        "NSE"
+    ],
+    [
+        "CNXAUTO",
+        "Nifty Auto Index",
+        "NSE"
+    ],
+    [
+        "CNXSMALLCAP",
+        "Nifty SmallCap 100 Index",
+        "NSE"
+    ],
+    [
+        "CNXPHARMA",
+        "Nifty Pharma Index",
+        "NSE"
+    ],
+    [
+        "CNXMIDCAP",
+        "Nifty MidCap 100 Index",
+        "NSE"
+    ],
+    [
+        "CNXFMCG",
+        "Nifty FMCG Index",
+        "NSE"
+    ],
+    [
+        "CNXREALTY",
+        "Nifty Realty Index",
+        "NSE"
+    ],
+    [
+        "CNXPSUBANK",
+        "Nifty PSU Bank Index",
+        "NSE"
+    ],
+    [
+        "CNXENERGY",
+        "Nifty Energy Index",
+        "NSE"
+    ],
+    [
+        "CNXINFRA",
+        "Nifty Infrastructure Index",
+        "NSE"
+    ],
+    [
+        "NIFTYSMLCAP250",
+        "Nifty SmallCap 250 Index",
+        "NSE"
+    ],
+    [
+        "NIFTYPVTBANK",
+        "Nifty Private Bank Index",
+        "NSE"
+    ],
+    [
+        "CNXMEDIA",
+        "Nifty Media Index",
+        "NSE"
+    ],
+    [
+        "NIFTYMIDCAP50",
+        "Nifty MidCap 50 Index",
+        "NSE"
+    ],
+    [
+        "CNXPSE",
+        "Nifty PSE Index",
+        "NSE"
+    ],
+    [
+        "NIFTYMIDSML400",
+        "Nifty MidSmallCap 400 Index",
+        "NSE"
+    ],
+    [
+        "NIFTY_OIL_AND_GAS",
+        "Nifty Oil &amp; Gas Index",
+        "NSE"
+    ],
+    [
+        "NIFTYJR",
+        "Nifty Next 50 Index",
+        "NSE"
+    ],
+    [
+        "NIFTYMIDCAP150",
+        "Nifty MidCap 150 Index",
+        "NSE"
+    ],
+    [
+        "NIFTY_HEALTHCARE",
+        "Nifty Healthcare Index",
+        "NSE"
+    ],
+    [
+        "MIDCAP",
+        "P BSE MidCap Index",
+        "BSE"
+    ],
+    [
+        "NIFTY_CONSR_DURBL",
+        "Nifty Consumer Durables Index",
+        "NSE"
+    ],
+    [
+        "CNXCONSUMPTION",
+        "Nifty India Consumption Index",
+        "NSE"
+    ],
+    [
+        "CNXCOMMODITIES",
+        "Nifty Commodities Index",
+        "NSE"
+    ],
+    [
+        "NIFTYFINSRV25_50",
+        "Nifty Financial Services 25/50 Index",
+        "NSE"
+    ],
+    [
+        "NIFTY_MICROCAP250",
+        "Nifty MicroCap 250 Index",
+        "NSE"
+    ],
+    [
+        "CNXSERVICE",
+        "NIfty Services Sector Index",
+        "NSE"
+    ],
+    [
+        "CPSE",
+        "Nifty CPSE Index",
+        "NSE"
+    ],
+    [
+        "NIFTYSMLCAP50",
+        "Nifty SmallCap 50 Index",
+        "NSE"
+    ],
+    [
+        "CNXMNC",
+        "Nifty MNC Index",
+        "NSE"
+    ],
+    [
+        "CNX100",
+        "Nifty 100 Index",
+        "NSE"
+    ],
+    [
+        "CNX200",
+        "Nifty 200 Index",
+        "NSE"
+    ],
+    [
+        "NIFTY_IND_DIGITAL",
+        "Nifty India Digital Index",
+        "NSE"
+    ],
+    [
+        "NIFTY200MOMENTM30",
+        "Nifty 200 Momentum 30 Index",
+        "NSE"
+    ],
+    [
+        "NIFTY_TOTAL_MKT",
+        "Nifty Total Market Index",
+        "NSE"
+    ],
+    [
+        "SMLCAP",
+        "P BSE SmallCap Index",
+        "BSE"
+    ],
+    [
+        "NIFTYALPHA50",
+        "Nifty Alpha 50 Index",
+        "NSE"
+    ],
+    [
+        "NIFTY_INDIA_MFG",
+        "Nifty India Manufacturing Index",
+        "NSE"
+    ],
+    [
+        "NIFTY500_MULTICAP",
+        "Nifty 500 MultiCap 50:25:25 Index",
+        "NSE"
+    ],
+    [
+        "GOLD",
+        "GOLD",
+        "NCDEX"
+    ],
+    [
+        "POWER",
+        "P BSE POWER INDEX",
+        "BSE"
+    ],
+    [
+        "NIFTY_LARGEMID250",
+        "Nifty LargeMidCap 250 Index",
+        "NSE"
+    ],
+    [
+        "STEEL",
+        "Steel Long - Mandi Gobindgarh Spot",
+        "NCDEX"
+    ],
+    [
+        "NIFTYM150MOMNTM50",
+        "Nifty MidCap 150 Momentum 50 Index",
+        "NSE"
+    ],
+    [
+        "TELCOM",
+        "P BSE Telecommunication",
+        "BSE"
+    ],
+    [
+        "CG",
+        "P BSE CAPITAL GOODS INDEX",
+        "BSE"
+    ],
+    [
+        "PSU",
+        "P BSE PUBLIC SECTOR INDEX",
+        "BSE"
+    ],
+    [
+        "CNXDIVIDOPPT",
+        "Nifty Dividend Opportunities 50 Index",
+        "NSE"
+    ],
+    [
+        "SNSX50",
+        "P BSE SENSEX 50 Index",
+        "BSE"
+    ],
+    [
+        "BSE500",
+        "P BSE 500 INDEX",
+        "BSE"
+    ],
+    [
+        "SML250",
+        "P BSE 250 SmallCap Index",
+        "BSE"
+    ],
+    [
+        "NIFTYGSCOMPOSITE",
+        "Nifty Composite G-Sec Index",
+        "NSE"
+    ],
+    [
+        "NIFTY200_ALPHA_30",
+        "Nifty 200 Alpha 30 Index",
+        "NSE"
+    ],
+    [
+        "NIFTY50EQUALWEIGHT",
+        "Nifty 50 Equal Weight Index",
+        "NSE"
+    ],
+    [
+        "NIFTY_TATA_25_CAP",
+        "NIFTY TATA 25 CAP",
+        "NSE"
+    ],
+    [
+        "SMEIPO",
+        "P BSE SMALL AND MEDIUM ENTERPRISES IPO INDEX",
+        "BSE"
+    ],
+    [
+        "METAL",
+        "P BSE METAL INDEX",
+        "BSE"
+    ],
+    [
+        "FINSER",
+        "P BSE Financial Services",
+        "BSE"
+    ],
+    [
+        "NIFTY50_VALUE_20",
+        "Nifty 50 Value 20 Index",
+        "NSE"
+    ],
+    [
+        "LRGCAP",
+        "P BSE LargeCap Index",
+        "BSE"
+    ],
+    [
+        "NIFTYALPHALOWVOL",
+        "Nifty Alpha Low Volatility 30 Index",
+        "NSE"
+    ],
+    [
+        "OILGAS",
+        "P BSE OIL&amp;GAS INDEX",
+        "BSE"
+    ],
+    [
+        "NIFTY_MIDSML_HLTH",
+        "NIFTY MIDSML HLTH",
+        "NSE"
+    ],
+    [
+        "BSEEVI",
+        "P BSE Enhanced Value Index",
+        "BSE"
+    ],
+    [
+        "AUTO",
+        "P BSE AUTO INDEX",
+        "BSE"
+    ],
+    [
+        "PEPPER",
+        "Pepper - Kochi Spot",
+        "NCDEX"
+    ],
+    [
+        "NIFTY200QUALTY30",
+        "Nifty 200 Quality 30 Index",
+        "NSE"
+    ],
+    [
+        "ALLCAP",
+        "P BSE ALLCAP",
+        "BSE"
+    ],
+    [
+        "IT",
+        "P BSE Information Technology",
+        "BSE"
+    ],
+    [
+        "NIFTY100LOWVOL30",
+        "Nifty 100 Low Volatility 30 Index",
+        "NSE"
+    ],
+    [
+        "NIFTY100EQUALWEIGHT",
+        "Nifty 100 Equal Weight Index",
+        "NSE"
+    ],
+    [
+        "LIX15",
+        "Nifty 100 Liquid 15 Index",
+        "NSE"
+    ],
+    [
+        "NIFTYMIDLIQ15",
+        "Nifty MidCap Liquid 15 Index",
+        "NSE"
+    ],
+    [
+        "RMSEED",
+        "Mustardseed - Jaipur Spot",
+        "NCDEX"
+    ],
+    [
+        "MIDSEL",
+        "P BSE MIDCAP SELECT INDEX",
+        "BSE"
+    ],
+    [
+        "FMCG",
+        "P BSE Fast Moving Consumer Goods",
+        "BSE"
+    ],
+    [
+        "CD",
+        "P BSE Consumer durables",
+        "BSE"
+    ],
+    [
+        "DFRGRI",
+        "P BSE Diversified Financials Revenue Growth Index",
+        "BSE"
+    ],
+    [
+        "REALTY",
+        "P BSE REALTY INDEX",
+        "BSE"
+    ],
+    [
+        "NI15",
+        "Nifty Growth Sectors 15 Index",
+        "NSE"
+    ],
+    [
+        "NIFTY100_ESG",
+        "Nifty 100 ESG Index",
+        "NSE"
+    ],
+    [
+        "HC",
+        "P BSE HEALTH CARE INDEX",
+        "BSE"
+    ],
+    [
+        "NIFTYQUALITY30",
+        "Nifty 100 Quality 30 Index",
+        "NSE"
+    ],
+    [
+        "SNXT50",
+        "P BSE SENSEX Next 50 Index",
+        "BSE"
+    ],
+    [
+        "IPO",
+        "P BSE IPO INDEX",
+        "BSE"
+    ],
+    [
+        "BSEMOI",
+        "P BSE Momentum Index",
+        "BSE"
+    ],
+    [
+        "COPPER",
+        "COPPER",
+        "NCDEX"
+    ],
+    [
+        "ALUMINIUM",
+        "Aluminium Spot",
+        "NCDEX"
+    ],
+    [
+        "SNXN30",
+        "BSE SENSEX NEXT 30",
+        "BSE"
+    ],
+    [
+        "CPO",
+        "Crude Palm Oil - Kandla Spot",
+        "NCDEX"
+    ],
+    [
+        "CHARJDDEL",
+        "Chana - Delhi Spot",
+        "NCDEX"
+    ],
+    [
+        "BHRT22",
+        "P BSE Bharat 22 Index",
+        "BSE"
+    ],
+    [
+        "COTTON",
+        "29 mm Cotton - Rajkot Spot",
+        "NCDEX"
+    ],
+    [
+        "ENERGY",
+        "P BSE ENERGY",
+        "BSE"
+    ],
+    [
+        "BSEPBI",
+        "P BSE Private Banks Index",
+        "BSE"
+    ],
+    [
+        "WHEAT",
+        "Wheat - Delhi Spot",
+        "NCDEX"
+    ],
+    [
+        "NIFTYPR1XINV",
+        "Nifty 50 PR 1x Inverse Index",
+        "NSE"
+    ],
+    [
+        "NIFTY_M150_QLTY50",
+        "Nifty MidCap 150 Quality 50 Index",
+        "NSE"
+    ],
+    [
+        "UTILS",
+        "P BSE UTILITIES",
+        "BSE"
+    ],
+    [
+        "DOLLEX30",
+        "P BSE DOLLEX-30",
+        "BSE"
+    ],
+    [
+        "NIFTY_MULTI_MFG",
+        "NIFTY MULTI MFG",
+        "NSE"
+    ],
+    [
+        "NIFTY_MULTI_INFRA",
+        "NIFTY MULTI INFRA",
+        "NSE"
+    ],
+    [
+        "INFRASTRUCTURE",
+        "P BSE INDIA INFRASTRUCTURE INDEX",
+        "BSE"
+    ],
+    [
+        "MID150",
+        "P BSE 150 MidCap Index",
+        "BSE"
+    ],
+    [
+        "INDSTR",
+        "P BSE INDUSTRIALS",
+        "BSE"
+    ],
+    [
+        "NIFTYTR1XINV",
+        "Nifty 50 TR 1x Inverse Index",
+        "NSE"
+    ],
+    [
+        "SOYAMEAL",
+        "Soyabean Meal - Indore Spot",
+        "NCDEX"
+    ],
+    [
+        "BSE100",
+        "P BSE 100 INDEX",
+        "BSE"
+    ],
+    [
+        "SUNOIL",
+        "Crude Sunflower Oil - Chennai Spot",
+        "NCDEX"
+    ],
+    [
+        "COCUDAKL",
+        "Cotton Seed Oilcake - Akola Spot",
+        "NCDEX"
+    ],
+    [
+        "TECK",
+        "P BSE TECK INDEX",
+        "BSE"
+    ],
+    [
+        "GOLD100",
+        "GOLD100",
+        "NCDEX"
+    ],
+    [
+        "GUARGUM5",
+        "Guar Gum - Jodhpur Spot",
+        "NCDEX"
+    ],
+    [
+        "TMCRJPSGL",
+        "Turmeric (Rajapore) - Sangli Spot",
+        "NCDEX"
+    ],
+    [
+        "GUARSEED10",
+        "Guar Seed - Jodhpur Spot",
+        "NCDEX"
+    ],
+    [
+        "SYBEANIDR",
+        "Soy Bean - Indore Spot",
+        "NCDEX"
+    ],
+    [
+        "BSEQUI",
+        "P BSE Quality Index",
+        "BSE"
+    ],
+    [
+        "BSESER",
+        "P BSE Services",
+        "BSE"
+    ],
+    [
+        "RBRRS4KOC",
+        "Rubber - Kochi Spot",
+        "NCDEX"
+    ],
+    [
+        "PADYPB1121",
+        "Paddy (Basmati) \u2013 Pusa 1121 Spot",
+        "NCDEX"
+    ],
+    [
+        "NIFTY100ESGSECLDR",
+        "Nifty 100 ESG Sector Leaders Index",
+        "NSE"
+    ],
+    [
+        "SYOREF",
+        "Refined Soybean Oil - Indore Spot",
+        "NCDEX"
+    ],
+    [
+        "ZINC",
+        "ZINC",
+        "NCDEX"
+    ],
+    [
+        "JEERAUNJHA",
+        "Jeera - Unjha Spot",
+        "NCDEX"
+    ],
+    [
+        "NICKEL",
+        "NICKEL",
+        "NCDEX"
+    ],
+    [
+        "RMSEEDALW",
+        "Mustardseed - Alwar Spot",
+        "NCDEX"
+    ],
+    [
+        "BSE200",
+        "P BSE 200 INDEX",
+        "BSE"
+    ],
+    [
+        "CHANA",
+        "Chana - Bikaner Spot",
+        "NCDEX"
+    ],
+    [
+        "COMDTY",
+        "P BSE Commodities",
+        "BSE"
+    ],
+    [
+        "NIFTYGS10YR",
+        "Nifty 10 year Benchmark G-Sec Index",
+        "NSE"
+    ],
+    [
+        "MAIZEKHRIF",
+        "Maize Kharif - Nizamabad Spot",
+        "NCDEX"
+    ],
+    [
+        "NIFTYGS8TO13YR",
+        "Nifty 8-13 years G-Sec Index",
+        "NSE"
+    ],
+    [
+        "MFG",
+        "P BSE INDIA MANUFACTURING INDEX",
+        "BSE"
+    ],
+    [
+        "NIFTYTR2XLEV",
+        "Nifty 50 TR 2x Leverage Index",
+        "NSE"
+    ],
+    [
+        "MOONG",
+        "Moong - Merta City Spot",
+        "NCDEX"
+    ],
+    [
+        "BSELVI",
+        "P BSE Low Volatility Index",
+        "BSE"
+    ],
+    [
+        "NIFTYGS10YRCLN",
+        "Nifty 10 year Benchmark G-Sec (Clean Price) Index",
+        "NSE"
+    ],
+    [
+        "NIFTYGS15YRPLUS",
+        "Nifty 15 years and above G-Sec Index",
+        "NSE"
+    ],
+    [
+        "NIFTYPR2XLEV",
+        "Nifty 50 PR 2x Leverage Index",
+        "NSE"
+    ],
+    [
+        "CONDIS",
+        "P BSE Consumer Discretionary",
+        "BSE"
+    ],
+    [
+        "SBMEALIDR",
+        "Soyabean Meal -Hipro - Indore Spot",
+        "NCDEX"
+    ],
+    [
+        "COFFEE",
+        "Coffee Robusta Cherry AB - KushalNagar Spot",
+        "NCDEX"
+    ],
+    [
+        "LCTMCI",
+        "P BSE 100 LargeCap TMC Index",
+        "BSE"
+    ],
+    [
+        "CASTOR",
+        "Castor Seed - Deesa Spot",
+        "NCDEX"
+    ],
+    [
+        "DHANIYA",
+        "Dhaniya - Gondal Spot",
+        "NCDEX"
+    ],
+    [
+        "NIFTYDIVIDEND",
+        "Nifty 50 Dividend Points Index",
+        "NSE"
+    ],
+    [
+        "NIFTYGS4TO8YR",
+        "Nifty 4-8 years G-Sec Index",
+        "NSE"
+    ],
+    [
+        "SYOREFKDL",
+        "Refined Soybean Oil - Kandla Spot",
+        "NCDEX"
+    ],
+    [
+        "BAJRA",
+        "Bajra - Jaipur Spot",
+        "NCDEX"
+    ],
+    [
+        "NIFTYGS11TO15YR",
+        "Nifty 11-15 years G-Sec Index",
+        "NSE"
+    ],
+    [
+        "MSL400",
+        "P BSE 400 MidSmallCap Index",
+        "BSE"
+    ],
+    [
+        "ISABGOL",
+        "Isabgol Seed",
+        "NCDEX"
+    ],
+    [
+        "SESAMESEED",
+        "Sesame Seed - Unjha Spot",
+        "NCDEX"
+    ],
+    [
+        "GUARGUM",
+        "GUARGUM",
+        "NCDEX"
+    ],
+    [
+        "KAPAS",
+        "Kapas - Rajkot Spot",
+        "NCDEX"
+    ],
+    [
+        "MAIZE",
+        "Maize - Feed/Industrial Grade - Chhindwara Spot",
+        "NCDEX"
+    ],
+    [
+        "SMLSEL",
+        "P BSE SMALLCAP SELECT INDEX",
+        "BSE"
+    ],
+    [
+        "TMCFGRNZM",
+        "Turmeric - Erode Spot",
+        "NCDEX"
+    ],
+    [
+        "CHANAAKL",
+        "Chana - Akola Spot",
+        "NCDEX"
+    ],
+    [
+        "KACHIGHANI",
+        "Kachi Ghani - Jaipur Spot",
+        "NCDEX"
+    ],
+    [
+        "SUGARS",
+        "Sugar S Grade - Kolhapur Spot",
+        "NCDEX"
+    ],
+    [
+        "COCUDCKDI",
+        "Cotton Seed Oilcake - Kadi Spot",
+        "NCDEX"
+    ],
+    [
+        "GROUNDNUT",
+        "Groundnut in Shell - Bikaner Spot",
+        "NCDEX"
+    ],
+    [
+        "RBDPLNKAK",
+        "RBD Palmolein - Kakinada Spot",
+        "NCDEX"
+    ],
+    [
+        "BARLEYJPR",
+        "Barley - Jaipur Spot",
+        "NCDEX"
+    ],
+    [
+        "COTTONKADI",
+        "29 mm Cotton - Kadi Spot",
+        "NCDEX"
+    ],
+    [
+        "CPSE",
+        "P BSE CPSE INDEX",
+        "BSE"
+    ],
+    [
+        "SILVERH5",
+        "SILVERH5",
+        "NCDEX"
+    ],
+    [
+        "SUGARM",
+        "Sugar M Grade - Kanpur Spot",
+        "NCDEX"
+    ],
+    [
+        "DHANIYAKOT",
+        "Dhaniya - Kota Spot",
+        "NCDEX"
+    ],
+    [
+        "YPECANMUM",
+        "Yellow Peas - Mumbai Spot",
+        "NCDEX"
+    ],
+    [
+        "GUR",
+        "Gur - Muzaffar Nagar Spot",
+        "NCDEX"
+    ],
+    [
+        "MAIZEKHRF",
+        "Maize Kharif Spot",
+        "NCDEX"
+    ],
+    [
+        "SYBEANAKL",
+        "Soy Bean - Akola Spot",
+        "NCDEX"
+    ],
+    [
+        "JEERAJDR",
+        "Jeera - Jodhpur Spot",
+        "NCDEX"
+    ],
+    [
+        "LEAD",
+        "LEAD",
+        "NCDEX"
+    ],
+    [
+        "MAIZERABI",
+        "Maize Rabi - Gulabbagh Spot",
+        "NCDEX"
+    ],
+    [
+        "LMI250",
+        "P BSE 250 LargeMidCap Index",
+        "BSE"
+    ],
+    [
+        "SUNOILKDL",
+        "Crude Sunflower Oil - Kandla Spot",
+        "NCDEX"
+    ],
+    [
+        "CRDPOLKAK",
+        "Crude Palm Oil - Kakinada Spot",
+        "NCDEX"
+    ],
+    [
+        "DHANIYAJPR",
+        "Dhaniya - Jaipur Spot",
+        "NCDEX"
+    ],
+    [
+        "SILVERINTL",
+        "SILVERINTL",
+        "NCDEX"
+    ],
+    [
+        "GOLDHEDGE",
+        "GOLDHEDGE",
+        "NCDEX"
+    ],
+    [
+        "MSRBLDIDR",
+        "Masoor - Indore Spot",
+        "NCDEX"
+    ],
+    [
+        "WHEATFAQ",
+        "Wheat - Kota Spot",
+        "NCDEX"
+    ],
+    [
+        "WHTSMQIDRI",
+        "Wheat - Indore Spot",
+        "NCDEX"
+    ],
+    [
+        "CASTOROIL",
+        "Refined Castor Oil (First Special Grade) - Kandla Spot",
+        "NCDEX"
+    ],
+    [
+        "DOLLEX100",
+        "P BSE DOLLEX-100",
+        "BSE"
+    ],
+    [
+        "DOLLEX200",
+        "P BSE DOLLEX-200",
+        "BSE"
+    ],
+    [
+        "GOLDH100",
+        "GOLDH100",
+        "NCDEX"
+    ],
+    [
+        "GUARSEDBKN",
+        "Guar Seed - Bikaner Spot",
+        "NCDEX"
+    ],
+    [
+        "SYBEANNGR",
+        "Soy Bean - Nagpur Spot",
+        "NCDEX"
+    ],
+    [
+        "CASTORKDI",
+        "Castor Seed - Kadi Spot",
+        "NCDEX"
+    ],
+    [
+        "KAPASKDI",
+        "Kapas - Kadi Spot",
+        "NCDEX"
+    ],
+    [
+        "MAIZECHIND",
+        "Maize - Feed/Industrial Grade - Chhindwara Spot",
+        "NCDEX"
+    ],
+    [
+        "SYOREFMUM",
+        "Refined Soybean Oil - Mumbai Spot",
+        "NCDEX"
+    ],
+    [
+        "WHTSMQKPRI",
+        "Wheat - Kanpur Spot",
+        "NCDEX"
+    ],
+    [
+        "BAJRADELHI",
+        "Bajra - Delhi Spot",
+        "NCDEX"
+    ],
+    [
+        "ESG100",
+        "P BSE 100 ESG Index",
+        "BSE"
+    ],
+    [
+        "MAIZESOUTH",
+        "Maize - Feed/Industrial Grade - Sangli Spot",
+        "NCDEX"
+    ],
+    [
+        "TMCFUPNZM",
+        "Turmeric (Unpolished) - Nizamabad Spot",
+        "NCDEX"
+    ],
+    [
+        "YLPEASKPR",
+        "Yellow Peas - Kanpur Spot",
+        "NCDEX"
+    ],
+    [
+        "GUAR1MT",
+        "GUAR1MT",
+        "NCDEX"
+    ],
+    [
+        "JEERAMINI",
+        "Jeera Mini - Unjha Spot",
+        "NCDEX"
+    ],
+    [
+        "MAIZEDEL",
+        "Maize - Feed/Industrial Grade - Delhi Spot",
+        "NCDEX"
+    ],
+    [
+        "SUGARMMZR",
+        "Sugar M Grade - Muzaffarnagar Spot",
+        "NCDEX"
+    ],
+    [
+        "SYBEANKOT",
+        "Soy Bean - Kota Spot",
+        "NCDEX"
+    ],
+    [
+        "BAJRAJPR",
+        "Bajra - Jaipur Spot",
+        "NCDEX"
+    ],
+    [
+        "GNOEXPRKT",
+        "Groundnut Expeller Oil - Rajkot Spot",
+        "NCDEX"
+    ],
+    [
+        "GURCHMUZR",
+        "GURCHMUZR",
+        "NCDEX"
+    ],
+    [
+        "KAPASSRNR",
+        "KAPASSRNR",
+        "NCDEX"
+    ],
+    [
+        "PADDYKRNL",
+        "Paddy (Basmati) \u2013 Pusa 1121 - Karnal - Spot",
+        "NCDEX"
+    ],
+    [
+        "SHANKRKPAS",
+        "SHANKRKPAS",
+        "NCDEX"
+    ],
+    [
+        "SUGARMKPR",
+        "Sugar M Grade - Kolhapur Spot",
+        "NCDEX"
+    ],
+    [
+        "SUGARSERD",
+        "Sugar S Grade - Erode Spot",
+        "NCDEX"
+    ],
+    [
+        "SYOREFNGR",
+        "Refined Soybean Oil - Nagpur Spot",
+        "NCDEX"
+    ],
+    [
+        "TMCFPLNZM",
+        "Turmeric (Farmer Polished) - Nizamabad Spot",
+        "NCDEX"
+    ],
+    [
+        "BARLEY",
+        "Barley",
+        "NCDEX"
+    ],
+    [
+        "BSEDSI",
+        "P BSE Dividend Stability Index",
+        "BSE"
+    ],
+    [
+        "COTWASOIL",
+        "COTWASOIL",
+        "NCDEX"
+    ],
+    [
+        "GNSHELJNG",
+        "Groundnut in Shell - Junagadh Spot",
+        "NCDEX"
+    ],
+    [
+        "JUTRAWKOL",
+        "Raw Jute - Kolkata Spot",
+        "NCDEX"
+    ],
+    [
+        "PADDYKOTA",
+        "Paddy (Basmati) \u2013 Pusa 1121 - Kota - Spot",
+        "NCDEX"
+    ],
+    [
+        "RMCAKE",
+        "Rapeseed-Mustard Seed Oilcake - Jaipur Spot",
+        "NCDEX"
+    ],
+    [
+        "RMOEXPGNR",
+        "Rapeseed-Mustard Spot",
+        "NCDEX"
+    ],
+    [
+        "SILVERHEDG",
+        "SILVERHEDG",
+        "NCDEX"
+    ],
+    [
+        "SUGARMDEL",
+        "Sugar M Grade - Delhi Spot",
+        "NCDEX"
+    ],
+    [
+        "SUGARMERD",
+        "Sugar M Grade - Erode Spot",
+        "NCDEX"
+    ],
+    [
+        "SUGARMKOL",
+        "Sugar M Grade - Kolkata Spot",
+        "NCDEX"
+    ],
+    [
+        "SUGARSVSH",
+        "SUGARSVSH",
+        "NCDEX"
+    ],
+    [
+        "SYODEGUM",
+        "SYODEGUM",
+        "NCDEX"
+    ],
+    [
+        "WHTSMQRJKT",
+        "Wheat - Rajkot Spot",
+        "NCDEX"
+    ],
+    [
+        "CHLL334GTR",
+        "CHLL334GTR",
+        "NCDEX"
+    ],
+    [
+        "GLDPURMUMK",
+        "GLDPURMUMK",
+        "NCDEX"
+    ],
+    [
+        "GUAR2MT",
+        "GUAR2MT",
+        "NCDEX"
+    ],
+    [
+        "TURDESAKL",
+        "TURDESAKL",
+        "NCDEX"
+    ]
+]
