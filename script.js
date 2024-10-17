@@ -655,8 +655,9 @@ window.onload = function() {
 
 // New function to filter symbols based on input
 function filterSymbols(input) {
-    return symbols.filter(symbol => symbol.toLowerCase().includes(input.toLowerCase()));
+    return symbols.filter(symbol => symbol.toLowerCase().startsWith(input.toLowerCase()));
 }
+
 
 // New function to display filtered suggestions
 function displaySuggestions(suggestions) {
