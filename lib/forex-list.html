@@ -11,6 +11,7 @@
   gtag('config', 'G-NS52FT89QG');
 </script>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forex List</title>
     <style>
@@ -38,6 +39,7 @@
             overflow-y: auto;
         }
 
+        /* Table styling */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -59,13 +61,27 @@
             background-color: #f1f1f1;
         }
 
-        a {
-            text-decoration: none;
-            color: #333;
-        }
+        /* Mobile-specific styling for responsive table */
+        @media only screen and (max-width: 768px) {
+            .table-container {
+                width: 90%;
+                overflow-x: auto; /* Allow horizontal scrolling */
+            }
 
-        a:hover {
-            color: #4CAF50;
+            table {
+                width: 100%; /* Make sure the table is full width */
+                display: block; /* Enable scrolling if the table overflows */
+                overflow-x: auto; /* Add scroll only if needed */
+            }
+
+            th, td {
+                padding: 10px;
+            }
+
+            /* Adjust heading size for mobile */
+            h1 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head> 
@@ -84,7 +100,7 @@
                 <tr>
                     <th onclick="sortTable(0)">Symbol</th>
                     <th onclick="sortTable(1)">Name</th>
-                    <th onclick="sortTable(2)">Exchange</th>
+                    <th onclick="sortTable(2)">Other Info</th>
                 </tr>
             </thead>
             <tbody id="stock-list"></tbody>
