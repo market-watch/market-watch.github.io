@@ -64,6 +64,10 @@
         "name": "Aarti Surfactants Ltd"
     },
     {
+        "symbol": "AARVI",
+        "name": "Aarvi Encon Ltd"
+    },
+    {
         "symbol": "AAVAS",
         "name": "AAVAS Financiers Ltd"
     },
@@ -208,6 +212,10 @@
         "name": "Ahlada Engineers Ltd"
     },
     {
+        "symbol": "AHLEAST",
+        "name": "Asian Hotels (east) Limited"
+    },
+    {
         "symbol": "AHLUCONT",
         "name": "Ahluwalia Contracts (india) Limited"
     },
@@ -338,6 +346,10 @@
     {
         "symbol": "AMRUTANJAN",
         "name": "Amrutanjan Health Care Limited"
+    },
+    {
+        "symbol": "ANANDRATHI",
+        "name": "Anand Rathi Wealth Ltd"
     },
     {
         "symbol": "ANANTRAJ",
@@ -3392,10 +3404,6 @@
         "name": "Kridhan Infra Limited"
     },
     {
-        "symbol": "KRISHANA",
-        "name": "Krishana Phoschem Ltd"
-    },
-    {
         "symbol": "KRITI",
         "name": "Kriti Industries (India) Ltd"
     },
@@ -3474,10 +3482,6 @@
     {
         "symbol": "LATENTVIEW",
         "name": "Latent View Analytics Ltd"
-    },
-    {
-        "symbol": "LATTEYS",
-        "name": "Latteys Industries Ltd"
     },
     {
         "symbol": "LAURUSLABS",
@@ -3682,10 +3686,6 @@
     {
         "symbol": "MAHABANK",
         "name": "Bank Of Maharashtra"
-    },
-    {
-        "symbol": "MAHAPEXLTD",
-        "name": "Maha Rashtra Apex Corporation Ltd"
     },
     {
         "symbol": "MAHEPC",
@@ -4378,10 +4378,6 @@
     {
         "symbol": "NILAINFRA",
         "name": "Nila Infrastructures Limited"
-    },
-    {
-        "symbol": "NILASPACES",
-        "name": "Nila Spaces Ltd"
     },
     {
         "symbol": "NIRAJ",
@@ -5572,10 +5568,6 @@
         "name": "Share India Securities Ltd"
     },
     {
-        "symbol": "SHEKHAWATI",
-        "name": "Shekhawati Industries Ltd"
-    },
-    {
         "symbol": "SHEMAROO",
         "name": "Shemaroo Entertainment Limited"
     },
@@ -5886,10 +5878,6 @@
     {
         "symbol": "STARHEALTH",
         "name": "Star Health & Allied Insurance Company Ltd"
-    },
-    {
-        "symbol": "STARPAPER",
-        "name": "Star Paper Mills Limited"
     },
     {
         "symbol": "STCINDIA",
