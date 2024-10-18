@@ -25,23 +25,47 @@
             z-index: -1;
         }
 
-        /* Content styling */
-        .content {
+        /* Table container styling */
+        .table-container {
             position: relative;
             padding: 20px;
-            background-color: rgba(244, 244, 244, 0.75); /* Slight transparency */
+            margin: auto;
+            width: 60%;
+            background-color: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
             max-height: 90vh;
             overflow-y: auto;
-            margin: 0 auto;
-            width: 80%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Style the list */
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            margin: 0;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        a:hover {
+            color: #4CAF50;
         }
     </style>
 </head> 
@@ -52,10 +76,19 @@
         Your browser does not support the video tag.
     </video>
 
-    <!-- Content -->
-    <div class="content">
+    <!-- Table container -->
+    <div class="table-container">
         <h1>Forex List</h1>
-        <ul id="stock-list"></ul>
+        <table id="forex-table">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Symbol</th>
+                    <th onclick="sortTable(1)">Name</th>
+                    <th onclick="sortTable(2)">Exchange</th>
+                </tr>
+            </thead>
+            <tbody id="stock-list"></tbody>
+        </table>
     </div>
 
     <script>
@@ -64,15 +97,53 @@
             .then(response => response.json())
             .then(data => {
                 const stockList = document.getElementById('stock-list');
-                
-                // Display each stock symbol and name
+
+                // Display each stock symbol, name, and other info
                 data.forEach(stock => {
-                    const listItem = document.createElement('li');
-                    listItem.textContent = `${stock[0]} - ${stock[1]} - ${stock[2]}`;
-                    stockList.appendChild(listItem);
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td>${stock[0]}</td><td>${stock[1]}</td><td>${stock[2]}</td>`;
+                    stockList.appendChild(row);
                 });
             })
             .catch(error => console.error('Error fetching stock data:', error));
+
+        // Sort table by column
+        function sortTable(columnIndex) {
+            const table = document.getElementById("forex-table");
+            let switching = true, shouldSwitch, rows, x, y, i;
+            let direction = "asc", switchcount = 0;
+            
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+                    x = rows[i].getElementsByTagName("TD")[columnIndex];
+                    y = rows[i + 1].getElementsByTagName("TD")[columnIndex];
+                    if (direction === "asc") {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else if (direction === "desc") {
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                }
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    switchcount++;
+                } else {
+                    if (switchcount === 0 && direction === "asc") {
+                        direction = "desc";
+                        switching = true;
+                    }
+                }
+            }
+        }
     </script>
 </body>
 </html>
