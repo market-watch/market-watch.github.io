@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candlestick Patterns</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #0073e6;
+        }
+        h2 {
+            color: #00509e;
+        }
+        p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        ul {
+            margin-left: 20px;
+            list-style-type: disc;
+        }
+        .right-align {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="article-title"></h1>
+        <div id="article-content"></div>
+    </div>
+
+    <script>
+        fetch('candlestick_article.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('article-title').innerText = data.title;
+
+                let contentDiv = document.getElementById('article-content');
+                data.sections.forEach(section => {
+                let heading = document.createElement('h2');
+                heading.innerText = section.heading;
+
+                let paragraph = document.createElement('p');
+                paragraph.innerHTML = section.content;
+
+                // Append heading and content
+                contentDiv.appendChild(heading);
+
+                // Add images based on the image data
+                if (section.images) {
+                    section.images.forEach(image => {
+                        let img = document.createElement('img');
+                        img.src = image.src; // Image path from JSON
+                        img.alt = image.pattern; // Alt text for accessibility
+                        img.classList.add('candlestick-image'); // Optional: add a class for styling
+                        contentDiv.appendChild(img);
+                    });
+    }
+
+    // Add content after image
+    contentDiv.appendChild(paragraph);
+});
+
+            })
+            .catch(error => console.error('Error loading the article:', error));
+    </script>
+
+</body>
+</html>
