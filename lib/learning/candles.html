@@ -73,15 +73,15 @@
                 // Append heading and content
                 contentDiv.appendChild(heading);
 
-                // Add images based on the image data
-                if (section.images) {
-                    section.images.forEach(image => {
-                        let img = document.createElement('img');
-                        img.src = image.src; // Image path from JSON
-                        img.alt = image.pattern; // Alt text for accessibility
-                        img.classList.add('candlestick-image'); // Optional: add a class for styling
-                        contentDiv.appendChild(img);
-                    });
+                // // Add images based on the image data
+                // if (section.images) {
+                //     section.images.forEach(image => {
+                //         let img = document.createElement('img');
+                //         img.src = image.src; // Image path from JSON
+                //         img.alt = image.pattern; // Alt text for accessibility
+                //         img.classList.add('candlestick-image'); // Optional: add a class for styling
+                //         contentDiv.appendChild(img);
+                //     });
     }
 
     // Add content after image
