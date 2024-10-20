@@ -74,5 +74,156 @@
             })
             .catch(error => console.error('Error fetching stock data:', error));
     </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futures List</title>
+    <style>
+        /* Video background styling */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Table container styling */
+        .table-container {
+            position: relative;
+            padding: 20px;
+            margin: auto;
+            width: 60%;
+            background-color: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        table {
+            margin: 0 auto; /* Centers the table inside its container */
+            width: 100%; /* Ensure the table spans its container width */
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Mobile-specific styling for responsive table */
+        @media only screen and (max-width: 768px) {
+            .table-container {
+                width: 90%;
+                overflow-x: auto; /* Allow horizontal scrolling */
+            }
+
+            table {
+                width: 100%; /* Make sure the table is full width */
+                display: block; /* Enable scrolling if the table overflows */
+                overflow-x: auto; /* Add scroll only if needed */
+            }
+
+            th, td {
+                padding: 10px;
+            }
+
+            /* Adjust heading size for mobile */
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head> 
+<body>
+    <!-- Video background -->
+    <video class="video-bg" autoplay muted loop>
+        <source src="standing learning.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Table container -->
+    <div class="table-container">
+        <h1>Futures List</h1>
+        <table id="futures-table">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Symbol</th>
+                    <th onclick="sortTable(1)">Name</th>
+                    <th onclick="sortTable(2)">Exchange</th>
+                </tr>
+            </thead>
+            <tbody id="stock-list"></tbody>
+        </table>
+    </div>
+
+    <script>
+        // Fetch stock data from the JSON file
+        fetch('../futures_ticks.json')
+            .then(response => response.json())
+            .then(data => {
+                const stockList = document.getElementById('stock-list');
+
+                // Display each stock symbol, name, and other info
+                data.forEach(stock => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td>${stock[0]}</td><td>${stock[1]}</td><td>${stock[2]}</td>`;
+                    stockList.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error fetching stock data:', error));
+
+        // Sort table by column
+        function sortTable(columnIndex) {
+            const table = document.getElementById("futures-table");
+            let switching = true, shouldSwitch, rows, x, y, i;
+            let direction = "asc", switchcount = 0;
+            
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+                    x = rows[i].getElementsByTagName("TD")[columnIndex];
+                    y = rows[i + 1].getElementsByTagName("TD")[columnIndex];
+                    if (direction === "asc") {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else if (direction === "desc") {
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                }
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    switchcount++;
+                } else {
+                    if (switchcount === 0 && direction === "asc") {
+                        direction = "desc";
+                        switching = true;
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 </html>
