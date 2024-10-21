@@ -3,22 +3,22 @@
 <head>
     <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="256x256">
     <!-- Google tag (gtag.js) -->
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7497119140124063"
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7497119140124063"
      crossorigin="anonymous"></script>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NS52FT89QG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NS52FT89QG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-NS52FT89QG');
-</script>
+        gtag('config', 'G-NS52FT89QG');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="lib/style.css">
-   <meta name="google-adsense-account" content="ca-pub-7497119140124063">
+    <meta name="google-adsense-account" content="ca-pub-7497119140124063">
+
     <style>
         /* Reset default padding and margin */
         * {
@@ -97,6 +97,31 @@
             max-width: 600px;
             position: relative;
             z-index: 1;
+        }
+
+        /* Video grid container for the 2x2 layout */
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px; /* Adjust the gap between videos */
+            margin-top: 20px; /* Adjust space between menu and videos */
+            width: 100%;
+            max-width: 1808px; /* Set max-width for grid container */
+            position: relative;
+            z-index: 1;
+        }
+
+        .video-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            max-width: 1808px;
+            max-height: 912px;
         }
 
         /* Popup Background */
@@ -182,6 +207,11 @@
             #disclaimer-popup h2 {
                 font-size: 1.2em; /* Smaller font size for headings in popup */
             }
+
+            /* Make videos stack vertically on mobile devices */
+            .video-grid {
+                grid-template-columns: 1fr; /* Single column for mobile */
+            }
         }
 
         @media (max-width: 480px) {
@@ -189,19 +219,15 @@
                 font-size: 14px; /* Further reduce font size on very small screens */
             }
         }
-        
-   
     </style>
 
-<script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 
 <body>
-
-
 
     <!-- Background Video -->
     <video class="video-bg" autoplay muted loop>
@@ -267,33 +293,35 @@
         <li><a href="lib/suggestions.html">Suggestions and Collaborations</a></li>
     </ul>
 
-    <script>
-        // Disable right-click
-        document.addEventListener('contextmenu', function (event) {
-            event.preventDefault();
-            alert("This page does not support this feature.");
-        });
+    <!-- 2x2 Video Grid (1x4 on mobile) -->
+    <div class="video-grid">
+        <div class="video-box">
+            <video controls>
+                <source src="lib/examples/nationalalum.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-box">
+            <video controls>
+                <source src="lib/examples/tatatech.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-box">
+            <video controls>
+                <source src="lib/examples/satin.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-box">
+            <video controls>
+                <source src="lib/examples/oscillator.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
 
-        
-        // Disable F12 and Ctrl key combinations
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'F12') {
-                event.preventDefault();
-                alert("This page does not support this feature.");
-            }
-
-            if (event.ctrlKey && (event.key === 'u' || event.key === 's' || event.key === 'p' || event.key === 'c' || event.key === 'Shift')) {
-                event.preventDefault();
-                alert("This page does not support this feature.");
-            }
-
-if (event.key === 'F12' || (event.ctrlKey && (event.shiftKey || event.key === 'I' || event.key === 'u'))) {
-                event.preventDefault();
-                alert("This page does not support this feature.");
-            }
-        });
-    </script>
-  </body>
+</body>
 </html>
 
 <footer>
