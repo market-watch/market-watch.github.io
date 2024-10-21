@@ -99,24 +99,22 @@
             z-index: 1;
         }
 
-        /* Video grid container for the 2x2 layout */
         .video-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px; /* Adjust the gap between videos */
-            margin-top: 20px; /* Adjust space between menu and videos */
-            width: 100%;
-            max-width: 1808px; /* Set max-width for grid container */
-            position: relative;
-            z-index: 1;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            gap: 20px; /* Space between items */
+            max-width: 1200px; /* Set a max width to prevent covering entire space */
+            margin: 0 auto; /* Center the grid */
+            padding: 20px; /* Add some padding around the grid */
         }
-
+        
         .video-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            text-align: center; /* Center titles */
+            border: 1px solid #ddd; /* Optional: add border for visibility */
+            border-radius: 8px; /* Optional: rounded corners */
+            overflow: hidden; /* Optional: prevent overflow if GIFs are too large */
+            background-color: rgba(255, 255, 255, 0.8); /* Optional: background for better visibility */
         }
-
         video {
             width: 100%;
             height: auto;
@@ -295,15 +293,15 @@
 
     <div class="video-grid">
     <div class="video-box">
-        <h2>Example 1 of Selene Indicator</h2>
+        <h2>Formation in Nationalum on 28-02-2022</h2>
         <img src="lib/examples/nationalalum.gif" alt="Nationalum formation on 28-02-2022" autoplay>
     </div>
     <div class="video-box">
-        <h2>Example 2 of Selene Indicator</h2>
+        <h2>Formation in Tatatech 05-08-2024</h2>
         <img src="lib/examples/tatatech.gif" alt="Tatatech formation on 05-08-2024" autoplay>
     </div>
     <div class="video-box">
-        <h2>Example 3 of Selene Indicator</h2>
+        <h2>Formation in Satin 18-06-2024</h2>
         <img src="lib/examples/satin.gif" alt="Satin formation on 18-06-2024" autoplay>
     </div>
     <div class="video-box">
