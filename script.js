@@ -141,9 +141,9 @@ function plotGraph() {
     console.log("Date range not found in the dates array.");
 }
         // Determine the appropriate JSON file to load based on tick suffix
-        const missingDatesFile = tick.endsWith('NS.Daily') || tick.endsWith('BO.Daily')
+        const missingDatesFile = tick.endsWith('NS.Daily') || tick.endsWith('BO.Daily') || tick.endsWith('Index.Daily') ||  tick.endsWith('NSE.Daily') || tick.endsWith('BSE.Daily')
         ? 'missing_dates.json'
-        : tick.endsWith('NS.Weekly') || tick.endsWith('BO.Weekly')
+        : tick.endsWith('NS.Weekly') || tick.endsWith('BO.Weekly') || tick.endsWith('Index.Weekly') ||  tick.endsWith('NSE.Weekly') || tick.endsWith('BSE.Weekly')
             ? 'missing_dates_w.json'
             : tick.endsWith('.Daily') && (!tick.endsWith('NS.Daily') && !tick.endsWith('BO.Daily'))
                 ? 'missing_dates_forex_d.json'
