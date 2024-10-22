@@ -1,9 +1,5 @@
 [
     {
-        "symbol": "20MICRONS",
-        "name": "20 Microns Limited"
-    },
-    {
         "symbol": "360ONE",
         "name": "360 ONE WAM Ltd"
     },
@@ -64,6 +60,10 @@
         "name": "Aarti Surfactants Ltd"
     },
     {
+        "symbol": "AARVEEDEN",
+        "name": "Aarvee Denims & Exports Limited"
+    },
+    {
         "symbol": "AARVI",
         "name": "Aarvi Encon Ltd"
     },
@@ -86,6 +86,10 @@
     {
         "symbol": "ABFRL",
         "name": "Aditya Birla Fashion And Retail Limited"
+    },
+    {
+        "symbol": "ABREL",
+        "name": "Aditya Birla Real Estate Ltd"
     },
     {
         "symbol": "ABSLAMC",
@@ -368,12 +372,20 @@
         "name": "Angel One Ltd"
     },
     {
+        "symbol": "ANIKINDS",
+        "name": "Anik Industries Limited"
+    },
+    {
         "symbol": "ANKITMETAL",
         "name": "Ankit Metal & Power Limited"
     },
     {
         "symbol": "ANMOL",
         "name": "Anmol India Ltd"
+    },
+    {
+        "symbol": "ANTGRAPHIC",
+        "name": "Antarctica Limited"
     },
     {
         "symbol": "ANUP",
@@ -1028,6 +1040,10 @@
         "name": "Bharat Road Network"
     },
     {
+        "symbol": "BROOKS",
+        "name": "Brooks Laboratories Limited"
+    },
+    {
         "symbol": "BSE",
         "name": "BSE (Bombay stock exchange)"
     },
@@ -1314,10 +1330,6 @@
     {
         "symbol": "CORALFINAC",
         "name": "Coral India Finance & Housing Ltd"
-    },
-    {
-        "symbol": "CORDSCABLE",
-        "name": "Cords Cable Industries Limited"
     },
     {
         "symbol": "COROMANDEL",
@@ -1698,10 +1710,6 @@
     {
         "symbol": "ELGIEQUIP",
         "name": "Elgi Equipments Limited"
-    },
-    {
-        "symbol": "ELGIRUBCO",
-        "name": "Elgi Rubber Company Limited"
     },
     {
         "symbol": "ELIN",
@@ -2828,10 +2836,6 @@
         "name": "Indraprastha Medical Corporation Limited"
     },
     {
-        "symbol": "INDSWFTLAB",
-        "name": "Ind-swift Laboratories Limited"
-    },
-    {
         "symbol": "INDSWFTLTD",
         "name": "Ind-swift Limited"
     },
@@ -2850,10 +2854,6 @@
     {
         "symbol": "INFIBEAM",
         "name": "Infibeam Incorporation Limited"
-    },
-    {
-        "symbol": "INFOBEAN",
-        "name": "InfoBeans Technologies Ltd"
     },
     {
         "symbol": "INFRAIETF",
@@ -4404,6 +4404,10 @@
         "name": "Nocil Limited"
     },
     {
+        "symbol": "NOIDATOLL",
+        "name": "Noida Toll Bridge Company Limited"
+    },
+    {
         "symbol": "NOVAAGRI",
         "name": "Nova Agritech Ltd"
     },
@@ -4542,6 +4546,10 @@
     {
         "symbol": "ORTINGLOBE",
         "name": "Ortin Laboratories Ltd"
+    },
+    {
+        "symbol": "OSIAHYPER",
+        "name": "Osia Hyper Retail Ltd"
     },
     {
         "symbol": "OSWALGREEN",
@@ -4852,6 +4860,10 @@
         "name": "Pritika Auto Industries Ltd"
     },
     {
+        "symbol": "PRIVISCL",
+        "name": "Privi Speciality Chemicals Ltd"
+    },
+    {
         "symbol": "PROZONER",
         "name": "Prozone Realty Ltd"
     },
@@ -5048,6 +5060,10 @@
         "name": "Rbl Bank Limited"
     },
     {
+        "symbol": "RBZJEWEL",
+        "name": "RBZ Jewellers Ltd"
+    },
+    {
         "symbol": "RCF",
         "name": "Rashtriya Chemicals And Fertilizers Limited"
     },
@@ -5094,6 +5110,10 @@
     {
         "symbol": "REPCOHOME",
         "name": "Repco Home Finance Limited"
+    },
+    {
+        "symbol": "REPL",
+        "name": "Rudrabhishek Enterprises Ltd"
     },
     {
         "symbol": "RESPONIND",
@@ -5440,10 +5460,6 @@
         "name": "Shipping Corporation of India Land & Assets Ltd"
     },
     {
-        "symbol": "SCPL",
-        "name": "Sheetal Cool Products Ltd"
-    },
-    {
         "symbol": "SDBL",
         "name": "Som Distilleries & Breweries Limited"
     },
@@ -5580,10 +5596,6 @@
         "name": "Shivam Autotech Limited"
     },
     {
-        "symbol": "SHIVATEX",
-        "name": "Shiva Texyarn Ltd"
-    },
-    {
         "symbol": "SHK",
         "name": "S H Kelkar And Company Limited"
     },
@@ -5598,6 +5610,10 @@
     {
         "symbol": "SHREEPUSHK",
         "name": "Shree Pushkar Chemicals & Fertilisers Limited"
+    },
+    {
+        "symbol": "SHREERAMA",
+        "name": "Shree Rama Multi-tech Limited"
     },
     {
         "symbol": "SHRENIK",
@@ -5976,6 +5992,10 @@
         "name": "Suprajit Engineering Limited"
     },
     {
+        "symbol": "SUPREMEENG",
+        "name": "Supreme Engineering Ltd"
+    },
+    {
         "symbol": "SUPREMEIND",
         "name": "Supreme Industries Limited"
     },
@@ -6156,10 +6176,6 @@
         "name": "Transport Corporation Of India Limited"
     },
     {
-        "symbol": "TCIEXP",
-        "name": "Tci Express Limited"
-    },
-    {
         "symbol": "TCS",
         "name": "Tata Consultancy Services Limited"
     },
@@ -6258,6 +6274,10 @@
     {
         "symbol": "TIRUMALCHM",
         "name": "Thirumalai Chemicals Limited"
+    },
+    {
+        "symbol": "TIRUPATIFL",
+        "name": "Tirupati Forge Ltd"
     },
     {
         "symbol": "TITAGARH",
@@ -6416,6 +6436,10 @@
         "name": "Usha Martin Education & Solutions Limited"
     },
     {
+        "symbol": "UNICHEMLAB",
+        "name": "Unichem Laboratories Limited"
+    },
+    {
         "symbol": "UNIINFO",
         "name": "Uniinfo Telecom Services Ltd"
     },
@@ -6462,6 +6486,10 @@
     {
         "symbol": "USHAMART",
         "name": "Usha Martin Limited"
+    },
+    {
+        "symbol": "USK",
+        "name": "Udayshivakumar Infra Ltd"
     },
     {
         "symbol": "UTIAMC",
@@ -6540,6 +6568,10 @@
         "name": "Vedanta Limited"
     },
     {
+        "symbol": "VEEDOL",
+        "name": "Veedol Corporation Ltd"
+    },
+    {
         "symbol": "VENKEYS",
         "name": "Venky's (india) Limited"
     },
@@ -6590,10 +6622,6 @@
     {
         "symbol": "VINATIORGA",
         "name": "Vinati Organics Limited"
-    },
-    {
-        "symbol": "VINDHYATEL",
-        "name": "Vindhya Telelinks Limited"
     },
     {
         "symbol": "VINEETLAB",
