@@ -153,10 +153,10 @@ function plotGraph() {
             : tick.endsWith('.Daily') && (!tick.endsWith('NS.Daily') && !tick.endsWith('BO.Daily'))
                 ? 'missing_dates_forex_d.json'
                 : 'missing_dates_forex_w.json';
-
+const folderPath1 = '/d_files/';
     
         // Load the selected missing dates file and plot the chart
-        fetch(`${folderPath}${missingDatesFile}`)
+        fetch(`${folderPath1}${missingDatesFile}`)
             .then(response => response.json())
             .then(missingDates => {
                 
