@@ -38,16 +38,21 @@ async function loadData() {
     const randstr = atob(randomstr);
 
     try {
-        const response = await fetch('tick_file_map.json');
+        const response = await fetch('d_files/tick_file_map.json');
         const tickFileMap = await response.json();
+        const folderPath = '/d_files/';  // Define your folder path
         const fileName = tickFileMap[tick];
-
+        
         if (!fileName) {
             displayMessage(`No data available for the tick: ${tick}`);
             return;
         }
+        
+        // Add folder path to the fileName
+        const fullFilePath = `${folderPath}${fileName}`;
+        
+        const jsonData = await fetchAndDecryptJson(fullFilePath, randstr);
 
-        const jsonData = await fetchAndDecryptJson(fileName, randstr);
         Object.assign(data, jsonData);
         displayMessage(`Data loaded for tick: ${tick}`);
         plotGraph();  // Call plotGraph after data is loaded
@@ -151,7 +156,7 @@ function plotGraph() {
 
     
         // Load the selected missing dates file and plot the chart
-        fetch(missingDatesFile)
+        fetch(`${folderPath}${missingDatesFile}`)
             .then(response => response.json())
             .then(missingDates => {
                 
@@ -638,7 +643,7 @@ if (window.innerWidth <= 768) {
 
 // New function to load symbols from symbols.json
 function loadSymbols() {
-    fetch('keys_list.json')
+    fetch('d_files/keys_list.json')
         .then(response => response.json())
         .then(data => {
             symbols = data; // Assume symbols.json is an array of tick names
