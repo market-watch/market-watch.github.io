@@ -81,14 +81,24 @@
         }
 
         h1 {
-            margin-top: 30px;
-            font-size: 2rem;
-            color: #007acc;
-            position: relative;
-            z-index: 1;
-            text-align: center; /* Center heading for mobile */
-        }
-
+    margin-top: 30px;
+    font-size: 3rem; /* Increase font size for emphasis */
+    font-weight: bold; /* Make the font bold */
+    color: #007acc; /* Keep the main color */
+    position: relative;
+    z-index: 1;
+    text-align: center; /* Center the heading */
+    
+    display: inline-block; /* Make background fit text */
+    background-color: rgba(255, 255, 255, 0.9); /* White opaque background with a higher opacity */
+    padding: 15px 30px; /* More padding for a striking look */
+    border-radius: 10px; /* Rounded corners */
+    
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to make it pop */
+    
+    letter-spacing: 1.5px; /* Add some spacing between letters */
+    text-transform: uppercase; /* Optional: Make text uppercase */
+}
         p {
             font-size: 1rem;
             margin-top: 10px;
@@ -121,10 +131,15 @@
 
 /* Style for the big container title */
 .big-container-title {
+  display: inline-block; /* Make the container wrap around the text */
   text-align: center;
+  margin-top: 20px;
   margin-bottom: 20px; /* Space between the title and the grid */
   font-size: 24px;
   color: #333;
+  background-color: rgba(255, 255, 255, 0.8); /* White opaque background */
+  padding: 10px 20px; /* Add some padding around the text */
+  border-radius: 8px; /* Optional: Add rounded corners */
 }
 
 /* Small containers for each video and description */
@@ -230,19 +245,23 @@ video {
         }
 
         /* Responsive Styles */
-        @media (max-width: 768px) {
+       @media (max-width: 768px) {
             .nav-menu {
                 flex-direction: column; /* Stack menu items on smaller screens */
                 align-items: center;
             }
-
+        
             .nav-menu li {
                 margin: 10px 0; /* Adjust margins for stacked layout */
             }
-
+        
             h1 {
-                font-size: 1.5rem; /* Smaller font size for heading */
+                font-size: 2rem; /* Slightly larger for better visibility on mobile */
+                padding: 10px 20px; /* Adjust padding for smaller screens */
+                letter-spacing: 1px; /* Decrease letter spacing slightly */
+                background-color: rgba(255, 255, 255, 0.9); /* Keep the same opaque background */
             }
+        }
 
             p {
                 font-size: 0.9rem; /* Smaller font size for paragraph */
