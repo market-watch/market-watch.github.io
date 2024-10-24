@@ -33,8 +33,19 @@ async function loadData() {
         displayMessage('Please enter a tick.');
         return;
     }
+    // public/script.js
 
-    const randomstr = "YnVkZGhhX2Jhcl9jaGFuZHJh";
+    fetch('/api/env')
+      .then(response => response.json())
+      .then(data => {
+        // Store the API key or environment variable in a const named 'rand'
+        const randomstr = data.apiKey; 
+        
+        // yourApiCallFunction(rand);
+      })
+      .catch(error => console.error('Error fetching API key:', error));
+
+    // const randomstr = "YnVkZGhhX2Jhcl9jaGFuZHJh";
     const randstr = atob(randomstr);
 
     try {
