@@ -38,10 +38,15 @@ body {
 
 /* Style for the big container title */
 .big-container-title {
+  display: inline-block; /* Make the container wrap around the text */
   text-align: center;
+  margin-top: 20px;
   margin-bottom: 20px; /* Space between the title and the grid */
   font-size: 24px;
   color: #333;
+  background-color: rgba(255, 255, 255, 0.8); /* White opaque background */
+  padding: 10px 20px; /* Add some padding around the text */
+  border-radius: 8px; /* Optional: Add rounded corners */
 }
 
 /* Small containers for each video and description */
