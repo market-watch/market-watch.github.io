@@ -34,7 +34,7 @@ async function loadData() {
         return;
     }
 
-    const randomstr = "YnVkZGhhX2Jhcl9jaGFuZHJh"; // Your encoded password
+    const randomstr = process.env.NEXT_PUBLIC_NAME;
     const randstr = atob(randomstr);
 
     try {
