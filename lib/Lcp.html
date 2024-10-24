@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest completed patterns till T4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="big-container-title">
+        <h2>Latest completed patterns till T4 in Daily timeframe</h2>
+    </div>
+    <div class="big-container">
+        <!-- Video items will be dynamically added here -->
+    </div>
+
+    <script>
+        // Function to extract and format description from filename
+        function formatDescription(filename) {
+            const parts = filename.split('__');
+            const commodity = parts[0]; // e.g., COMDTY.Index.BSE.Daily
+            const date = parts[1]; // e.g., 2024-10-22
+            const days = parts[2]; // e.g., 23
+            const percentageChange = parseFloat(parts[3]).toFixed(2); // Get the fourth value and format to 2 decimal places
+
+            return `Pattern completed in ${commodity} on ${date} in ${days} days with %age change of ${percentageChange}`;
+        }
+
+        // Function to get sorted video filenames
+        function getSortedVideoFiles(filenames) {
+            return filenames
+                .map(file => {
+                    const parts = file.split('__');
+                    return {
+                        name: file,
+                        value: parts[3], // Get the fourth value for sorting
+                        description: formatDescription(file) // Generate description
+                    };
+                })
+                .sort((a, b) => b.value.localeCompare(a.value)) // Sort in descending order
+                .slice(0, 100); // Take the first 25
+        }
+
+        // Function to create video containers in the DOM
+        function createVideoContainers(videoFiles) {
+            const bigContainer = document.querySelector('.big-container'); // Get the big container
+
+            videoFiles.forEach(file => {
+                // Create video item
+                const videoItem = document.createElement('div');
+                videoItem.classList.add('video-item');
+
+                // Create video element
+                const video = document.createElement('video');
+                video.autoplay = true;
+                video.loop = true;
+                video.muted = true;
+
+                // Create source element
+                const source = document.createElement('source');
+                source.src = `d_files/output_videos/${file.name}`; // Construct video path
+                source.type = 'video/mp4';
+
+                // Append source to video
+                video.appendChild(source);
+                videoItem.appendChild(video);
+
+                // Create description
+                const description = document.createElement('p');
+                description.classList.add('description');
+                description.textContent = file.description; // Use the generated description
+                videoItem.appendChild(description);
+
+                // Append video item to big container
+                bigContainer.appendChild(videoItem);
+            });
+        }
+
+        // Fetch video filenames from JSON
+        fetch('../d_files/video_files.json')
+            .then(response => response.json())
+            .then(videoFilenames => {
+                const sortedVideoFiles = getSortedVideoFiles(videoFilenames);
+                createVideoContainers(sortedVideoFiles);
+            })
+            .catch(error => {
+                console.error('Error fetching video files:', error);
+            });
+    </script>
+</body>
+</html>
