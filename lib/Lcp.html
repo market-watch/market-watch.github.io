@@ -15,12 +15,12 @@
         // Function to extract and format description from filename
         function formatDescription(filename) {
             const parts = filename.split('__');
-            const commodity = parts[0]; // e.g., COMDTY.Index.BSE.Daily
+            const commodity = parts[0].split('.')[0]; // e.g., COMDTY.Index.BSE.Daily
             const date = parts[1]; // e.g., 2024-10-22
             const days = parts[2]; // e.g., 23
             const percentageChange = parseFloat(parts[3]).toFixed(2); // Get the fourth value and format to 2 decimal places
 
-            return `Pattern completed in ${commodity} on ${date} in ${days} days with %age change of ${percentageChange}`;
+            return `Pattern completed in ${commodity} on ${date} in ${days} days with change of ${percentageChange}%`;
         }
 
         // Function to get sorted video filenames
@@ -30,7 +30,7 @@
                     const parts = file.split('__');
                     return {
                         name: file,
-                        value: parts[3], // Get the fourth value for sorting
+                        value: parseFloat(parts[3]), // Get the fourth value for sorting
                         description: formatDescription(file) // Generate description
                     };
                 })
