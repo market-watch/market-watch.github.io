@@ -155,12 +155,18 @@
   border-radius: 10px; /* Rounded corners */
   background-color: #fff; /* White background for video container */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for minimalistic effect */
-  transition: transform 0.3s ease; /* Hover effect */
+  transition: transform 0.3s ease, top 0.3s ease, left 0.3s ease; /* Smooth transition for zoom and position */
+  position: relative; /* Ensure relative positioning */
 }
 
 .video-item:hover {
   transform: scale(2); /* Zoom-in effect on hover */
   transform-origin: center center; /* Set the origin of the transform to the center */
+  position: fixed; /* Position it relative to the viewport when hovered */
+  top: 50%; /* Move it to the center vertically */
+  left: 50%; /* Move it to the center horizontally */
+  transform: translate(-50%, -50%) scale(2); /* Adjust position and apply zoom */
+  z-index: 1000; /* Ensure it appears above other elements */
 }
 
 video {
