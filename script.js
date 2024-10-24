@@ -34,7 +34,7 @@ async function loadData() {
         return;
     }
 
-    const randomstr = process.env.NEXT_PUBLIC_NAME;
+    const randomstr = "YnVkZGhhX2Jhcl9jaGFuZHJh";
     const randstr = atob(randomstr);
 
     try {
