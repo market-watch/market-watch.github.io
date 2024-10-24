@@ -32,19 +32,16 @@ async function loadData() {
     if (!tick) {
         displayMessage('Please enter a tick.');
         return;
+    
+    let randomstr;
+    try {
+        const response = await fetch('/api/env');
+        const data = await response.json();
+        randomstr = data.apiKey; 
+    } catch (error) {
+        console.error('Error fetching API key:', error);
+        return;
     }
-    // public/script.js
-
-    fetch('/api/env')
-      .then(response => response.json())
-      .then(data => {
-        // Store the API key or environment variable in a const named 'rand'
-        const randomstr = data.apiKey; 
-        
-        // yourApiCallFunction(rand);
-      })
-      .catch(error => console.error('Error fetching API key:', error));
-
     // const randomstr = "YnVkZGhhX2Jhcl9jaGFuZHJh";
     const randstr = atob(randomstr);
 
