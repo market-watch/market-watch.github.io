@@ -42,7 +42,7 @@ async function loadData() {
         console.error('Error fetching API key:', error);
         return;
     }
-    // const randomstr = "YnVkZGhhX2Jhcl9jaGFuZHJh";
+    
     const randstr = atob(randomstr);
 
     try {
