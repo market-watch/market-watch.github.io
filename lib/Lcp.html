@@ -30,12 +30,12 @@
                     const parts = file.split('__');
                     return {
                         name: file,
-                        value: parseFloat(parts[3]), // Get the fourth value for sorting
+                        value: parseFloat(parts[3]), // Convert to float for proper sorting
                         description: formatDescription(file) // Generate description
                     };
                 })
-                .sort((a, b) => b.value.localeCompare(a.value)) // Sort in descending order
-                .slice(0, 100); // Take the first 25
+                .sort((a, b) => b.value - a.value) // Sort numerically in descending order
+                .slice(0, 100); // Take the first 100
         }
 
         // Function to create video containers in the DOM
