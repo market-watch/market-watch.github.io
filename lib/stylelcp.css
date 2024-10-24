@@ -65,7 +65,7 @@ body {
 }
 
 .video-item:hover {
-  transform: scale(1.03); /* Slight zoom-in effect on hover */
+  transform: scale(2); /* Slight zoom-in effect on hover */
 }
 
 video {
@@ -76,7 +76,7 @@ video {
 
 .description {
   margin-top: 8px;
-  font-size: 14px;
+  font-size: 10px;
   color: #333;
 }
 
