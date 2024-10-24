@@ -65,7 +65,8 @@ body {
 }
 
 .video-item:hover {
-  transform: scale(2); /* Slight zoom-in effect on hover */
+  transform: scale(2); /* Zoom-in effect on hover */
+  transform-origin: center center; /* Set the origin of the transform to the center */
 }
 
 video {
