@@ -88,6 +88,10 @@
         "name": "Aditya Birla Fashion And Retail Limited"
     },
     {
+        "symbol": "ABREL",
+        "name": "Aditya Birla Real Estate Ltd"
+    },
+    {
         "symbol": "ABSLAMC",
         "name": "Aditya Birla Sun Life AMC Ltd"
     },
@@ -6244,6 +6248,10 @@
         "name": "Timken India Limited"
     },
     {
+        "symbol": "TIPSMUSIC",
+        "name": "Tips Music Ltd"
+    },
+    {
         "symbol": "TIRUMALCHM",
         "name": "Thirumalai Chemicals Limited"
     },
@@ -6534,6 +6542,10 @@
     {
         "symbol": "VEDL",
         "name": "Vedanta Limited"
+    },
+    {
+        "symbol": "VEEDOL",
+        "name": "Veedol Corporation Ltd"
     },
     {
         "symbol": "VENKEYS",
