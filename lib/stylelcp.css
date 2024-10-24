@@ -50,7 +50,6 @@ body {
 }
 
 /* Small containers for each video and description */
-Got it! Here's a simplified approach where the element just zooms by 1.3 times in place and ensures it stays within the viewport without going off-screen:
 
 .video-item {
   display: flex;
@@ -74,18 +73,6 @@ Got it! Here's a simplified approach where the element just zooms by 1.3 times i
   z-index: 1000; /* Ensures it appears above other elements when zoomed */
 }
 
-Key points:
-
-The element zooms to 1.3 times its original size using transform: scale(1.3).
-
-max-width and max-height prevent the element from growing beyond the viewport.
-
-overflow: hidden ensures any content within the element won't overflow when zoomed.
-
-z-index: 1000 ensures that when zoomed, the element appears on top of other elements on the page.
-
-
-This will provide the desired zoom effect in place without worrying about centering or moving it off-screen.
 
 
 
