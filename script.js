@@ -32,7 +32,7 @@ async function loadData() {
     if (!tick) {
         displayMessage('Please enter a tick.');
         return;
-    
+    }
     let randomstr;
     try {
         const response = await fetch('/api/env');
