@@ -652,6 +652,7 @@ if (window.innerWidth <= 768) {
         let secondCandle = null;
 
         // Click event listener with direct access to OHLC values
+        var myPlot = document.getElementById('plot');
         myPlot.on('plotly_click', function(eventData) {
             if (!firstCandle) {
                 firstCandle = eventData.points[0];
