@@ -20,13 +20,13 @@ body {
 /* Big container for holding the 4x25 grid */
 .big-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Set 4 columns */
-  grid-template-rows: repeat(25, auto); /* Set 25 rows with auto height */
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-rows: repeat(25, 200px); /* 25 rows with fixed height */
   grid-gap: 15px; /* Space between items */
   padding: 20px; /* Padding around the big container */
-  max-width: 90vw; /* Max width to prevent overflowing */
-  max-height: 90vh; /* Max height to prevent overflowing */
-  overflow: auto; /* Scroll if content overflows */
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto; /* Enable scrolling if content overflows */
 }
 
 /* Style for the container holding the title and grid */
@@ -40,15 +40,15 @@ body {
 
 /* Style for the big container title */
 .big-container-title {
-  display: inline-block; /* Make the container wrap around the text */
+  display: inline-block;
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 20px; /* Space between the title and the grid */
+  margin-bottom: 20px;
   font-size: 24px;
   color: #333;
-  background-color: rgba(255, 255, 255, 0.8); /* White opaque background */
-  padding: 10px 20px; /* Add some padding around the text */
-  border-radius: 8px; /* Optional: Add rounded corners */
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border-radius: 8px;
 }
 
 /* Small containers for each video and description */
@@ -58,24 +58,26 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 100%; /* Ensures the container takes full grid space */
+  height: 100%; /* Ensures container stays within the row height */
   padding: 10px;
-  border: 1px solid #ccc; /* Minimalistic border */
-  border-radius: 10px; /* Rounded corners */
-  background-color: #fff; /* White background for video container */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for minimalistic effect */
-  transition: transform 0.3s ease; /* Smooth hover effect */
-  overflow: hidden; /* Ensures content doesn't overflow when zooming */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
 }
 
 .video-item:hover {
   transform: scale(1.3); /* Zoom-in effect */
-  z-index: 1000; /* Ensures it appears above other elements when zoomed */
+  z-index: 1000;
 }
 
 video {
-  width: 100%; /* Fit the video inside its container */
+  width: 100%;
   height: auto;
-  border-radius: 8px; /* Slight rounding for the video */
+  border-radius: 8px;
 }
 
 .description {
@@ -84,15 +86,15 @@ video {
   color: #333;
 }
 
-/* Media query for smaller screens to adjust the grid layout */
+/* Media query for smaller screens */
 @media (max-width: 768px) {
   .big-container {
-    grid-template-columns: repeat(3, 1fr); /* Switch to 3 columns on smaller screens */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller screens */
   }
 }
 
 @media (max-width: 480px) {
   .big-container {
-    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns on extra small screens */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on extra small screens */
   }
 }
