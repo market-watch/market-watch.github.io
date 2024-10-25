@@ -682,7 +682,7 @@ if (window.innerWidth <= 768) {
                 const numOfPoints = Math.abs(firstCandle.pointIndex - secondCandle.pointIndex);
                 document.getElementById("box_can").innerText = `${numOfPoints}`;
         
-                document.getElementById("box_change").innerText = `${percentageChange}%`;
+                document.getElementById("box_pro").innerText = `${percentageChange}%`;
         
                 // Reset for the next set of clicks
                 firstCandle = null;
