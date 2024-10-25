@@ -76,7 +76,7 @@ body {
 /* Style the video to fit inside the container */
 video {
   width: 100%;
-  height: auto;
+  height: 80%;
   border-radius: 8px;
 }
 
