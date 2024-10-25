@@ -482,6 +482,51 @@ if (window.innerWidth <= 768) {
                     }
                 });
 
+                // Variables to store clicked candles
+        let firstCandle = null;
+        let secondCandle = null;
+        
+        // Click event listener with direct access to OHLC values
+        var myPlot1 = document.getElementById('plot');
+        myPlot1.on('plotly_click', function(eventData) {
+            if (!firstCandle) {
+                firstCandle = eventData.points[0];
+            } else {
+                secondCandle = eventData.points[0];
+        
+                // Access the OHLC values directly from the event data
+                const firstLow = firstCandle.data.low[firstCandle.pointIndex];
+                const secondLow = secondCandle.data.low[secondCandle.pointIndex];
+                const firstHigh = firstCandle.data.high[firstCandle.pointIndex];
+                const secondHigh = secondCandle.data.high[secondCandle.pointIndex];
+        
+                let percentageChange = null;
+        
+                // Check if first candle's low is greater than the second candle's low
+                if (firstLow > secondLow) {
+                    percentageChange = Math.abs(((firstLow - secondLow) / firstLow) * 100);
+                }
+                // Otherwise, check if first candle's high is less than the second candle's high
+                else if (firstHigh < secondHigh) {
+                    percentageChange = Math.abs(((secondHigh - firstHigh) / firstHigh) * 100);
+                }
+        
+                // Round the percentage change to 2 decimal points, or set to null if neither condition was met
+                percentageChange = percentageChange ? +percentageChange.toFixed(2) : null;
+        
+                // Calculate number of data points between two candles
+                const numOfPoints = Math.abs(firstCandle.pointIndex - secondCandle.pointIndex);
+        
+                // Update the UI with calculated values
+                document.getElementById("box_can").innerText = `${numOfPoints}`;
+                document.getElementById("box_pro").innerText = `${percentageChange !== null ? percentageChange + '%' : 'N/A'}`;
+        
+                // Reset for the next set of clicks
+                firstCandle = null;
+                secondCandle = null;
+            }
+        });
+                
                 myPlot.on('plotly_click', function (data) {
                 var pointIndex = data.points[0].pointIndex;
                 
@@ -646,51 +691,6 @@ if (window.innerWidth <= 768) {
     }
 }
 
-        
-        // Variables to store clicked candles
-        let firstCandle = null;
-        let secondCandle = null;
-        
-        // Click event listener with direct access to OHLC values
-        var myPlot1 = document.getElementById('plot');
-        myPlot1.on('plotly_click', function(eventData) {
-            if (!firstCandle) {
-                firstCandle = eventData.points[0];
-            } else {
-                secondCandle = eventData.points[0];
-        
-                // Access the OHLC values directly from the event data
-                const firstLow = firstCandle.data.low[firstCandle.pointIndex];
-                const secondLow = secondCandle.data.low[secondCandle.pointIndex];
-                const firstHigh = firstCandle.data.high[firstCandle.pointIndex];
-                const secondHigh = secondCandle.data.high[secondCandle.pointIndex];
-        
-                let percentageChange = null;
-        
-                // Check if first candle's low is greater than the second candle's low
-                if (firstLow > secondLow) {
-                    percentageChange = Math.abs(((firstLow - secondLow) / firstLow) * 100);
-                }
-                // Otherwise, check if first candle's high is less than the second candle's high
-                else if (firstHigh < secondHigh) {
-                    percentageChange = Math.abs(((secondHigh - firstHigh) / firstHigh) * 100);
-                }
-        
-                // Round the percentage change to 2 decimal points, or set to null if neither condition was met
-                percentageChange = percentageChange ? +percentageChange.toFixed(2) : null;
-        
-                // Calculate number of data points between two candles
-                const numOfPoints = Math.abs(firstCandle.pointIndex - secondCandle.pointIndex);
-        
-                // Update the UI with calculated values
-                document.getElementById("box_can").innerText = `${numOfPoints}`;
-                document.getElementById("box_pro").innerText = `${percentageChange !== null ? percentageChange + '%' : 'N/A'}`;
-        
-                // Reset for the next set of clicks
-                firstCandle = null;
-                secondCandle = null;
-            }
-        });
 
 
 // New function to load symbols from symbols.json
