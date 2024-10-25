@@ -21,8 +21,6 @@ body {
 .big-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns */
-/*   grid-template-rows: repeat(25, auto); /* 25 rows with dynamic height */ */
-  grid-auto-rows: 200px; /* Set a fixed height for each row */
   grid-gap: 15px; /* Space between items */
   padding: 20px;
   max-width: 90vw;
@@ -60,6 +58,8 @@ body {
   align-items: center;
   text-align: center;
   padding: 10px;
+  width: 180px; /* Fixed width */
+  height: 220px; /* Fixed height */
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #fff;
