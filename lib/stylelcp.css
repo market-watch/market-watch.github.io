@@ -21,7 +21,7 @@ body {
 .big-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  grid-template-rows: repeat(25, auto); /* 25 rows with dynamic height */
+/*   grid-template-rows: repeat(25, auto); /* 25 rows with dynamic height */ */
   grid-auto-rows: 200px; /* Set a fixed height for each row */
   grid-gap: 15px; /* Space between items */
   padding: 20px;
@@ -76,7 +76,7 @@ body {
 /* Style the video to fit inside the container */
 video {
   width: 100%;
-  height: 80%;
+  height: auto;
   border-radius: 8px;
 }
 
