@@ -22,6 +22,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns */
   grid-template-rows: repeat(25, auto); /* 25 rows with dynamic height */
+  grid-auto-rows: 200px; /* Set a fixed height for each row */
   grid-gap: 15px; /* Space between items */
   padding: 20px;
   max-width: 90vw;
@@ -65,7 +66,6 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   overflow: hidden;
-  height: 100%; /* Keeps container height in place */
 }
 
 .video-item:hover {
@@ -73,12 +73,11 @@ body {
   z-index: 1000;
 }
 
-/* Style the video to take available space */
+/* Style the video to fit inside the container */
 video {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  flex-grow: 1; /* Allow video to take remaining space */
 }
 
 /* Ensure description appears below video */
@@ -86,7 +85,6 @@ video {
   margin-top: 8px;
   font-size: 12px;
   color: #333;
-  align-self: flex-start; /* Prevent overlapping */
 }
 
 /* Media query for smaller screens */
