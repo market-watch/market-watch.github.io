@@ -496,10 +496,10 @@ if (window.innerWidth <= 768) {
                 secondCandle = eventData.points[0];
         
                 // Access the OHLC values directly from the event data
-                const firstLow = firstCandle.data.low[firstCandle.pointIndex];
-                const secondLow = secondCandle.data.low[secondCandle.pointIndex];
-                const firstHigh = firstCandle.data.high[firstCandle.pointIndex];
-                const secondHigh = secondCandle.data.high[secondCandle.pointIndex];
+                const firstLow = tickData[firstCandle.pointIndex].low;
+                const secondLow = tickData[secondCandle.pointIndex].low;
+                const firstHigh = tickData[firstCandle.pointIndex].high;
+                const secondHigh = tickData[secondCandle.pointIndex].high;
         
                 let percentageChange = null;
         
