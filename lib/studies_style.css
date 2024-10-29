@@ -38,6 +38,7 @@ body {
 .info-box-container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* 2 columns */
+    grid-template-rows: repeat(5, auto);   /* 2 rows */
     gap: 10px;                      /* Space between grid items */
     position: absolute;             /* Position in the top right */
     top: 150px;
