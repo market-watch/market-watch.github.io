@@ -48,8 +48,8 @@ body {
 
 /* Style for each info box within the grid */
 .info-box-wrapper {
-    display: flex;
-    flex-direction: column;
+/*     display: flex;
+    flex-direction: column; */
     align-items: center;
     font-size: 10px;      /* Reduced font size */
 }
