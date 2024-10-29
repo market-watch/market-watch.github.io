@@ -34,8 +34,47 @@ body {
 }
 
 /* Main container for the info boxes aligned to the top right of the Plotly chart container */
-/* Main container for info boxes as a grid, positioned 150px from the top */
+
+
+/* Container for boxes aligned to the right */
 .info-box-container {
+width: 10%;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+margin-top: 200px;
+position: relative;
+z-index: 1;
+background-color: rgba(255, 255, 255, 0); /* Semi-transparent white strip */
+padding: 20px 0;
+}
+
+/* Style for individual info boxes */
+/* .info-box {
+width: 70px;
+height: 20px;
+margin: 5px;
+padding: 10px;
+border: 1px solid #ccc;
+background-color: #f9f9f9;
+text-align: center;
+font-weight: bold;
+color: black; /* Retain default text color inside the boxes */
+}
+ */
+/* .info-box-wrapper {
+margin-bottom: 10px;
+}
+ */
+.info-label {
+font-weight: bold;
+margin-bottom: 5px;
+color: white; /* White headings */
+}
+
+
+
+/* .info-box-container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* 2 columns */
     grid-template-rows: repeat(5, auto);   /* 2 rows */
@@ -44,12 +83,11 @@ body {
     top: 150px;
     right: 20px;
     width: 200px;
-}
-
+} */
 /* Style for each info box within the grid */
 .info-box-wrapper {
-/*     display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column; 
     align-items: center;
     font-size: 10px;      /* Reduced font size */
 }
