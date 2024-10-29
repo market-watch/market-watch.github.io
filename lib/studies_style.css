@@ -37,15 +37,12 @@ body {
 /* Main container for info boxes as a grid, positioned 150px from the top */
 .info-box-container {
     display: grid;
-    grid-template-columns: 1fr; /* 2 columns */
-    grid-template-rows: repeat(9, auto); /* 4 rows */
-    gap: 10px;                          /* Space between grid items */
-    position: absolute;
-    top: 150px;                         /* Positioned 150px from the top */
-    right: 20px;                        /* Positioned on the right */
-    width: 180px;                       /* Set to 200px to match grid container */
-/*     padding: 10px; */
-    z-index: 1;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 10px;                      /* Space between grid items */
+    position: absolute;             /* Position in the top right */
+    top: 150px;
+    right: 20px;
+    width: 200px;
 }
 
 /* Style for each info box within the grid */
@@ -57,16 +54,13 @@ body {
 }
 
 .info-box, .dropdown-box {
-    width: 100%;          /* Full width within each grid cell */
-    height: 25px;         /* Slightly reduced height */
-    padding: 5px;         /* Reduced padding */
+    background-color: rgba(241, 241, 241, 0.8); /* Slightly transparent */
     border: 1px solid #ccc;
-    border-radius: 10px;  /* Reduced corner radius */
-    background-color: rgba(249, 249, 249, 0.8);
+    padding: 10px;
     text-align: center;
+    border-radius: 15px; /* Rounded corners */
     font-weight: bold;
-    color: black;
-    transition: background-color 0.3s;
+    color: green;
 }
 
 /* Label styling within each info box */
