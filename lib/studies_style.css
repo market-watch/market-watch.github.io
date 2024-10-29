@@ -37,8 +37,8 @@ body {
 /* Main container for info boxes as a grid, positioned 150px from the top */
 .info-box-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columns */
-    grid-template-rows: repeat(5, auto); /* 4 rows */
+    grid-template-columns: 1fr; /* 2 columns */
+    grid-template-rows: repeat(9, auto); /* 4 rows */
     gap: 10px;                          /* Space between grid items */
     position: absolute;
     top: 150px;                         /* Positioned 150px from the top */
