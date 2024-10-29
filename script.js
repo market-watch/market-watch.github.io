@@ -539,7 +539,13 @@ if (window.innerWidth <= 768) {
                     var slh = tickData[pointIndex].high
                     var sll = tickData[pointIndex].low
                     var mar = dataTuple[7]
+                    // var shaved = dataTuple[7]
                     var atrv = dataTuple[8]
+                    // Get the cdlp variable from dataTuple
+                    var cdlp = dataTuple[9];
+
+                    // Populate the candle pattern dropdown if cdlp is not 'None'
+                    populateCandlePatternDropdown(cdlp);
                     console.log(dataTuple)
                     console.log(mar)
                     // console.log(mar[1])
@@ -579,27 +585,27 @@ if (window.innerWidth <= 768) {
     let boxColorMar = ''; // Initialize boxColorMar
     
     // Text for box 3
-    if (mar[0] !== 'None') {
-        if (mar[1] > 0 && dataTuple[5] === true) {
-            maru = 'BullMB';
+    if (mar !== 'None') {
+        if (mar === 'Bullish' && dataTuple[5] === true) {
+            maru = 'Best';
             textColorMar = "#008000"; // Green text color
             boxColorMar = "#90EE90";  // Light green box color
-        } else if (mar[1] > 0 && dataTuple[5] === false) {
-            maru = 'BullMB';
+        } else if (mar === 'Bullish' && dataTuple[5] === false) {
+            maru = 'Alert';
             textColorMar = "#008000"; // Green text color
             boxColorMar = "#90EE90";  // Light green box color
-        } else if (mar[1] < 0 && dataTuple[5] === false) {
-            maru = 'BearMB';
+        } else if (mar === 'Bearish' && dataTuple[5] === false) {
+            maru = 'Best';
             textColorMar = "#FF0000"; // Red text color
             boxColorMar = "#FFCCCB";  // Light red box color
-        } else if (mar[1] < 0 && dataTuple[5] === true) {
-            maru = 'BearMB';
+        } else if (mar === 'Bearish' && dataTuple[5] === true) {
+            maru = 'Alert';
             textColorMar = "#FF0000"; // Red text color
             boxColorMar = "#FFCCCB";  // Light red box color
         }
     } else {
         // Fallback when mar is 'None'
-        maru = '';
+        maru = 'Good';
         textColorMar = dataTuple[5] === false ? "#FF0000" : "#008000"; // Set text color based on dataTuple[5]
         boxColorMar = dataTuple[5] === false ? "#FFCCCB" : "#90EE90";   // Set box color based on dataTuple[5]
     }
@@ -692,7 +698,35 @@ if (window.innerWidth <= 768) {
     }
 }
 
+// Modify the populate function to accept cdlp as an argument
+function populateCandlePatternDropdown(cdlp) {
+    const dropdown = document.getElementById('candle-pattern-dropdown');
 
+    // Clear dropdown if cdlp is 'None'
+    if (cdlp === 'None' || cdlp.length === 0) {
+        dropdown.innerHTML = ''; // Ensure dropdown is empty
+        return;
+    }
+
+    // Clear existing options
+    dropdown.innerHTML = '';
+
+    // Iterate over cdlp to create options with color based on value
+    cdlp.forEach(([pattern, value]) => {
+        const option = document.createElement('option');
+        option.value = pattern;
+        option.textContent = pattern;
+
+        // Set color based on value
+        if (value > 0) {
+            option.style.color = 'green';
+        } else if (value < 0) {
+            option.style.color = 'red';
+        }
+
+        dropdown.appendChild(option);
+    });
+}
 
 // New function to load symbols from symbols.json
 function loadSymbols() {
