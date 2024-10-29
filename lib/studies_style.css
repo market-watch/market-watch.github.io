@@ -1,4 +1,9 @@
 /* Main container for flex layout */
+html, body {
+    height: 100%; /* Ensure full height */
+    margin: 0; /* Remove default margin */
+}
+
 body {
     display: flex;
     justify-content: space-between;
@@ -9,9 +14,23 @@ body {
 /* Style for the plot and input areas */
 .main-content {
     width: 80%;
-    
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
     position: relative;
     z-index: 1;
+    height: 100%; /* Take full height of the body */
+}
+
+#search-box {
+    margin-bottom: 10px; /* Space below search box */
+}
+
+/* Ensure the plot takes up the remaining height */
+#plot {
+    flex-grow: 1; /* Allow plot to grow and take available space */
+    color: white;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
 }
 
 /* Container for boxes aligned to the right */
@@ -20,7 +39,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 150px;
+    margin-top: 10px; /* Adjust margin as necessary */
     position: relative;
     z-index: 1;
     background-color: rgba(255, 255, 255, 0); /* Slightly transparent */
@@ -79,10 +98,6 @@ body {
     background-color: #333;
     max-height: 200px;
     overflow-y: auto;
-}
-
-#plot {
-    color: white;
 }
 
 .grid-container {
