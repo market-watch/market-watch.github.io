@@ -631,12 +631,12 @@ if (window.innerWidth <= 768) {
 
     document.getElementById("box5").innerText = sl;
 
-    const f23bc = "#FFFF004D";
-    const f38bc = "#00FF004D";
-    const f50bc = "#0000FF4D";
-    const f61bc = "#0064004D";
+    const f23bc = "#FFFFFF";
+    const f38bc = "#FFFFFF";
+    const f50bc = "#FFFFFF";
+    const f61bc = "#FFFFFF";
 
-    // const f23tc = "#FFFF00";
+    const f23tc = "#FFFF00";
     const f38tc = "#008000";
     const f50tc = "#0000FF";
     const f61tc = "#006400";
