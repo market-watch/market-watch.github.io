@@ -70,14 +70,6 @@
             <span class="info-label">Shaved Candle</span>
             <div id="box3" class="info-box"></div>
         </div>
-
-         <!-- Candle Pattern Dropdown -->
-          <div class="info-box-wrapper">
-              <label for="candle-pattern-dropdown" class="info-label">Candle Pattern</label>
-              <select id="candle-pattern-dropdown" class="info-box">
-                  <!-- Options will be populated by script.js -->
-              </select>
-          </div>
          
         <div class="info-box-wrapper">
             <span class="info-label">ATRV</span>
@@ -110,7 +102,15 @@
     <div class="grid-item" id="box_can"></div>
     <div class="grid-item" id="box_pro"></div>
 </div>
-
+<!-- Candle Pattern Dropdown -->
+<div class="dropdown-container">
+    <div class="dropdown-wrapper">
+        <label for="candle-pattern-dropdown" class="info-label">Candle Pattern</label>
+        <select id="candle-pattern-dropdown" class="dropdown-box">
+            <!-- Options will be populated by script.js -->
+        </select>
+    </div>
+</div>
     <!-- Script for disabling right-click and key combinations -->
     <script>
         document.addEventListener('contextmenu', function(event) {
