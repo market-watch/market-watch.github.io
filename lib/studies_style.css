@@ -33,44 +33,57 @@ body {
     height: 100%; /* Full height */
 }
 
-/* Container for boxes aligned to the right */
+/* Main container for the info boxes aligned to the top right of the Plotly chart container */
 .info-box-container {
-    width: 10%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(2, auto);   /* 2 rows */
+    gap: 10px;                             /* Space between grid items */
+    position: absolute;
+    top: 0;                                /* Align with the top of the chart container */
+    right: 20px;                           /* Position on the right side */
+    padding: 10px;
+    width: 250px;                          /* Adjust width as needed */
+    z-index: 1;
+}
+
+/* Individual info boxes inside the grid */
+.info-box-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    margin-top: 10px; /* Adjust margin as necessary */
-    position: relative;
-    z-index: 1;
-    background-color: rgba(255, 255, 255, 0); /* Slightly transparent */
-    padding: 20px 0;
-}
-
-/* Style for individual info boxes */
-.info-box, .dropdown-box {
-    width: 70px;
-    height: 30px; /* Increased height for better touch area */
-    margin: 5px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 15px; /* Rounded corners */
-    background-color: rgba(249, 249, 249, 0.8); /* Slightly transparent */
-    text-align: center;
-    font-weight: bold;
-    color: black; /* Default text color */
-    transition: background-color 0.3s; /* Smooth background transition */
-}
-
-.info-box-wrapper {
-    margin-bottom: 10px;
+    align-items: center;
 }
 
 .info-label {
     font-weight: bold;
     margin-bottom: 5px;
-    color: white; /* White headings */
+    color: white;
+    text-align: center;
 }
 
+.info-box, .dropdown-box {
+    width: 100%; /* Full width within the grid cell */
+    height: 30px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: rgba(249, 249, 249, 0.8);
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    transition: background-color 0.3s;
+}
+
+/* Separate styling for dropdown positioned elsewhere */
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 60px;      /* Adjust top position as per layout */
+    right: 20px;    /* Position to the right */
+    z-index: 1;
+}
 /* Background Video */
 .video-bg {
     position: fixed;
