@@ -19,10 +19,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 200px;
+    margin-top: 150px;
     position: relative;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent */
+    background-color: rgba(255, 255, 255, 0); /* Slightly transparent */
     padding: 20px 0;
 }
 
@@ -111,6 +111,6 @@ body {
     flex-direction: column;
     align-items: flex-end;
     position: absolute; /* Adjust if needed */
-    top: 240px; /* Adjust as per layout */
+    top: 60px; /* Adjust as per layout */
     right: 20px; /* Align with the grid */
 }
