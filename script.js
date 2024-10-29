@@ -426,7 +426,7 @@ var layout = {
         autorange: true,
         anchor: 'x'
     },
-    showlegend: true,
+    showlegend: false,
     hovermode: 'x',
     shapes: rectangles, // Add rectangles to the layout
     margin: {
@@ -628,7 +628,7 @@ if (window.innerWidth <= 768) {
     
     
     document.getElementById("box5").style.color = "#FF0000";
-    document.getElementById("box5").style.backgroundColor = "#FF00004D";
+    document.getElementById("box5").style.backgroundColor = "#FFFFFF";
 
     document.getElementById("box5").innerText = sl;
 
@@ -655,7 +655,7 @@ if (window.innerWidth <= 768) {
     document.getElementById("box8").style.backgroundColor = f50bc;
     document.getElementById("box9").style.backgroundColor = f61bc;
     
-    // document.getElementById("box6").style.color = f23tc;
+    document.getElementById("box6").style.color = f23tc;
     document.getElementById("box7").style.color = f38tc;
     document.getElementById("box8").style.color = f50tc;
     document.getElementById("box9").style.color = f61tc;
