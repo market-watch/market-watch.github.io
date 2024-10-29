@@ -385,7 +385,8 @@ const folderPath1 = '/d_files/';
                 // Layout for the chart
 var layout = {
     title: `Study for ${tick}`,
-    height: 800,
+    // height: 800,
+    autosize: true, // Automatically adjust size
     grid: {
         rows: 3,
         columns: 1,
