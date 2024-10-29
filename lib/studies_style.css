@@ -37,13 +37,13 @@ body {
 /* Main container for info boxes as a grid, positioned 150px from the top */
 .info-box-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
-    grid-template-rows: repeat(2, auto);   /* 2 rows */
-    gap: 10px;                             /* Space between grid items */
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    grid-template-rows: repeat(4, auto); /* 4 rows */
+    gap: 10px;                          /* Space between grid items */
     position: absolute;
-    top: 150px;                            /* Positioned 150px from the top */
-    right: 20px;                           /* Positioned on the right */
-    width: 200px;                          /* Set to 200px to match grid container */
+    top: 150px;                         /* Positioned 150px from the top */
+    right: 20px;                        /* Positioned on the right */
+    width: 200px;                       /* Set to 200px to match grid container */
     padding: 10px;
     z-index: 1;
 }
