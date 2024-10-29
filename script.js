@@ -538,11 +538,11 @@ if (window.innerWidth <= 768) {
                     var retracements = tickData[pointIndex].Data_tuple[6];
                     var slh = tickData[pointIndex].high
                     var sll = tickData[pointIndex].low
-                    var mar = dataTuple[7]
+                    var mar = dataTuple[9]
                     // var shaved = dataTuple[7]
                     var atrv = dataTuple[8]
                     // Get the cdlp variable from dataTuple
-                    var cdlp = dataTuple[9];
+                    var cdlp = dataTuple[7];
 
                     // Populate the candle pattern dropdown if cdlp is not 'None'
                     populateCandlePatternDropdown(cdlp);
