@@ -707,7 +707,7 @@ if (window.innerWidth <= 768) {
           document.getElementById("box8").style.backgroundColor = "#FFFFFF";
           document.getElementById("box9").innerText = "";
           document.getElementById("box9").style.backgroundColor = "#FFFFFF";
-          cdlp = 0;
+          cdlp = "None";
         
     }}
     });
