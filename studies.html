@@ -41,9 +41,21 @@
         <source src="lib/osc.webm" type="video/webm">
         Your browser does not support the video tag.
     </video>
-    
-    <!-- Main Content -->
+
+ <!-- Main Content -->
     <div class="main-content">
+         <h1>Search Stock Data</h1>
+         <div class="search-container">
+             <input type="text" id="search-box" placeholder="Enter tick...">
+             <button id="search-button">Search</button>
+         </div>
+         <div id="suggestions"></div>
+         <div id="message"></div>
+         <div id="plot"></div>
+     </div>
+
+   
+<!--     <div class="main-content">
         <h1>Search Stock Data</h1>
         
         <input type="text" id="search-box" placeholder="Enter tick...">
@@ -52,7 +64,7 @@
     
         <div id="message"></div>
         <div id="plot"></div>
-    </div>
+    </div> -->
     
     <!-- Right-side boxes container -->
     <div class="info-box-container" id="info-boxes" style="display: none;">
