@@ -535,6 +535,7 @@ if (window.innerWidth <= 768) {
                 // Make sure tickData is defined and accessible here
                 if (tickData && tickData.length > pointIndex) {
                     var dataTuple = tickData[pointIndex].Data_tuple;
+                if (dataTuple !== 0) {
                     var gap = tickData[pointIndex].GAP;
                     var retracements = tickData[pointIndex].Data_tuple[6];
                     var slh = tickData[pointIndex].high
@@ -707,7 +708,7 @@ if (window.innerWidth <= 768) {
           document.getElementById("box9").innerText = "";
           document.getElementById("box9").style.backgroundColor = "#FFFFFF";
         
-    }
+    }}
     });
         
 
