@@ -100,6 +100,8 @@ color: white; /* White headings */
     border-radius: 15px; /* Rounded corners */
     font-weight: bold;
     color: green;
+    width: 50px;
+    font-size: small;
 }
 
 /* Label styling within each info box */
