@@ -708,6 +708,7 @@ if (window.innerWidth <= 768) {
           document.getElementById("box9").innerText = "";
           document.getElementById("box9").style.backgroundColor = "#FFFFFF";
           cdlp = "None";
+          populateCandlePatternDropdown(cdlp);
         
     }}
     });
