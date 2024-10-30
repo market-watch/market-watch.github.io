@@ -546,7 +546,7 @@ if (window.innerWidth <= 768) {
                     var cdlp = dataTuple[7];
                     console.log(cdlp)
                     // Populate the candle pattern dropdown if cdlp is not 'None'
-                    populateCandlePatternDropdown(cdlp);
+                    
                     console.log(dataTuple)
                     console.log(mar)
                     // console.log(mar[1])
@@ -686,7 +686,7 @@ if (window.innerWidth <= 768) {
 
     const bt9 = (atrv === false) ? "Normal" : "High";
     document.getElementById("box4").innerText = bt9;
-
+    populateCandlePatternDropdown(cdlp);
         }
     });
         
