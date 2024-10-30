@@ -169,7 +169,7 @@ color: white; /* White headings */
     border: 1px solid #666;
     color: white;
     background-color: #333;
-    max-height: 200px;
+    max-height: 500px;
     overflow-y: auto;
 }
 
