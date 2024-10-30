@@ -637,7 +637,7 @@ if (window.innerWidth <= 768) {
     const f50bc = "#FFFFFF";
     const f61bc = "#FFFFFF";
 
-    const f23tc = "#FFFF00";
+    const f23tc = "#CCCC00";
     const f38tc = "#008000";
     const f50tc = "#0000FF";
     const f61tc = "#006400";
