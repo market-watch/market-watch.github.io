@@ -544,7 +544,7 @@ if (window.innerWidth <= 768) {
                     var atrv = dataTuple[8]
                     // Get the cdlp variable from dataTuple
                     var cdlp = dataTuple[7];
-
+                    console.log(cdlp)
                     // Populate the candle pattern dropdown if cdlp is not 'None'
                     populateCandlePatternDropdown(cdlp);
                     console.log(dataTuple)
