@@ -548,8 +548,8 @@ if (window.innerWidth <= 768) {
                     console.log(cdlp)
                     // Populate the candle pattern dropdown if cdlp is not 'None'
                     
-                    console.log(dataTuple)
-                    console.log(mar)
+                    // console.log(dataTuple)
+                    // console.log(mar)
                     // console.log(mar[1])
                     // // Show the info boxes
                     document.getElementById("info-boxes").style.display = "flex";
@@ -707,6 +707,7 @@ if (window.innerWidth <= 768) {
           document.getElementById("box8").style.backgroundColor = "#FFFFFF";
           document.getElementById("box9").innerText = "";
           document.getElementById("box9").style.backgroundColor = "#FFFFFF";
+          cdlp = 0;
         
     }}
     });
