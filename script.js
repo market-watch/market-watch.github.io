@@ -688,6 +688,26 @@ if (window.innerWidth <= 768) {
     document.getElementById("box4").innerText = bt9;
     populateCandlePatternDropdown(cdlp);
         }
+    else { document.getElementById("box1").innerText = "";
+          document.getElementById("box1").style.backgroundColor = "#FFFFFF";
+          document.getElementById("box2").innerText = "";
+          document.getElementById("box2").style.backgroundColor = "#FFFFFF";
+          document.getElementById("box3").innerText = "";
+          document.getElementById("box3").style.backgroundColor = "#FFFFFF";
+          document.getElementById("box4").innerText = "";
+          document.getElementById("box4").style.backgroundColor = "#FFFFFF";
+          document.getElementById("box5").innerText = "";
+          document.getElementById("box5").style.backgroundColor = "#FFFFFF";
+          document.getElementById("box6").innerText = "";
+          document.getElementById("box6").style.backgroundColor = "#FFFFFF";
+          document.getElementById("box7").innerText = "";
+          document.getElementById("box7").style.backgroundColor = "#FFFFFF";
+          document.getElementById("box8").innerText = "";
+          document.getElementById("box8").style.backgroundColor = "#FFFFFF";
+          document.getElementById("box9").innerText = "";
+          document.getElementById("box9").style.backgroundColor = "#FFFFFF";
+        
+    }
     });
         
 
