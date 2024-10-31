@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital Exposure Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Capital Exposure Calculator</h1>
+    <form id="calcForm">
+        <label for="positionType">Position Type:</label>
+        <select id="positionType">
+            <option value="long">Long</option>
+            <option value="short">Short</option>
+        </select>
+        <br>
+        
+        <label for="capital">Total Capital ($):</label>
+        <input type="number" id="capital" required>
+        <br>
+        
+        <label for="entryPrice">Entry Price ($):</label>
+        <input type="number" id="entryPrice" required>
+        <br>
+        
+        <label for="stopPrice">Stop Price ($):</label>
+        <input type="number" id="stopPrice" required>
+        <br>
+        
+        <label for="leverage">Leverage Ratio:</label>
+        <input type="number" id="leverage" min="1" value="1">
+        <br>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    <div id="results"></div>
+
+    <script>
+        document.getElementById('calcForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get input values
+            const positionType = document.getElementById('positionType').value;
+            const capital = parseFloat(document.getElementById('capital').value);
+            const entryPrice = parseFloat(document.getElementById('entryPrice').value);
+            const stopPrice = parseFloat(document.getElementById('stopPrice').value);
+            const leverage = parseFloat(document.getElementById('leverage').value);
+
+            // Validate input values
+            if (isNaN(capital) || isNaN(entryPrice) || isNaN(stopPrice) || leverage < 1) {
+                alert('Please enter valid numbers. Ensure leverage is at least 1.');
+                return;
+            }
+            if (positionType === 'long' && entryPrice <= stopPrice) {
+                alert('For a long position, the entry price must be greater than the stop price.');
+                return;
+            }
+            if (positionType === 'short' && entryPrice >= stopPrice) {
+                alert('For a short position, the entry price must be less than the stop price.');
+                return;
+            }
+
+            // Calculate maximum capital exposure
+            const maxExposurePerTrade = (capital * 0.03) / leverage; // 3% of capital, adjusted for leverage
+            
+            // Calculate capital exposure per unit based on position type
+            let capitalExposurePerUnit;
+            if (positionType === 'long') {
+                capitalExposurePerUnit = entryPrice - stopPrice; // Long exposure
+            } else { // Short
+                capitalExposurePerUnit = stopPrice - entryPrice; // Short exposure
+            }
+
+            // Calculate maximum position size
+            const maxPositionSize = Math.floor(maxExposurePerTrade / capitalExposurePerUnit);
+
+            // Calculate overall position exposure (for all open trades)
+            const overallPositionExposure = capital * 0.06; // 6%
+
+            // Display results
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `
+                <h2>Calculation Results:</h2>
+                <p>Maximum Capital Exposure Per Trade: $${maxExposurePerTrade.toFixed(2)}</p>
+                <p>Capital Exposure Per Unit: $${capitalExposurePerUnit.toFixed(2)}</p>
+                <p>Maximum Position Size: ${maxPositionSize} units</p>
+                <p>Overall Position Exposure: $${overallPositionExposure.toFixed(2)}</p>
+            `;
+        });
+    </script>
+</body>
+</html>
