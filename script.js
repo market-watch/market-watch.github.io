@@ -467,10 +467,12 @@ var scrollBar = document.getElementById('scroll-bar');
 var totalCandles = myPlot.data[0].x.length;
 var visibleDays = parseInt(rangeBar.value); // Get initial visible days from range-bar
 
-// Set the scroll bar max to total candles minus 1
-scrollBar.max = totalCandles - 1; 
-// Set the scroll bar value to show the last 1/5th of candles
-scrollBar.value = totalCandles - Math.floor(totalCandles / 5);
+// Set the scroll bar max to total candles minus the visible days
+scrollBar.max = totalCandles - visibleDays;
+
+// Set initial visible range to display last 1/5th of total candles
+var initialStartIndex = Math.max(totalCandles - Math.floor(totalCandles / 5), 0);
+scrollBar.value = initialStartIndex; // Set scroll bar to the initial starting index
 
 // Function to update the chart range
 function updateChartRange(startIndex) {
@@ -489,20 +491,8 @@ function updateChartRange(startIndex) {
 
 // Update chart when scroll bar is moved
 scrollBar.addEventListener('input', function() {
-    // Get the current value of the scroll bar
     var startIndex = parseInt(scrollBar.value);
-
-    // If moving left, ensure more candles are visible by adjusting the end index
-    if (startIndex > 0) {
-        var newStartIndex = startIndex - 1; // Move left by one
-        if (newStartIndex < 0) newStartIndex = 0; // Prevent going out of bounds
-        // Update the chart range based on the new start index
-        updateChartRange(newStartIndex);
-        scrollBar.value = newStartIndex; // Sync the scroll bar value with the new start index
-    } else {
-        // If at the start, just refresh the chart
-        updateChartRange(startIndex);
-    }
+    updateChartRange(startIndex);
 });
 
 // Update chart when range bar is moved
