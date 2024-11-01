@@ -178,7 +178,7 @@ color: white; /* White headings */
     width: calc(100% - 20px); /* Adjust width as necessary */
     margin-top: 2px;    /* Space between the input and suggestions */
     padding: 0;         /* Remove padding to prevent extra space */
-    display: none;    
+    
 }
 
 #suggestions div {
