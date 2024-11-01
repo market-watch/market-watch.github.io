@@ -476,7 +476,7 @@ var layout = {
                     }
                 
                     Plotly.relayout('plot', {
-                        'xaxis.range': myPlot.data[0].x[startIndex], myPlot.data[0].x[rangeEndIndex]]
+                        'xaxis.range': [myPlot.data[0].x[startIndex], myPlot.data[0].x[rangeEndIndex]]
                     });
                 });
                 
