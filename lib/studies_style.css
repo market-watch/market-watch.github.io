@@ -204,3 +204,17 @@ color: white; /* White headings */
     top: 60px; /* Adjust as per layout */
     right: 20px; /* Align with the grid */
 }
+
+
+
+#range-bar-container, #scroll-bar-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#range-bar, #scroll-bar {
+    width: 100%;
+}
+
