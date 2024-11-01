@@ -457,6 +457,7 @@ var layout = {
                                         os_line, bbl_trace, bbm_trace, bbu_trace], layout, {showSendToCloud: true});
 
                 // Get the plot element
+                              
                 var myPlot = document.getElementById('plot');
                 
                 // Initialize the range and scroll bars
@@ -504,25 +505,6 @@ var layout = {
                     updateChartRange(startIndex);
                 });
 
-                
-                // Update chart when range bar is moved
-                rangeBar.addEventListener('input', function() {
-                    visibleDays = parseInt(rangeBar.value);
-                    scrollBar.max = myPlot.data[0].x.length - visibleDays;
-                
-                    var startIndex = parseInt(scrollBar.value);
-                    var rangeEndIndex = startIndex + visibleDays - 1;
-                
-                    if (rangeEndIndex >= myPlot.data[0].x.length) {
-                        rangeEndIndex = myPlot.data[0].x.length - 1;
-                    }
-                
-                    Plotly.relayout('plot', {
-                        'xaxis.range': [myPlot.data[0].x[startIndex], myPlot.data[0].x[rangeEndIndex]]
-                    });
-                });
-                
-                
                 
                 // Set up relayout event for auto-scaling on zoom, pan, or rangeslider move
                 
