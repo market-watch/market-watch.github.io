@@ -456,29 +456,54 @@ var layout = {
                 Plotly.newPlot('plot', [candlestick, volume_trace, k_trace, d_trace, ob_line,
                                         os_line, bbl_trace, bbm_trace, bbu_trace], layout, {showSendToCloud: true});
 
+                // Get the plot element
                 var myPlot = document.getElementById('plot');
                 
                 // Initialize the range and scroll bars
                 var rangeBar = document.getElementById('range-bar');
                 var scrollBar = document.getElementById('scroll-bar');
                 
-                // Set initial values
+                // Calculate total candles and set initial values
+                var totalCandles = myPlot.data[0].x.length;
                 var visibleDays = parseInt(rangeBar.value); // Get initial visible days from range-bar
-                scrollBar.max = myPlot.data[0].x.length - visibleDays; // Set scroll bar max
+                
+                // Set the scroll bar max to total candles minus the visible days
+                scrollBar.max = totalCandles - visibleDays;
+                
+                // Set initial visible range to display last 1/5th of total candles
+                var initialStartIndex = Math.max(totalCandles - Math.floor(totalCandles / 5), 0);
+                scrollBar.value = initialStartIndex; // Set scroll bar to the initial starting index
+                
+                // Function to update the chart range
+                function updateChartRange(startIndex) {
+                    var rangeEndIndex = startIndex + visibleDays - 1;
+                
+                    // Ensure the end index does not exceed total candles
+                    if (rangeEndIndex >= totalCandles) {
+                        rangeEndIndex = totalCandles - 1;
+                    }
+                
+                    // Update the x-axis range
+                    Plotly.relayout('plot', {
+                        'xaxis.range': [myPlot.data[0].x[startIndex], myPlot.data[0].x[rangeEndIndex]]
+                    });
+                }
                 
                 // Update chart when scroll bar is moved
                 scrollBar.addEventListener('input', function() {
                     var startIndex = parseInt(scrollBar.value);
-                    var rangeEndIndex = startIndex + visibleDays - 1;
-                
-                    if (rangeEndIndex >= myPlot.data[0].x.length) {
-                        rangeEndIndex = myPlot.data[0].x.length - 1;
-                    }
-                
-                    Plotly.relayout('plot', {
-                        'xaxis.range': [myPlot.data[0].x[startIndex], myPlot.data[0].x[rangeEndIndex]]
-                    });
+                    updateChartRange(startIndex);
                 });
+                
+                // Update chart when range bar is moved
+                rangeBar.addEventListener('input', function() {
+                    visibleDays = parseInt(rangeBar.value);
+                    scrollBar.max = totalCandles - visibleDays; // Update the scroll bar max
+                
+                    var startIndex = parseInt(scrollBar.value);
+                    updateChartRange(startIndex);
+                });
+
                 
                 // Update chart when range bar is moved
                 rangeBar.addEventListener('input', function() {
