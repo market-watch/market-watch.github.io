@@ -123,7 +123,7 @@ function plotGraph() {
         // Get first and last date for setting X-axis range
         const firstDate = dates[0];
         const lastDate = dates[dates.length - 1];
-        const last50date = dates[dates.length - Math.round(dates.length/3)];
+        const last50date = dates[dates.length - Math.round(dates.length/5)];
         // Extend the chart to include 10 additional days
         const extendedLastDate = new Date(lastDate);
         extendedLastDate.setDate(extendedLastDate.getDate() + 10);
@@ -384,6 +384,7 @@ const folderPath1 = '/d_files/';
 
                 // Layout for the chart
 var layout = {
+    dragmode: 'pan',
     title: `Study for ${tick}`,
     // height: 800,
     autosize: true, // Automatically adjust size
@@ -396,7 +397,7 @@ var layout = {
     xaxis: {
         // autorange: true,
         rangeslider: { 
-            visible: true, 
+            visible: false, 
             range: [firstDate, formattedExtendedLastDate],
             thickness: 0.01, // Make the range slider thinner
             
@@ -439,15 +440,15 @@ var layout = {
     autosize: true // Allow automatic sizing based on viewport
 };
 
-// Adjust height dynamically for mobile screens
-if (window.innerWidth <= 768) {
-    layout.height = 400; // Reduce height for smaller screens
-    layout.title.font = { size: 16 }; // Adjust title font size for mobile
-    layout.xaxis.title.font = { size: 14 }; // Adjust x-axis title font size for mobile
-    layout.yaxis1.title.font = { size: 14 }; // Adjust y-axis 1 title font size for mobile
-    layout.yaxis2.title.font = { size: 14 }; // Adjust y-axis 2 title font size for mobile
-    layout.yaxis3.title.font = { size: 14 }; // Adjust y-axis 3 title font size for mobile
-}
+// // Adjust height dynamically for mobile screens
+// if (window.innerWidth <= 768) {
+//     layout.height = 400; // Reduce height for smaller screens
+//     layout.title.font = { size: 16 }; // Adjust title font size for mobile
+//     layout.xaxis.title.font = { size: 14 }; // Adjust x-axis title font size for mobile
+//     layout.yaxis1.title.font = { size: 14 }; // Adjust y-axis 1 title font size for mobile
+//     layout.yaxis2.title.font = { size: 14 }; // Adjust y-axis 2 title font size for mobile
+//     layout.yaxis3.title.font = { size: 14 }; // Adjust y-axis 3 title font size for mobile
+// }
 
 
                 // Plot the chart
