@@ -826,7 +826,26 @@ function filterSymbols(input) {
 }
 
 
-// New function to display filtered suggestions
+// // New function to display filtered suggestions
+// function displaySuggestions(suggestions) {
+//     const suggestionsDiv = document.getElementById("suggestions");
+//     suggestionsDiv.innerHTML = ""; // Clear previous suggestions
+
+//     if (suggestions.length === 0) {
+//         return; // No suggestions to display
+//     }
+
+//     suggestions.forEach(suggestion => {
+//         const suggestionItem = document.createElement("div");
+//         suggestionItem.textContent = suggestion;
+//         suggestionItem.onclick = () => {
+//             document.getElementById("search-box").value = suggestion; // Set the input value
+//             suggestionsDiv.innerHTML = ""; // Clear suggestions
+//         };
+//         suggestionsDiv.appendChild(suggestionItem);
+//     });
+// }
+
 function displaySuggestions(suggestions) {
     const suggestionsDiv = document.getElementById("suggestions");
     suggestionsDiv.innerHTML = ""; // Clear previous suggestions
@@ -835,7 +854,11 @@ function displaySuggestions(suggestions) {
         return; // No suggestions to display
     }
 
-    suggestions.forEach(suggestion => {
+    // Limit the number of displayed suggestions to 5
+    const maxSuggestions = 5;
+    const suggestionsToShow = suggestions.slice(0, maxSuggestions); // Get the first 5 suggestions
+
+    suggestionsToShow.forEach(suggestion => {
         const suggestionItem = document.createElement("div");
         suggestionItem.textContent = suggestion;
         suggestionItem.onclick = () => {
@@ -844,7 +867,11 @@ function displaySuggestions(suggestions) {
         };
         suggestionsDiv.appendChild(suggestionItem);
     });
+
+    // The suggestionsDiv will automatically handle scrolling if more than 5 suggestions exist.
 }
+
+
 
 // New event listener for the search box to filter suggestions
 document.getElementById("search-box").addEventListener("input", function() {
