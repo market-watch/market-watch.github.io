@@ -169,9 +169,24 @@ color: white; /* White headings */
     border: 1px solid #666;
     color: white;
     background-color: #333;
-    max-height: 500px;
-    overflow-y: auto;
+    max-height: 150px; /* Set a maximum height for the suggestions box */
+    overflow-y: auto;   /* Enable vertical scrolling when needed */
+    position: absolute;  /* Position suggestions below the input */
+    z-index: 1000;      /* Ensure it appears above other elements */
+    width: calc(100% - 20px); /* Adjust width as necessary */
+    margin-top: 2px;    /* Space between the input and suggestions */
+    padding: 0;         /* Remove padding to prevent extra space */
 }
+
+#suggestions div {
+    padding: 8px;       /* Padding for suggestion items */
+    cursor: pointer;    /* Change cursor to pointer on hover */
+}
+
+#suggestions div:hover {
+    background-color: #555; /* Highlight suggestion on hover */
+}
+
 
 
 .grid-container {
