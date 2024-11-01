@@ -409,6 +409,7 @@ var layout = {
     yaxis1: {
         title: 'Price',
         domain: [0.4, 1],  // Height for candlestick panel
+        fixedrange: true,
         autorange: true,
         anchor: 'x',
         rangemode: 'match', // Ensure the y-axis is consistent,
