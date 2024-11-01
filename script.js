@@ -384,7 +384,7 @@ const folderPath1 = '/d_files/';
 
                 // Layout for the chart
 var layout = {
-    dragmode: 'pan',
+    dragmode: false,
     title: `Study for ${tick}`,
     // height: 800,
     autosize: true, // Automatically adjust size
@@ -409,8 +409,8 @@ var layout = {
     yaxis1: {
         title: 'Price',
         domain: [0.4, 1],  // Height for candlestick panel
-        fixedrange: true,
-        autorange: true,
+        // fixedrange: true,
+        autorange: false,
         anchor: 'x',
         rangemode: 'match', // Ensure the y-axis is consistent,
         range: [minLow, maxHigh] // Set the initial range for y-axis
@@ -456,6 +456,49 @@ var layout = {
                 Plotly.newPlot('plot', [candlestick, volume_trace, k_trace, d_trace, ob_line,
                                         os_line, bbl_trace, bbm_trace, bbu_trace], layout, {showSendToCloud: true});
 
+                
+                
+                // Initialize the range and scroll bars
+                var rangeBar = document.getElementById('range-bar');
+                var scrollBar = document.getElementById('scroll-bar');
+                
+                // Set initial values
+                var visibleDays = parseInt(rangeBar.value); // Get initial visible days from range-bar
+                scrollBar.max = data[0].x.length - visibleDays; // Set scroll bar max
+                
+                // Update chart when scroll bar is moved
+                scrollBar.addEventListener('input', function() {
+                    var startIndex = parseInt(scrollBar.value);
+                    var rangeEndIndex = startIndex + visibleDays - 1;
+                
+                    if (rangeEndIndex >= data[0].x.length) {
+                        rangeEndIndex = data[0].x.length - 1;
+                    }
+                
+                    Plotly.relayout('plot', {
+                        'xaxis.range': [data[0].x[startIndex], data[0].x[rangeEndIndex]]
+                    });
+                });
+                
+                // Update chart when range bar is moved
+                rangeBar.addEventListener('input', function() {
+                    visibleDays = parseInt(rangeBar.value);
+                    scrollBar.max = data[0].x.length - visibleDays;
+                
+                    var startIndex = parseInt(scrollBar.value);
+                    var rangeEndIndex = startIndex + visibleDays - 1;
+                
+                    if (rangeEndIndex >= data[0].x.length) {
+                        rangeEndIndex = data[0].x.length - 1;
+                    }
+                
+                    Plotly.relayout('plot', {
+                        'xaxis.range': [data[0].x[startIndex], data[0].x[rangeEndIndex]]
+                    });
+                });
+                
+                
+                
                 // Set up relayout event for auto-scaling on zoom, pan, or rangeslider move
                 var myPlot = document.getElementById('plot');
                 var isUnderRelayout = false;
