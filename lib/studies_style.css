@@ -175,8 +175,8 @@ color: white; /* White headings */
     overflow-y: auto;   /* Enable vertical scrolling when needed */
     position: absolute;  /* Position suggestions below the input */
     z-index: 1000;      /* Ensure it appears above other elements */
-    width: calc(100% - 20px); /* Adjust width as necessary */
-    margin-top: 2px;    /* Space between the input and suggestions */
+    width: calc(50% - 100px); /* Adjust width as necessary */
+    margin-top: 120px;    /* Space between the input and suggestions */
     padding: 0;         /* Remove padding to prevent extra space */
     
 }
