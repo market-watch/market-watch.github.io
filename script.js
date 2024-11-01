@@ -457,24 +457,61 @@ var layout = {
                                         os_line, bbl_trace, bbm_trace, bbu_trace], layout, {showSendToCloud: true});
 
                 // Get the plot element
-                var myPlot = document.getElementById('plot');
-                
-                // Initialize the scroll bar
-                var scrollBar = document.getElementById('scroll-bar');
-                
-                // Set the scroll bar max value to total number of candles
-                scrollBar.max = myPlot.data[0].x.length;
-                
-                // Update chart when scroll bar is moved
-                scrollBar.addEventListener('input', function() {
-                    var startIndex = parseInt(scrollBar.value);
-                    var rangeEndIndex = Math.min(startIndex + (myPlot.data[0].x.length / 5), myPlot.data[0].x.length - 1); // Keep displaying last 1/5th of total candles
-                
-                    // Adjust the xaxis range
-                    Plotly.relayout('plot', {
-                        'xaxis.range': [myPlot.data[0].x[startIndex], myPlot.data[0].x[rangeEndIndex]]
-                    });
-                });
+var myPlot = document.getElementById('plot');
+
+// Initialize the range and scroll bars
+var rangeBar = document.getElementById('range-bar');
+var scrollBar = document.getElementById('scroll-bar');
+
+// Calculate total candles and set initial values
+var totalCandles = myPlot.data[0].x.length;
+var visibleDays = parseInt(rangeBar.value); // Get initial visible days from range-bar
+
+// Set the scroll bar max to total candles minus 1
+scrollBar.max = totalCandles - 1; 
+// Set the scroll bar value to show the last 1/5th of candles
+scrollBar.value = totalCandles - Math.floor(totalCandles / 5);
+
+// Function to update the chart range
+function updateChartRange(startIndex) {
+    // Adjust the end index based on the visible days
+    var rangeEndIndex = Math.min(startIndex + visibleDays - 1, totalCandles - 1);
+    
+    // Update the x-axis range
+    Plotly.relayout('plot', {
+        'xaxis.range': [myPlot.data[0].x[startIndex], myPlot.data[0].x[rangeEndIndex]]
+    });
+}
+
+// Update chart when scroll bar is moved
+scrollBar.addEventListener('input', function() {
+    // Get the current value of the scroll bar
+    var startIndex = parseInt(scrollBar.value);
+
+    // When moving left, increase the number of visible candles
+    if (startIndex > 0) {
+        var newStartIndex = Math.max(0, startIndex - 1); // Move left by one
+        // Update the chart range based on the new start index
+        updateChartRange(newStartIndex);
+        scrollBar.value = newStartIndex; // Sync the scroll bar value with the new start index
+    } else {
+        // If at the start, just refresh the chart
+        updateChartRange(startIndex);
+    }
+});
+
+// Update chart when range bar is moved
+rangeBar.addEventListener('input', function() {
+    visibleDays = parseInt(rangeBar.value);
+    scrollBar.max = totalCandles - visibleDays; // Update the scroll bar max
+
+    var startIndex = parseInt(scrollBar.value);
+    updateChartRange(startIndex);
+});
+
+// Initial load: Display all candles when scrolled all the way to the left
+updateChartRange(0);
+
                 
                 // Set up relayout event for auto-scaling on zoom, pan, or rangeslider move
                 
