@@ -457,7 +457,6 @@ var layout = {
                                         os_line, bbl_trace, bbm_trace, bbu_trace], layout, {showSendToCloud: true});
 
                 // Get the plot element
-                        
                 var myPlot = document.getElementById('plot');
                 
                 // Initialize the range and scroll bars
@@ -468,9 +467,10 @@ var layout = {
                 var totalCandles = myPlot.data[0].x.length;
                 var visibleDays = parseInt(rangeBar.value); // Get initial visible days from range-bar
                 
-                // Set the scroll bar max to total candles minus the visible days
-                scrollBar.max = totalCandles - 1; // Maximum should be total candles minus 1
-                scrollBar.value = Math.max(totalCandles - Math.floor(totalCandles / 5), 0); // Set to show last 1/5th initially
+                // Set the scroll bar max to total candles minus 1
+                scrollBar.max = totalCandles - 1; 
+                // Set the scroll bar value to show the last 1/5th of candles
+                scrollBar.value = totalCandles - Math.floor(totalCandles / 5);
                 
                 // Function to update the chart range
                 function updateChartRange(startIndex) {
@@ -489,14 +489,20 @@ var layout = {
                 
                 // Update chart when scroll bar is moved
                 scrollBar.addEventListener('input', function() {
-                    // Move startIndex to the left when scroll bar is adjusted
+                    // Get the current value of the scroll bar
                     var startIndex = parseInt(scrollBar.value);
                 
-                    // Ensure we do not go below 0
-                    if (startIndex < 0) startIndex = 0;
-                
-                    // Update the chart range
-                    updateChartRange(startIndex);
+                    // If moving left, ensure more candles are visible by adjusting the end index
+                    if (startIndex > 0) {
+                        var newStartIndex = startIndex - 1; // Move left by one
+                        if (newStartIndex < 0) newStartIndex = 0; // Prevent going out of bounds
+                        // Update the chart range based on the new start index
+                        updateChartRange(newStartIndex);
+                        scrollBar.value = newStartIndex; // Sync the scroll bar value with the new start index
+                    } else {
+                        // If at the start, just refresh the chart
+                        updateChartRange(startIndex);
+                    }
                 });
                 
                 // Update chart when range bar is moved
