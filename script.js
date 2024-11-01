@@ -409,7 +409,7 @@ var layout = {
     yaxis1: {
         title: 'Price',
         domain: [0.4, 1],  // Height for candlestick panel
-        autorange: false,
+        autorange: true,
         anchor: 'x',
         rangemode: 'match', // Ensure the y-axis is consistent,
         range: [minLow, maxHigh] // Set the initial range for y-axis
