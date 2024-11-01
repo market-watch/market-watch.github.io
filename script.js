@@ -456,7 +456,7 @@ var layout = {
                 Plotly.newPlot('plot', [candlestick, volume_trace, k_trace, d_trace, ob_line,
                                         os_line, bbl_trace, bbm_trace, bbu_trace], layout, {showSendToCloud: true});
 
-                // Get the plot element
+ // Get the plot element
 var myPlot = document.getElementById('plot');
 
 // Initialize the range and scroll bars
@@ -474,9 +474,13 @@ scrollBar.value = totalCandles - Math.floor(totalCandles / 5);
 
 // Function to update the chart range
 function updateChartRange(startIndex) {
-    // Adjust the end index based on the visible days
-    var rangeEndIndex = Math.min(startIndex + visibleDays - 1, totalCandles - 1);
-    
+    var rangeEndIndex = startIndex + visibleDays - 1;
+
+    // Ensure the end index does not exceed total candles
+    if (rangeEndIndex >= totalCandles) {
+        rangeEndIndex = totalCandles - 1;
+    }
+
     // Update the x-axis range
     Plotly.relayout('plot', {
         'xaxis.range': [myPlot.data[0].x[startIndex], myPlot.data[0].x[rangeEndIndex]]
@@ -488,9 +492,10 @@ scrollBar.addEventListener('input', function() {
     // Get the current value of the scroll bar
     var startIndex = parseInt(scrollBar.value);
 
-    // When moving left, increase the number of visible candles
+    // If moving left, ensure more candles are visible by adjusting the end index
     if (startIndex > 0) {
-        var newStartIndex = Math.max(0, startIndex - 1); // Move left by one
+        var newStartIndex = startIndex - 1; // Move left by one
+        if (newStartIndex < 0) newStartIndex = 0; // Prevent going out of bounds
         // Update the chart range based on the new start index
         updateChartRange(newStartIndex);
         scrollBar.value = newStartIndex; // Sync the scroll bar value with the new start index
@@ -508,9 +513,6 @@ rangeBar.addEventListener('input', function() {
     var startIndex = parseInt(scrollBar.value);
     updateChartRange(startIndex);
 });
-
-// Initial load: Display all candles when scrolled all the way to the left
-updateChartRange(0);
 
                 
                 // Set up relayout event for auto-scaling on zoom, pan, or rangeslider move
