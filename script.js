@@ -457,7 +457,7 @@ var layout = {
                                         os_line, bbl_trace, bbm_trace, bbu_trace], layout, {showSendToCloud: true});
 
                 // Get the plot element
-                              
+                        
                 var myPlot = document.getElementById('plot');
                 
                 // Initialize the range and scroll bars
@@ -469,11 +469,8 @@ var layout = {
                 var visibleDays = parseInt(rangeBar.value); // Get initial visible days from range-bar
                 
                 // Set the scroll bar max to total candles minus the visible days
-                scrollBar.max = totalCandles - visibleDays;
-                
-                // Set initial visible range to display last 1/5th of total candles
-                var initialStartIndex = Math.max(totalCandles - Math.floor(totalCandles / 5), 0);
-                scrollBar.value = initialStartIndex; // Set scroll bar to the initial starting index
+                scrollBar.max = totalCandles - 1; // Maximum should be total candles minus 1
+                scrollBar.value = Math.max(totalCandles - Math.floor(totalCandles / 5), 0); // Set to show last 1/5th initially
                 
                 // Function to update the chart range
                 function updateChartRange(startIndex) {
@@ -492,7 +489,13 @@ var layout = {
                 
                 // Update chart when scroll bar is moved
                 scrollBar.addEventListener('input', function() {
+                    // Move startIndex to the left when scroll bar is adjusted
                     var startIndex = parseInt(scrollBar.value);
+                
+                    // Ensure we do not go below 0
+                    if (startIndex < 0) startIndex = 0;
+                
+                    // Update the chart range
                     updateChartRange(startIndex);
                 });
                 
