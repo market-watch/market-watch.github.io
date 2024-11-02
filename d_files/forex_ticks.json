@@ -343,5 +343,30 @@
         "XAUUSD",
         "Gold/USD",
         "OANDA"
+    ],
+    [
+        "BTCUSD",
+        "Bitcoin/USD",
+        "BITSTAMP"
+    ],
+    [
+        "ETHUSD",
+        "Ethereum/USD",
+        "BITSTAMP"
+    ],
+    [
+        "SPX500USD",
+        "US SPX 500",
+        "OANDA"
+    ],
+    [
+        "XAGUSD",
+        "XAG/USD",
+        "OANDA"
+    ],
+    [
+        "WTICOUSD",
+        "West Texas Oil",
+        "OANDA"
     ]
 ]
