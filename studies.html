@@ -152,7 +152,14 @@
         });
 
         document.addEventListener('keydown', function(event) {
-            if (event.key === 'F12' || (event.ctrlKey && (event.key === 'u' || event.key === 's' || event.key === 'p' || event.key === 'c' || event.key === 'Shift'))) {
+            if (event.key === 'F12' || (event.ctrlKey && (event.key === 'i' || event.key === 'u' || event.key === 's' || event.key === 'p' || event.key === 'c' || event.key === 'Shift'))) {
+                event.preventDefault();
+                alert("This page does not support this feature.");
+            }
+        });
+
+         document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey &&  event.key === 'Shift' && (event.key === 'i' )) {
                 event.preventDefault();
                 alert("This page does not support this feature.");
             }
