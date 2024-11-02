@@ -456,7 +456,6 @@ var layout = {
                 Plotly.newPlot('plot', [candlestick, volume_trace, k_trace, d_trace, ob_line,
                                         os_line, bbl_trace, bbm_trace, bbu_trace], layout, {showSendToCloud: true});
 
- // Get the plot element
 // Get the plot element
 var myPlot = document.getElementById('plot');
 
@@ -466,22 +465,26 @@ var scrollBar = document.getElementById('scroll-bar');
 
 // Calculate total candles and set initial values
 var totalCandles = myPlot.data[0].x.length;
-var visibleDays = parseInt(rangeBar.value); // Get initial visible days from range-bar
+var visibleDays = Math.floor(totalCandles / 5); // Initially set to last 1/5th of candles
+rangeBar.max = totalCandles; // Range slider max set to total number of candles
+rangeBar.value = visibleDays; // Set initial visible days based on last 1/5th of candles
 
 // Set the scroll bar max to total candles minus the visible days
 scrollBar.max = totalCandles - visibleDays;
 
-// Set initial visible range to display last 1/5th of total candles
-var initialStartIndex = Math.max(totalCandles - Math.floor(totalCandles / 5), 0);
+// Set initial scroll position to display last 1/5th of total candles
+var initialStartIndex = Math.max(totalCandles - visibleDays, 0);
 scrollBar.value = initialStartIndex; // Set scroll bar to the initial starting index
 
 // Function to update the chart range based on start index and visible days
 function updateChartRange(startIndex) {
+    // Calculate the range end to keep the last candle in view
     var rangeEndIndex = startIndex + visibleDays - 1;
 
     // Ensure the end index does not exceed total candles
     if (rangeEndIndex >= totalCandles) {
         rangeEndIndex = totalCandles - 1;
+        startIndex = totalCandles - visibleDays; // Adjust start index to keep range size
     }
 
     // Update the x-axis range
@@ -501,13 +504,14 @@ rangeBar.addEventListener('input', function() {
     visibleDays = parseInt(rangeBar.value);
     scrollBar.max = totalCandles - visibleDays; // Update the scroll bar max
 
-    var startIndex = parseInt(scrollBar.value); // Keep the scroll bar position consistent
+    // Adjust the start index to keep the last candle in view
+    var startIndex = Math.max(totalCandles - visibleDays, 0);
+    scrollBar.value = startIndex; // Update scroll position
     updateChartRange(startIndex);
 });
 
 // Initialize chart display with last 1/5th of candles visible
 updateChartRange(initialStartIndex);
-
 
                 
                 // Set up relayout event for auto-scaling on zoom, pan, or rangeslider move
