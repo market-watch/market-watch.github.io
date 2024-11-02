@@ -524,8 +524,8 @@ updateChartRange(initialStartIndex);
                         isUnderRelayout = true;
 
                         // Get the start and end dates from the current view or rangeslider
-                        var start = relayoutData['xaxis.range'] ? relayoutData['xaxis.range'][0].slice(0, 10) : firstDate;
-                        var end = relayoutData['xaxis.range'] ? relayoutData['xaxis.range'][1].slice(0, 10) : lastDate;
+                        var start = relayoutData['xaxis.range'] ? relayoutData['xaxis.range'][0] : firstDate;
+                        var end = relayoutData['xaxis.range'] ? relayoutData['xaxis.range'][1]) : lastDate;
 
                         // Get the index range
                         var xstart = myPlot.data[0].x.indexOf(start);
