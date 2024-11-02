@@ -457,6 +457,7 @@ var layout = {
                                         os_line, bbl_trace, bbm_trace, bbu_trace], layout, {showSendToCloud: true});
 
  // Get the plot element
+// Get the plot element
 var myPlot = document.getElementById('plot');
 
 // Initialize the range and scroll bars
@@ -474,7 +475,7 @@ scrollBar.max = totalCandles - visibleDays;
 var initialStartIndex = Math.max(totalCandles - Math.floor(totalCandles / 5), 0);
 scrollBar.value = initialStartIndex; // Set scroll bar to the initial starting index
 
-// Function to update the chart range
+// Function to update the chart range based on start index and visible days
 function updateChartRange(startIndex) {
     var rangeEndIndex = startIndex + visibleDays - 1;
 
@@ -500,9 +501,13 @@ rangeBar.addEventListener('input', function() {
     visibleDays = parseInt(rangeBar.value);
     scrollBar.max = totalCandles - visibleDays; // Update the scroll bar max
 
-    var startIndex = parseInt(scrollBar.value);
+    var startIndex = parseInt(scrollBar.value); // Keep the scroll bar position consistent
     updateChartRange(startIndex);
 });
+
+// Initialize chart display with last 1/5th of candles visible
+updateChartRange(initialStartIndex);
+
 
                 
                 // Set up relayout event for auto-scaling on zoom, pan, or rangeslider move
