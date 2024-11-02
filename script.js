@@ -865,7 +865,7 @@ function displaySuggestions(suggestions) {
     }
 
     // Limit the number of displayed suggestions to 5
-    const maxSuggestions = 5;
+    const maxSuggestions = 10;
     const suggestionsToShow = suggestions.slice(0, maxSuggestions); // Get the first 5 suggestions
 
     suggestionsToShow.forEach(suggestion => {
