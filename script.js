@@ -124,7 +124,7 @@ function plotGraph() {
         // Get first and last date for setting X-axis range
         const firstDate = dates[0];
         const lastDate = dates[dates.length - 1];
-        const last50date = dates[dates.length - Math.round(dates.length/5)];
+        const last50date = dates[dates.length - Math.round(dates.length/4)];
         // Extend the chart to include 10 additional days
         const extendedLastDate = new Date(lastDate);
         extendedLastDate.setDate(extendedLastDate.getDate() + 10);
@@ -466,7 +466,7 @@ var scrollBar = document.getElementById('scroll-bar');
 
 // Calculate total candles and set initial values
 var totalCandles = myPlot.data[0].x.length;
-var visibleDays = Math.floor(totalCandles / 5); // Initially set to last 1/5th of candles
+var visibleDays = Math.floor(totalCandles / 4); // Initially set to last 1/5th of candles
 rangeBar.max = totalCandles; // Range slider max set to total number of candles
 rangeBar.value = visibleDays; // Set initial visible days based on last 1/5th of candles
 
