@@ -91,7 +91,8 @@ function plotGraph() {
         displayMessage(`Data found for tick: ${tick}`);
 
         // Extract candlestick data
-        const dates = tickData.map(entry => entry.Datetime.slice(0, 10)); // Use YYYY-MM-DD
+        // const dates = tickData.map(entry => entry.Datetime.slice(0, 10)); // Use YYYY-MM-DD
+        const dates = tickData.map(entry => new Date(entry.Datetime));
         // Get the last date from the dates array
         let lastDate1 = new Date(dates[dates.length - 1]);
         
