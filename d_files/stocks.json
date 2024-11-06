@@ -1,5 +1,9 @@
 [
     {
+        "symbol": "20MICRONS",
+        "name": "20 Microns Limited"
+    },
+    {
         "symbol": "360ONE",
         "name": "360 ONE WAM Ltd"
     },
@@ -54,6 +58,10 @@
     {
         "symbol": "AARTISURF",
         "name": "Aarti Surfactants Ltd"
+    },
+    {
+        "symbol": "AARVEEDEN",
+        "name": "Aarvee Denims & Exports Limited"
     },
     {
         "symbol": "AARVI",
@@ -288,6 +296,10 @@
         "name": "Allcargo Logistics Limited"
     },
     {
+        "symbol": "ALMONDZ",
+        "name": "Almondz Global Securities Limited"
+    },
+    {
         "symbol": "ALOKINDS",
         "name": "Alok Industries Ltd"
     },
@@ -374,6 +386,10 @@
     {
         "symbol": "ANSALAPI",
         "name": "Ansal Properties & Infrastructure Limited"
+    },
+    {
+        "symbol": "ANTGRAPHIC",
+        "name": "Antarctica Limited"
     },
     {
         "symbol": "ANUP",
@@ -508,6 +524,10 @@
         "name": "Ashoka Buildcon Limited"
     },
     {
+        "symbol": "ASHOKAMET",
+        "name": "Ashoka Metcast Ltd"
+    },
+    {
         "symbol": "ASHOKLEY",
         "name": "Ashok Leyland Limited"
     },
@@ -570,6 +590,10 @@
     {
         "symbol": "ATL",
         "name": "Allcargo Terminals Ltd"
+    },
+    {
+        "symbol": "ATLANTAA",
+        "name": "Atlantaa Ltd"
     },
     {
         "symbol": "ATUL",
@@ -940,6 +964,10 @@
         "name": "Birla Corporation Limited"
     },
     {
+        "symbol": "BIRLAMONEY",
+        "name": "Aditya Birla Money Limited"
+    },
+    {
         "symbol": "BLAL",
         "name": "BEML Land Assets Ltd"
     },
@@ -962,6 +990,10 @@
     {
         "symbol": "BLSE",
         "name": "BLS E-Services Ltd"
+    },
+    {
+        "symbol": "BLUECHIP",
+        "name": "Blue Chip India Limited"
     },
     {
         "symbol": "BLUEJET",
@@ -1168,6 +1200,10 @@
         "name": "Century Plyboards (india) Limited"
     },
     {
+        "symbol": "CEREBRAINT",
+        "name": "Cerebra Integrated Technologies Limited"
+    },
+    {
         "symbol": "CESC",
         "name": "Cesc Limited"
     },
@@ -1292,6 +1328,10 @@
         "name": "Nippon India ETF Consumption"
     },
     {
+        "symbol": "CONSUMIETF",
+        "name": "ICICI Prudential Nifty India Consumption ETF"
+    },
+    {
         "symbol": "CORALFINAC",
         "name": "Coral India Finance & Housing Ltd"
     },
@@ -1342,10 +1382,6 @@
     {
         "symbol": "CSLFINANCE",
         "name": "CSL Finance Ltd"
-    },
-    {
-        "symbol": "CTE",
-        "name": "Cambridge Technology Enterprises Limited"
     },
     {
         "symbol": "CUB",
@@ -1434,6 +1470,10 @@
     {
         "symbol": "DCM",
         "name": "Dcm  Limited"
+    },
+    {
+        "symbol": "DCMFINSERV",
+        "name": "DCM Financial Services Ltd"
     },
     {
         "symbol": "DCMSHRIRAM",
@@ -1570,6 +1610,10 @@
     {
         "symbol": "DOMS",
         "name": "Doms Industries Ltd"
+    },
+    {
+        "symbol": "DONEAR",
+        "name": "Donear Industries Limited"
     },
     {
         "symbol": "DPABHUSHAN",
@@ -1772,6 +1816,10 @@
         "name": "Essar Shipping Limited"
     },
     {
+        "symbol": "ESSENTIA",
+        "name": "Integra Essentia Ltd"
+    },
+    {
         "symbol": "ESTER",
         "name": "Ester Industries Limited"
     },
@@ -1786,6 +1834,10 @@
     {
         "symbol": "EXCEL",
         "name": "Excel Realty N Infra Limited"
+    },
+    {
+        "symbol": "EXCELINDUS",
+        "name": "Excel Industries Limited"
     },
     {
         "symbol": "EXICOM",
@@ -1844,6 +1896,10 @@
         "name": "Filatex India Limited"
     },
     {
+        "symbol": "FILATFASH",
+        "name": "Filatex Fashions Ltd"
+    },
+    {
         "symbol": "FINCABLES",
         "name": "Finolex Cables Limited"
     },
@@ -1882,6 +1938,10 @@
     {
         "symbol": "FMGOETZE",
         "name": "Federal-mogul Goetze (india) Limited."
+    },
+    {
+        "symbol": "FMNL",
+        "name": "Future Market Networks Limited"
     },
     {
         "symbol": "FOCUS",
@@ -2172,6 +2232,10 @@
         "name": "UTI - Gold Exchange Traded Fund"
     },
     {
+        "symbol": "GOLDTECH",
+        "name": "Goldstone Technologies Limited"
+    },
+    {
         "symbol": "GOODLUCK",
         "name": "Goodluck India Limited"
     },
@@ -2330,6 +2394,10 @@
     {
         "symbol": "HARIOMPIPE",
         "name": "Hariom Pipe Industries Ltd"
+    },
+    {
+        "symbol": "HARRMALAYA",
+        "name": "Harrisons  Malayalam Limited"
     },
     {
         "symbol": "HARSHA",
@@ -2520,6 +2588,10 @@
         "name": "Hindustan Copper Limited"
     },
     {
+        "symbol": "HINDMOTORS",
+        "name": "Hindustan Motors Limited"
+    },
+    {
         "symbol": "HINDNATGLS",
         "name": "Hindusthan National Glass & Industries Limited"
     },
@@ -2542,6 +2614,10 @@
     {
         "symbol": "HINDZINC",
         "name": "Hindustan Zinc Limited"
+    },
+    {
+        "symbol": "HIRECT",
+        "name": "Hind Rectifiers Limited"
     },
     {
         "symbol": "HITECH",
@@ -2700,6 +2776,10 @@
         "name": "IKIO Lighting Ltd"
     },
     {
+        "symbol": "IL&FSTRANS",
+        "name": "Il&fs Transportation Networks Limited"
+    },
+    {
         "symbol": "IMAGICAA",
         "name": "Imagicaaworld Entertainment Ltd"
     },
@@ -2780,6 +2860,10 @@
         "name": "Indraprastha Medical Corporation Limited"
     },
     {
+        "symbol": "INDSWFTLAB",
+        "name": "Ind-swift Laboratories Limited"
+    },
+    {
         "symbol": "INDSWFTLTD",
         "name": "Ind-swift Limited"
     },
@@ -2830,6 +2914,10 @@
     {
         "symbol": "INTELLECT",
         "name": "Intellect Design Arena Limited"
+    },
+    {
+        "symbol": "INTENTECH",
+        "name": "Intense Technologies Ltd"
     },
     {
         "symbol": "INTLCONV",
@@ -3428,8 +3516,16 @@
         "name": "La Opala Rg Limited"
     },
     {
+        "symbol": "LASA",
+        "name": "Lasa Supergenerics Ltd"
+    },
+    {
         "symbol": "LATENTVIEW",
         "name": "Latent View Analytics Ltd"
+    },
+    {
+        "symbol": "LATTEYS",
+        "name": "Latteys Industries Ltd"
     },
     {
         "symbol": "LAURUSLABS",
@@ -3438,6 +3534,10 @@
     {
         "symbol": "LAXMICOT",
         "name": "Laxmi Cotspin Ltd"
+    },
+    {
+        "symbol": "LCCINFOTEC",
+        "name": "Lcc Infotech Limited"
     },
     {
         "symbol": "LEMONTREE",
@@ -3466,6 +3566,10 @@
     {
         "symbol": "LICI",
         "name": "Life Insurance Corporation of India"
+    },
+    {
+        "symbol": "LICNETFGSC",
+        "name": "LIC Nomura MF G-Sec Long Term ETF"
     },
     {
         "symbol": "LICNMID100",
@@ -3806,6 +3910,10 @@
     {
         "symbol": "MAZDOCK",
         "name": "Mazagon Dock Shipbuilders Ltd"
+    },
+    {
+        "symbol": "MBECL",
+        "name": "Mcnally Bharat Engineering Company Limited"
     },
     {
         "symbol": "MBLINFRA",
@@ -4212,6 +4320,10 @@
         "name": "Ncl Industries Limited"
     },
     {
+        "symbol": "NDL",
+        "name": "Nandan Denim Limited"
+    },
+    {
         "symbol": "NDLVENTURE",
         "name": "NDL Ventures Ltd"
     },
@@ -4226,6 +4338,10 @@
     {
         "symbol": "NECCLTD",
         "name": "North Eastern Carrying Corporation Limited"
+    },
+    {
+        "symbol": "NECLIFE",
+        "name": "Nectar Lifesciences Limited"
     },
     {
         "symbol": "NELCAST",
@@ -4328,8 +4444,16 @@
         "name": "Nila Infrastructures Limited"
     },
     {
+        "symbol": "NILASPACES",
+        "name": "Nila Spaces Ltd"
+    },
+    {
         "symbol": "NIRAJ",
         "name": "Niraj Cement Structurals Ltd"
+    },
+    {
+        "symbol": "NITCO",
+        "name": "Nitco Limited"
     },
     {
         "symbol": "NITINSPIN",
@@ -4460,6 +4584,10 @@
         "name": "Oricon Enterprises Limited"
     },
     {
+        "symbol": "ORIENTALTL",
+        "name": "Oriental Trimex Limited"
+    },
+    {
         "symbol": "ORIENTCEM",
         "name": "Orient Cement Limited"
     },
@@ -4550,6 +4678,10 @@
     {
         "symbol": "PARKHOTELS",
         "name": "Apeejay Surrendra Park Hotels Ltd"
+    },
+    {
+        "symbol": "PARSVNATH",
+        "name": "Parsvnath Developers Limited"
     },
     {
         "symbol": "PASUPTAC",
@@ -4832,6 +4964,10 @@
         "name": "Prudent Corporate Advisory Services Ltd"
     },
     {
+        "symbol": "PRUDMOULI",
+        "name": "Prudential Sugar Corporation Ltd"
+    },
+    {
         "symbol": "PSB",
         "name": "Punjab & Sind Bank"
     },
@@ -4866,6 +5002,10 @@
     {
         "symbol": "PURVA",
         "name": "Puravankara Projects Limited"
+    },
+    {
+        "symbol": "PVP",
+        "name": "Pvp Ventures Limited"
     },
     {
         "symbol": "PVRINOX",
@@ -4906,6 +5046,10 @@
     {
         "symbol": "RACE",
         "name": "Race Eco Chain Ltd"
+    },
+    {
+        "symbol": "RADAAN",
+        "name": "Radaan Mediaworks India Limited"
     },
     {
         "symbol": "RADHIKAJWE",
@@ -5010,6 +5154,10 @@
     {
         "symbol": "RBLBANK",
         "name": "Rbl Bank Limited"
+    },
+    {
+        "symbol": "RBZJEWEL",
+        "name": "RBZ Jewellers Ltd"
     },
     {
         "symbol": "RCF",
@@ -5120,8 +5268,16 @@
         "name": "Royal Orchid Hotels Limited"
     },
     {
+        "symbol": "ROLLT",
+        "name": "Rollatainers Limited"
+    },
+    {
         "symbol": "ROSSARI",
         "name": "Rossari Biotech Ltd"
+    },
+    {
+        "symbol": "ROSSELLIND",
+        "name": "Rossell India Limited"
     },
     {
         "symbol": "ROTO",
@@ -5484,6 +5640,10 @@
         "name": "Stl Global Limited"
     },
     {
+        "symbol": "SHAH",
+        "name": "Shah Metacorp Ltd"
+    },
+    {
         "symbol": "SHAHALLOYS",
         "name": "Shah Alloys Limited"
     },
@@ -5522,6 +5682,10 @@
     {
         "symbol": "SHAREINDIA",
         "name": "Share India Securities Ltd"
+    },
+    {
+        "symbol": "SHEKHAWATI",
+        "name": "Shekhawati Industries Ltd"
     },
     {
         "symbol": "SHEMAROO",
@@ -5732,6 +5896,10 @@
         "name": "Sona BLW Precision Forgings Ltd"
     },
     {
+        "symbol": "SONAMLTD",
+        "name": "Sonam Ltd"
+    },
+    {
         "symbol": "SONATSOFTW",
         "name": "Sonata Software Limited"
     },
@@ -5930,6 +6098,10 @@
     {
         "symbol": "SUPREMEIND",
         "name": "Supreme Industries Limited"
+    },
+    {
+        "symbol": "SUPREMEINF",
+        "name": "Supreme Infrastructure India Limited"
     },
     {
         "symbol": "SUPRIYA",
@@ -6212,6 +6384,10 @@
         "name": "Thirumalai Chemicals Limited"
     },
     {
+        "symbol": "TIRUPATIFL",
+        "name": "Tirupati Forge Ltd"
+    },
+    {
         "symbol": "TITAGARH",
         "name": "Titagarh Rail Systems Ltd"
     },
@@ -6266,6 +6442,10 @@
     {
         "symbol": "TRANSWORLD",
         "name": "Shreyas Shipping & Logistics Ltd"
+    },
+    {
+        "symbol": "TREEHOUSE",
+        "name": "Tree House Education & Accessories Limited"
     },
     {
         "symbol": "TREL",
@@ -6362,6 +6542,10 @@
     {
         "symbol": "ULTRACEMCO",
         "name": "Ultratech Cement Limited"
+    },
+    {
+        "symbol": "UMAEXPORTS",
+        "name": "Uma Exports Ltd"
     },
     {
         "symbol": "UMANGDAIRY",
