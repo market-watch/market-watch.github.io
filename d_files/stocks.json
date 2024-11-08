@@ -260,10 +260,6 @@
         "name": "AKI India Ltd"
     },
     {
-        "symbol": "AKSHAR",
-        "name": "Akshar Spintex Ltd"
-    },
-    {
         "symbol": "AKSHOPTFBR",
         "name": "Aksh Optifibre Limited"
     },
@@ -1282,10 +1278,6 @@
     {
         "symbol": "CONSUMIETF",
         "name": "ICICI Prudential Nifty India Consumption ETF"
-    },
-    {
-        "symbol": "CORALFINAC",
-        "name": "Coral India Finance & Housing Ltd"
     },
     {
         "symbol": "COROMANDEL",
@@ -3448,10 +3440,6 @@
         "name": "Life Insurance Corporation of India"
     },
     {
-        "symbol": "LICNETFGSC",
-        "name": "LIC Nomura MF G-Sec Long Term ETF"
-    },
-    {
         "symbol": "LICNMID100",
         "name": "LIC MF Nifty Midcap 100 ETF"
     },
@@ -4132,10 +4120,6 @@
         "name": "Nahar Industrial Enterprises Limited"
     },
     {
-        "symbol": "NAHARPOLY",
-        "name": "Nahar Poly Films Limited"
-    },
-    {
         "symbol": "NAHARSPING",
         "name": "Nahar Spinning Mills Limited"
     },
@@ -4350,6 +4334,10 @@
     {
         "symbol": "NSLNISP",
         "name": "NMDC Steel Ltd"
+    },
+    {
+        "symbol": "NTL",
+        "name": "Neueon Towers Ltd"
     },
     {
         "symbol": "NTPC",
@@ -5420,10 +5408,6 @@
         "name": "Servotech Power Systems Ltd"
     },
     {
-        "symbol": "SESHAPAPER",
-        "name": "Seshasayee Paper And Boards Limited"
-    },
-    {
         "symbol": "SETCO",
         "name": "Setco Automotive Limited"
     },
@@ -5502,6 +5486,10 @@
     {
         "symbol": "SHIVAMAUTO",
         "name": "Shivam Autotech Limited"
+    },
+    {
+        "symbol": "SHIVATEX",
+        "name": "Shiva Texyarn Ltd"
     },
     {
         "symbol": "SHK",
@@ -5744,10 +5732,6 @@
         "name": "Southern Petrochemicals Industries Corporation  Limited"
     },
     {
-        "symbol": "SPLIL",
-        "name": "Spl Industries Limited"
-    },
-    {
         "symbol": "SPLPETRO",
         "name": "Supreme Petrochem Ltd"
     },
@@ -5770,10 +5754,6 @@
     {
         "symbol": "SRM",
         "name": "SRM Contractors Ltd"
-    },
-    {
-        "symbol": "SRPL",
-        "name": "Shree Ram Protiens Ltd"
     },
     {
         "symbol": "SSWL",
@@ -6268,10 +6248,6 @@
         "name": "Tata Teleservices (maharashtra) Limited"
     },
     {
-        "symbol": "TVSELECT",
-        "name": "Tvs Electronics Limited"
-    },
-    {
         "symbol": "TVSMOTOR",
         "name": "Tvs Motor Company Limited"
     },
@@ -6578,6 +6554,10 @@
     {
         "symbol": "VPRPL",
         "name": "Vishnu Prakash R Punglia Ltd"
+    },
+    {
+        "symbol": "VRAJ",
+        "name": "Vraj Iron & Steel Ltd"
     },
     {
         "symbol": "VRLLOG",
