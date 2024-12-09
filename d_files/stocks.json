@@ -60,10 +60,6 @@
         "name": "Aarti Pharmalabs Ltd"
     },
     {
-        "symbol": "AARVEEDEN",
-        "name": "Aarvee Denims & Exports Limited"
-    },
-    {
         "symbol": "AAVAS",
         "name": "AAVAS Financiers Ltd"
     },
@@ -196,10 +192,6 @@
         "name": "AGI Greenpac Ltd"
     },
     {
-        "symbol": "AGRITECH",
-        "name": "Agri-tech (india) Limited"
-    },
-    {
         "symbol": "AGROPHOS",
         "name": "Agro Phos India Ltd"
     },
@@ -214,10 +206,6 @@
     {
         "symbol": "AHLADA",
         "name": "Ahlada Engineers Ltd"
-    },
-    {
-        "symbol": "AHLEAST",
-        "name": "Asian Hotels (east) Limited"
     },
     {
         "symbol": "AHLUCONT",
@@ -314,6 +302,10 @@
     {
         "symbol": "ALPL30IETF",
         "name": "ICICI Prudential Nifty Alpha Low Volatility 30 ETF"
+    },
+    {
+        "symbol": "ALPSINDUS",
+        "name": "Alps Industries Limited"
     },
     {
         "symbol": "AMBER",
@@ -580,6 +572,10 @@
         "name": "Atul Limited"
     },
     {
+        "symbol": "ATULAUTO",
+        "name": "Atul Auto Limited"
+    },
+    {
         "symbol": "AUBANK",
         "name": "AU Small Finance Bank"
     },
@@ -620,8 +616,16 @@
         "name": "Avalon Technologies Ltd"
     },
     {
+        "symbol": "AVANTEL",
+        "name": "Avantel Ltd"
+    },
+    {
         "symbol": "AVANTIFEED",
         "name": "Avanti Feeds Limited"
+    },
+    {
+        "symbol": "AVG",
+        "name": "AVG Logistics Ltd"
     },
     {
         "symbol": "AVONMORE",
@@ -830,6 +834,10 @@
     {
         "symbol": "BBTC",
         "name": "Bombay Burmah Trading Corporation Limited"
+    },
+    {
+        "symbol": "BCG",
+        "name": "Brightcom Group Ltd"
     },
     {
         "symbol": "BCLIND",
@@ -1268,6 +1276,10 @@
         "name": "Cochin Shipyard"
     },
     {
+        "symbol": "COFFEEDAY",
+        "name": "Coffee Day Enterprises Limited"
+    },
+    {
         "symbol": "COFORGE",
         "name": "Coforge (Niit Tech)"
     },
@@ -1330,6 +1342,10 @@
     {
         "symbol": "CRAFTSMAN",
         "name": "Craftsman Automation Ltd"
+    },
+    {
+        "symbol": "CREATIVE",
+        "name": "Creative Peripherals & Distribution Ltd"
     },
     {
         "symbol": "CREDITACC",
@@ -1648,6 +1664,10 @@
         "name": "Edelweiss Financial Services Limited"
     },
     {
+        "symbol": "EDUCOMP",
+        "name": "Educomp Solutions Limited"
+    },
+    {
         "symbol": "EGOLD",
         "name": "Edelweiss Gold ETF"
     },
@@ -1840,6 +1860,10 @@
         "name": "Fineotex Chemical Limited"
     },
     {
+        "symbol": "FCONSUMER",
+        "name": "Future Consumer Limited"
+    },
+    {
         "symbol": "FCSSOFT",
         "name": "Fcs Software Solutions Limited"
     },
@@ -1932,6 +1956,10 @@
         "name": "Fortis Healthcare Limited"
     },
     {
+        "symbol": "FSC",
+        "name": "Future Supply Chain Solutions Ltd"
+    },
+    {
         "symbol": "FSL",
         "name": "Firstsource Solutions Limited"
     },
@@ -1986,6 +2014,10 @@
     {
         "symbol": "GATEWAY",
         "name": "Gateway Distriparks Ltd"
+    },
+    {
+        "symbol": "GAYAHWS",
+        "name": "Gayatri Highways Ltd"
     },
     {
         "symbol": "GAYAPROJ",
@@ -2374,10 +2406,6 @@
     {
         "symbol": "HARIOMPIPE",
         "name": "Hariom Pipe Industries Ltd"
-    },
-    {
-        "symbol": "HARRMALAYA",
-        "name": "Harrisons  Malayalam Limited"
     },
     {
         "symbol": "HARSHA",
@@ -3308,16 +3336,8 @@
         "name": "KFin Technologies Ltd"
     },
     {
-        "symbol": "KHADIM",
-        "name": "Khadim India Ltd"
-    },
-    {
         "symbol": "KHAICHEM",
         "name": "Khaitan Chemicals & Fertilizers Ltd"
-    },
-    {
-        "symbol": "KHANDSE",
-        "name": "Khandwala Securities Limited"
     },
     {
         "symbol": "KIMS",
@@ -3536,6 +3556,10 @@
         "name": "Likhitha Infrastructure Ltd"
     },
     {
+        "symbol": "LINC",
+        "name": "Linc Ltd"
+    },
+    {
         "symbol": "LINCOLN",
         "name": "Lincoln Pharmaceuticals Limited"
     },
@@ -3728,6 +3752,10 @@
         "name": "Malu Paper Mills Limited"
     },
     {
+        "symbol": "MANAKALUCO",
+        "name": "Manaksia Aluminium Company Limited"
+    },
+    {
         "symbol": "MANAKCOAT",
         "name": "Manaksia Coated Metals & Industries Limited"
     },
@@ -3902,6 +3930,10 @@
     {
         "symbol": "MENONBE",
         "name": "Menon Bearings Limited"
+    },
+    {
+        "symbol": "MEP",
+        "name": "Mep Infrastructure Developers Limited"
     },
     {
         "symbol": "METROBRAND",
@@ -4124,6 +4156,10 @@
         "name": "MTAR Technologies Ltd"
     },
     {
+        "symbol": "MTEDUCARE",
+        "name": "Mt Educare Limited"
+    },
+    {
         "symbol": "MTNL",
         "name": "Mahanagar Telephone Nigam Limited"
     },
@@ -4298,6 +4334,10 @@
     {
         "symbol": "NETWORK18",
         "name": "Network18 Media & Investments Limited"
+    },
+    {
+        "symbol": "NEULANDLAB",
+        "name": "Neuland Laboratories Limited"
     },
     {
         "symbol": "NEWGEN",
@@ -4514,6 +4554,10 @@
     {
         "symbol": "OPTIEMUS",
         "name": "Optiemus Infracom Ltd"
+    },
+    {
+        "symbol": "ORBTEXP",
+        "name": "Orbit Exports Limited"
     },
     {
         "symbol": "ORCHPHARMA",
@@ -4880,10 +4924,6 @@
         "name": "Pritika Auto Industries Ltd"
     },
     {
-        "symbol": "PRIVISCL",
-        "name": "Privi Speciality Chemicals Ltd"
-    },
-    {
         "symbol": "PROZONER",
         "name": "Prozone Realty Ltd"
     },
@@ -4974,6 +5014,10 @@
     {
         "symbol": "QUICKHEAL",
         "name": "Quick Heal Technologies Limited"
+    },
+    {
+        "symbol": "QUINTEGRA",
+        "name": "Quintegra Solutions Limited"
     },
     {
         "symbol": "RACE",
@@ -5122,6 +5166,10 @@
     {
         "symbol": "RELINFRA",
         "name": "Reliance Infrastructure Limited"
+    },
+    {
+        "symbol": "RELTD",
+        "name": "Ravindra Energy Ltd"
     },
     {
         "symbol": "REMSONSIND",
@@ -5360,6 +5408,10 @@
         "name": "Sammaan Capital Ltd"
     },
     {
+        "symbol": "SAMPANN",
+        "name": "Sampann Utpadan India Ltd"
+    },
+    {
         "symbol": "SANDHAR",
         "name": "Sandhar Technologies Limited"
     },
@@ -5386,6 +5438,10 @@
     {
         "symbol": "SANSERA",
         "name": "Sansera Engineering Ltd"
+    },
+    {
+        "symbol": "SANSTAR",
+        "name": "Sanstar Ltd"
     },
     {
         "symbol": "SANWARIA",
@@ -5600,8 +5656,16 @@
         "name": "Shilpa Medicare Limited"
     },
     {
+        "symbol": "SHIVALIK",
+        "name": "Shivalik Rasayan Ltd"
+    },
+    {
         "symbol": "SHIVAMAUTO",
         "name": "Shivam Autotech Limited"
+    },
+    {
+        "symbol": "SHIVAMILLS",
+        "name": "Shiva Mills Ltd"
     },
     {
         "symbol": "SHIVATEX",
@@ -5708,10 +5772,6 @@
         "name": "ICICI Prudential Silver ETF"
     },
     {
-        "symbol": "SILVRETF",
-        "name": "Mirae Asset Silver ETF"
-    },
-    {
         "symbol": "SIMPLEXINF",
         "name": "Simplex Infrastructures Limited"
     },
@@ -5750,6 +5810,10 @@
     {
         "symbol": "SKFINDIA",
         "name": "Skf India Limited"
+    },
+    {
+        "symbol": "SKIL",
+        "name": "Skil Infrastructure Limited"
     },
     {
         "symbol": "SKIPPER",
@@ -6092,6 +6156,14 @@
         "name": "Tanla Solutions Limited"
     },
     {
+        "symbol": "TARACHAND",
+        "name": "Tara Chand Logistic Solutions Ltd"
+    },
+    {
+        "symbol": "TARAPUR",
+        "name": "Tarapur Transformers Limited"
+    },
+    {
         "symbol": "TARC",
         "name": "Anant Raj Global Ltd"
     },
@@ -6166,6 +6238,10 @@
     {
         "symbol": "TCI",
         "name": "Transport Corporation Of India Limited"
+    },
+    {
+        "symbol": "TCIEXP",
+        "name": "Tci Express Limited"
     },
     {
         "symbol": "TCS",
@@ -6444,10 +6520,6 @@
         "name": "Unichem Laboratories Limited"
     },
     {
-        "symbol": "UNIINFO",
-        "name": "Uniinfo Telecom Services Ltd"
-    },
-    {
         "symbol": "UNIONBANK",
         "name": "Union Bank Of India"
     },
@@ -6650,6 +6722,10 @@
     {
         "symbol": "VISAKAIND",
         "name": "Visaka Industries Limited"
+    },
+    {
+        "symbol": "VISASTEEL",
+        "name": "Visa Steel Limited"
     },
     {
         "symbol": "VISHNU",
