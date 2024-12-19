@@ -228,10 +228,6 @@
         "name": "Ajooni Biotech Ltd"
     },
     {
-        "symbol": "AKASH",
-        "name": "Akash Infraprojects Ltd"
-    },
-    {
         "symbol": "AKG",
         "name": "AKG Exim Ltd"
     },
@@ -2208,6 +2204,10 @@
         "name": "GRM Overseas Ltd"
     },
     {
+        "symbol": "GROWWEV",
+        "name": "Groww Nifty EV & New Age Automotive ETF"
+    },
+    {
         "symbol": "GRSE",
         "name": "Garden Reach Shipbuilders & Engineers Ltd"
     },
@@ -2308,10 +2308,6 @@
         "name": "Hathway Cable & Datacom Limited"
     },
     {
-        "symbol": "HATSUN",
-        "name": "Hatsun Agro Product Limited"
-    },
-    {
         "symbol": "HAVELLS",
         "name": "Havells India Limited"
     },
@@ -2386,6 +2382,10 @@
     {
         "symbol": "HDFCNIFTY",
         "name": "HDFCNIFTY"
+    },
+    {
+        "symbol": "HDFCPSUBK",
+        "name": "HDFC Nifty PSU Bank ETF"
     },
     {
         "symbol": "HDFCPVTBAN",
@@ -4188,10 +4188,6 @@
         "name": "ICICI Prudential Nifty Next 50 ETF"
     },
     {
-        "symbol": "NEXTMEDIA",
-        "name": "Next Mediaworks Limited"
-    },
-    {
         "symbol": "NFL",
         "name": "National Fertilizers Limited"
     },
@@ -5448,10 +5444,6 @@
         "name": "Share India Securities Ltd"
     },
     {
-        "symbol": "SHEKHAWATI",
-        "name": "Shekhawati Industries Ltd"
-    },
-    {
         "symbol": "SHEMAROO",
         "name": "Shemaroo Entertainment Limited"
     },
@@ -5628,6 +5620,10 @@
         "name": "Skm Egg Products Export (india) Limited"
     },
     {
+        "symbol": "SKYGOLD",
+        "name": "Sky Gold Ltd"
+    },
+    {
         "symbol": "SMALLCAP",
         "name": "Mirae Asset Nifty Smallcap 250 Momen.Quali. 100ETF"
     },
@@ -5782,6 +5778,10 @@
     {
         "symbol": "STOVEKRAFT",
         "name": "Stove Kraft Ltd"
+    },
+    {
+        "symbol": "STYLAMIND",
+        "name": "Stylam Industries Ltd"
     },
     {
         "symbol": "STYRENIX",
@@ -6298,6 +6298,10 @@
     {
         "symbol": "UNICHEMLAB",
         "name": "Unichem Laboratories Limited"
+    },
+    {
+        "symbol": "UNIINFO",
+        "name": "Uniinfo Telecom Services Ltd"
     },
     {
         "symbol": "UNIONBANK",
