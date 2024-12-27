@@ -416,6 +416,10 @@
         "name": "Arihant Superstructures Ltd"
     },
     {
+        "symbol": "ARMANFIN",
+        "name": "Arman Financial Services Limited"
+    },
+    {
         "symbol": "AROGRANITE",
         "name": "Aro Granite Industries Limited"
     },
@@ -1248,6 +1252,10 @@
         "name": "Coral India Finance & Housing Ltd"
     },
     {
+        "symbol": "CORDSCABLE",
+        "name": "Cords Cable Industries Limited"
+    },
+    {
         "symbol": "COROMANDEL",
         "name": "Coromandel International Limited"
     },
@@ -1548,10 +1556,6 @@
         "name": "Dr. Reddy's Laboratories Limited"
     },
     {
-        "symbol": "DSSL",
-        "name": "Dynacons Systems & Solutions Limited"
-    },
-    {
         "symbol": "DTIL",
         "name": "Dhunseri Tea & Industries Limited"
     },
@@ -1670,10 +1674,6 @@
     {
         "symbol": "ENGINERSIN",
         "name": "Engineers India Limited"
-    },
-    {
-        "symbol": "ENIL",
-        "name": "Entertainment Network (india) Limited"
     },
     {
         "symbol": "ENTERO",
@@ -2634,10 +2634,6 @@
     {
         "symbol": "IKIO",
         "name": "IKIO Lighting Ltd"
-    },
-    {
-        "symbol": "IL&FSTRANS",
-        "name": "Il&fs Transportation Networks Limited"
     },
     {
         "symbol": "IMAGICAA",
@@ -3758,6 +3754,10 @@
     {
         "symbol": "MENONBE",
         "name": "Menon Bearings Limited"
+    },
+    {
+        "symbol": "METALIETF",
+        "name": "ICICI Prudential Nifty Metal ETF"
     },
     {
         "symbol": "METROBRAND",
@@ -5682,6 +5682,10 @@
     {
         "symbol": "SRPL",
         "name": "Shree Ram Proteins Ltd"
+    },
+    {
+        "symbol": "SSDL",
+        "name": "Saraswati Saree Depot Ltd"
     },
     {
         "symbol": "SSWL",
