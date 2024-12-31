@@ -300,10 +300,6 @@
         "name": "Amber Enterprises India Ltd"
     },
     {
-        "symbol": "AMBICAAGAR",
-        "name": "Ambica Agarbathies Aroma & Industries Ltd"
-    },
-    {
         "symbol": "AMBUJACEM",
         "name": "Ambuja Cements Limited"
     },
@@ -414,14 +410,6 @@
     {
         "symbol": "ARIHANTSUP",
         "name": "Arihant Superstructures Ltd"
-    },
-    {
-        "symbol": "ARMANFIN",
-        "name": "Arman Financial Services Limited"
-    },
-    {
-        "symbol": "AROGRANITE",
-        "name": "Aro Granite Industries Limited"
     },
     {
         "symbol": "ARROWGREEN",
@@ -692,6 +680,10 @@
         "name": "Balaji Telefilms Limited"
     },
     {
+        "symbol": "BALAMINES",
+        "name": "Balaji Amines Limited"
+    },
+    {
         "symbol": "BALAXI",
         "name": "Balaxi Pharmaceuticals Ltd"
     },
@@ -706,6 +698,10 @@
     {
         "symbol": "BALMLAWRIE",
         "name": "Balmer Lawrie & Company Limited"
+    },
+    {
+        "symbol": "BALPHARMA",
+        "name": "Bal Pharma Limited"
     },
     {
         "symbol": "BALRAMCHIN",
@@ -1716,6 +1712,10 @@
         "name": "Edelweiss Silver ETF"
     },
     {
+        "symbol": "ESSARSHPNG",
+        "name": "Essar Shipping Limited"
+    },
+    {
         "symbol": "ESSENTIA",
         "name": "Integra Essentia Ltd"
     },
@@ -2236,10 +2236,6 @@
         "name": "Gujarat Alkalies And Chemicals Limited"
     },
     {
-        "symbol": "GUJAPOLLO",
-        "name": "Gujarat Apollo Industries Limited"
-    },
-    {
         "symbol": "GUJGASLTD",
         "name": "Gujarat Gas Limited"
     },
@@ -2350,10 +2346,6 @@
     {
         "symbol": "HDFCNIFBAN",
         "name": "HDFC Nifty Banking ETF"
-    },
-    {
-        "symbol": "HDFCNIFIT",
-        "name": "HDFC Nifty IT ETF"
     },
     {
         "symbol": "HDFCNIFTY",
@@ -2528,10 +2520,6 @@
         "name": "Honasa Consumer Ltd"
     },
     {
-        "symbol": "HOVS",
-        "name": "Hov Services Limited"
-    },
-    {
         "symbol": "HPAL",
         "name": "HP Adhesives Ltd"
     },
@@ -2618,10 +2606,6 @@
     {
         "symbol": "IGL",
         "name": "Indraprastha Gas Limited"
-    },
-    {
-        "symbol": "IGPL",
-        "name": "Ig Petrochemicals Limited"
     },
     {
         "symbol": "IIFL",
@@ -3240,6 +3224,10 @@
         "name": "Kothari Petrochemicals Limited"
     },
     {
+        "symbol": "KOTHARIPRO",
+        "name": "Kothari Products Limited"
+    },
+    {
         "symbol": "KPIGREEN",
         "name": "KPI Green Energy Ltd"
     },
@@ -3262,10 +3250,6 @@
     {
         "symbol": "KRIDHANINF",
         "name": "Kridhan Infra Limited"
-    },
-    {
-        "symbol": "KRITI",
-        "name": "Kriti Industries (India) Ltd"
     },
     {
         "symbol": "KRITIKA",
@@ -3310,6 +3294,10 @@
     {
         "symbol": "KUANTUM",
         "name": "Kuantum Papers Ltd"
+    },
+    {
+        "symbol": "LAGNAM",
+        "name": "Lagnam Spintex Ltd"
     },
     {
         "symbol": "LAL",
@@ -3540,20 +3528,12 @@
         "name": "Mirae Asset NYSE FANG+ ETF"
     },
     {
-        "symbol": "MAGADSUGAR",
-        "name": "Magadh Sugar & Energy Ltd"
-    },
-    {
         "symbol": "MAGNUM",
         "name": "Magnum Ventures Limited"
     },
     {
         "symbol": "MAHABANK",
         "name": "Bank Of Maharashtra"
-    },
-    {
-        "symbol": "MAHASTEEL",
-        "name": "Mahamaya Steel Industries Limited"
     },
     {
         "symbol": "MAHESHWARI",
@@ -4262,10 +4242,6 @@
     {
         "symbol": "NTPC",
         "name": "Ntpc Limited"
-    },
-    {
-        "symbol": "NUCLEUS",
-        "name": "Nucleus Software Exports Limited"
     },
     {
         "symbol": "NURECA",
@@ -5994,10 +5970,6 @@
     {
         "symbol": "TDPOWERSYS",
         "name": "Td Power Systems Limited"
-    },
-    {
-        "symbol": "TECH",
-        "name": "Aditya Birla Sun Life Nifty IT ETF"
     },
     {
         "symbol": "TECHM",
